@@ -32,7 +32,7 @@ public class ExistingPassive : AbstractSpell
 
     private void CastDebuff(UnitProperties victim)
     {
-        if (victim.sideOnMap == parentUnit.sideOnMap &&
+        if (victim.Side == parentUnit.Side &&
             victim.inpDamageType == 5)
         {
             count++;

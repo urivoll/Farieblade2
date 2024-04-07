@@ -29,8 +29,8 @@ public class NecrBless : AbstractSpell
     }
     private void Cast(UnitProperties victim, Dictionary<string, int> inpData)
     {
-        if (inpData["sideFrom"] == parentUnit.sideOnMap &&
-            inpData["placeFrom"] == parentUnit.placeOnMap &&
+        if (inpData["sideFrom"] == parentUnit.Side &&
+            inpData["placeFrom"] == parentUnit.Place &&
             inpData["debuffId"] == id)
         {
             UnitProperties unit = Turns.circlesMap[inpData["sideTarget"], inpData["placeTarget"]].newObject;

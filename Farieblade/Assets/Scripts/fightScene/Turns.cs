@@ -132,8 +132,8 @@ public class Turns : MonoBehaviour
             var currentDoing = BattleNetwork.doingQueue[gameCount - 1];
             if (currentDoing.array[0] == -444) break;
             turnUnit = circlesMap[currentDoing.array[0], currentDoing.array[1]].newObject;
-            StartIni.playersBars[turnUnit.sideOnMap].gameObject.SetActive(true);
-            StartIni.playersBars[turnUnit.sideOnMap].fillAmount = 1f;
+            StartIni.playersBars[turnUnit.Side].gameObject.SetActive(true);
+            StartIni.playersBars[turnUnit.Side].fillAmount = 1f;
             StartIni.work = true;
             DefinitionSides();
             cor = StartCoroutine(PeriodicEffects());
@@ -152,8 +152,8 @@ public class Turns : MonoBehaviour
             if (turnUnit != null && !turnUnit.paralize && turnUnit.pathParent.fraction != 9)
             {
                 GetComponent<CheckAllowHit>().TurnUnitEffect();
-                Debug.Log(turnUnit.sideOnMap + " Ходит! " + turnUnit.placeOnMap);
-                if (turnUnit.sideOnMap == BattleNetwork.sideOnBattle)
+                Debug.Log(turnUnit.Side + " Ходит! " + turnUnit.Place);
+                if (turnUnit.Side == BattleNetwork.sideOnBattle)
                 {
                     sideUnitUI.SetSpells();
                     if (PlayerData.ai == 2) GetComponent<BattleAI>().AI0();
@@ -166,9 +166,9 @@ public class Turns : MonoBehaviour
             aiMay = false;
             if (turnUnit != null)
             {
-                if(turnUnit.sideOnMap == BattleNetwork.sideOnBattle) sideUnitUI.Exit();
+                if(turnUnit.Side == BattleNetwork.sideOnBattle) sideUnitUI.Exit();
                 StartIni.work = false;
-                StartIni.playersBars[turnUnit.sideOnMap].gameObject.SetActive(false);
+                StartIni.playersBars[turnUnit.Side].gameObject.SetActive(false);
             }
             cor = StartCoroutine(AfterTurn());
             yield return cor;
@@ -214,10 +214,10 @@ public class Turns : MonoBehaviour
         {
             if (turnUnit.pushUnit != null)
             {
-                turnUnit.pushUnit.transform.position = circlesMap[turnUnit.pushUnit.sideOnMap, turnUnit.pushUnit.placeOnMap].transform.position;
+                turnUnit.pushUnit.transform.position = circlesMap[turnUnit.pushUnit.Side, turnUnit.pushUnit.Place].transform.position;
                 turnUnit.pushUnit = null;
             }
-            turnUnit.transform.position = circlesMap[turnUnit.sideOnMap, turnUnit.placeOnMap].transform.position;
+            turnUnit.transform.position = circlesMap[turnUnit.Side, turnUnit.Place].transform.position;
             turnUnit.pathParent.transform.SetParent(turnUnit.pathCircle.transform);
             turnUnit.pathParent.transform.localScale = new Vector2(1, 1);
         }
@@ -225,13 +225,13 @@ public class Turns : MonoBehaviour
     public void Defend()
     {
         unitChoose = turnUnit;
-        GetComponent<BattleNetwork>().AttackQuery(-10, turnUnit.pathSpells.modeIndex, BattleNetwork.ident, turnUnit.sideOnMap, turnUnit.placeOnMap);
+        GetComponent<BattleNetwork>().AttackQuery(-10, turnUnit.pathSpells.modeIndex, BattleNetwork.ident, turnUnit.Side, turnUnit.Place);
     }
     //После хода восстанавливать дефолтные значения
 
     public void DefinitionSides()
     {
-        if (turnUnit.sideOnMap == 1)
+        if (turnUnit.Side == 1)
         {
             enemySide = 0;
             listUnitEnemy = listUnitLeft;

@@ -21,7 +21,7 @@ public class AuraFatMan : Spells
         bool have = false;
         for (int i = 0; i < Turns.listUnitAll.Count; i++)
         {
-            if (Turns.listUnitAll[i].sideOnMap == GetComponent<UnitProperties>().sideOnMap &&
+            if (Turns.listUnitAll[i].Side == GetComponent<UnitProperties>().Side &&
                 Turns.listUnitAll[i].pathParent.fraction == 8 && Turns.listUnitAll[i] != GetComponent<UnitProperties>())
             {
                 have = true;

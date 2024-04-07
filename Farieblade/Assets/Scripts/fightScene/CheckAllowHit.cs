@@ -9,7 +9,7 @@ public class CheckAllowHit : MonoBehaviour
     {
         this.state = state;
         this.spell = spell;
-        sideOur = Turns.turnUnit.sideOnMap;
+        sideOur = Turns.turnUnit.Side;
         if (sideOur == 1) sideEnemy = 0;
         else sideEnemy = 1;
         Clear();
@@ -156,7 +156,7 @@ public class CheckAllowHit : MonoBehaviour
     //Подсвечивание вражеских кругов которых можно поразить
     private void MayHit(int index)
     {
-        if (Turns.turnUnit.sideOnMap == BattleNetwork.sideOnBattle && PlayerData.ai != 2)
+        if (Turns.turnUnit.Side == BattleNetwork.sideOnBattle && PlayerData.ai != 2)
         {
             if (spell == false && state != 2) Turns.circlesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleEnemy");
             else
@@ -188,7 +188,7 @@ public class CheckAllowHit : MonoBehaviour
     }
     public void TurnUnitEffect()
     {
-        if (Turns.turnUnit.sideOnMap == BattleNetwork.sideOnBattle) Turns.turnUnit.pathCircle.PathAnimation.SetCaracterState("circleOur");
+        if (Turns.turnUnit.Side == BattleNetwork.sideOnBattle) Turns.turnUnit.pathCircle.PathAnimation.SetCaracterState("circleOur");
         else Turns.turnUnit.pathCircle.PathAnimation.SetCaracterState("circleEnemyTurn");
     }
     public void Clear()

@@ -182,7 +182,7 @@ public class StartIni : MonoBehaviour
         {
             PlayerPrefs.SetInt("ai", 2);
             PlayerData.ai = 2;
-            if (Turns.turnUnit != null && Turns.turnUnit.sideOnMap == BattleNetwork.sideOnBattle && Turns.aiMay) GetComponent<BattleAI>().AI0();
+            if (Turns.turnUnit != null && Turns.turnUnit.Side == BattleNetwork.sideOnBattle && Turns.aiMay) GetComponent<BattleAI>().AI0();
             aiImage.sprite = aiSprite[1];
         }
 
@@ -257,17 +257,17 @@ public class StartIni : MonoBehaviour
     {
         if (!work || Turns.turnUnit == null) return;
         // Уменьшаем заполнение с постоянной скоростью
-        float newFillAmount = playersBars[Turns.turnUnit.sideOnMap].fillAmount - (fillSpeed * Time.fixedDeltaTime);
-        playersBars[Turns.turnUnit.sideOnMap].fillAmount = Mathf.Clamp01(newFillAmount);
+        float newFillAmount = playersBars[Turns.turnUnit.Side].fillAmount - (fillSpeed * Time.fixedDeltaTime);
+        playersBars[Turns.turnUnit.Side].fillAmount = Mathf.Clamp01(newFillAmount);
 
         // Изменяем цвет в соответствии с заполнением
-        float fillPercentage = playersBars[Turns.turnUnit.sideOnMap].fillAmount;
+        float fillPercentage = playersBars[Turns.turnUnit.Side].fillAmount;
         Color color;
         if (fillPercentage < 0.5f) color = Color.Lerp(Color.red, Color.yellow, fillPercentage * 2f);
         else color = Color.Lerp(Color.yellow, Color.green, (fillPercentage - 0.5f) * 2f);
-        playersBars[Turns.turnUnit.sideOnMap].color = color;
+        playersBars[Turns.turnUnit.Side].color = color;
 
         // Проверяем, достигли ли нулевого заполнения
-        if (playersBars[Turns.turnUnit.sideOnMap].fillAmount == 0) work = false;
+        if (playersBars[Turns.turnUnit.Side].fillAmount == 0) work = false;
     }
 }

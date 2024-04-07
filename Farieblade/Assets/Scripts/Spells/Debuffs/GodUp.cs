@@ -17,7 +17,7 @@ public class GodUp : AbstractSpell
             parentUnit.HpDamage("dmg");
             for (int i = 0; i < 3; i += 2)
             {
-                UnitProperties wolf = Turns.circlesMap[parentUnit.sideOnMap, i].newObject;
+                UnitProperties wolf = Turns.circlesMap[parentUnit.Side, i].newObject;
                 if (wolf != null && wolf.pathParent.ID == -2)
                 {
                     wolf.damage += Convert.ToInt32(TempValue * Value2);

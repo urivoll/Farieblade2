@@ -48,8 +48,7 @@ public class CircleProperties : MonoBehaviour
         else Turns.listUnitLeft.Add(newObject);
         Turns.listUnitAll.Add(newObject);
         newObject.pathCircle = this;
-        newObject.sideOnMap = sideOnMap;
-        newObject.placeOnMap = placeOnMap;
+        newObject.Init(sideOnMap, placeOnMap);
         //дальность прорисовки и поворот
         if (sideOnMap == 0) intState = -1; else intState = 1;
         //Слои

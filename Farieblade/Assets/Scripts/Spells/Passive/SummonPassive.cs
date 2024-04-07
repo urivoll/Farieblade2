@@ -23,8 +23,8 @@ public class SummonPassive : AbstractSpell
         parentUnit.pathAnimation.SetCaracterState("death");
         yield return new WaitForSeconds(0.5f);
         Turns.listUnitAll.Remove(parentUnit);
-        if (parentUnit.sideOnMap == 0) Turns.listUnitLeft.Remove(parentUnit);
-        else if (parentUnit.sideOnMap == 1) Turns.listUnitRight.Remove(parentUnit);
+        if (parentUnit.Side == 0) Turns.listUnitLeft.Remove(parentUnit);
+        else if (parentUnit.Side == 1) Turns.listUnitRight.Remove(parentUnit);
         yield return new WaitForSeconds(0.1f);
         Turns.finishEndEvent = true;
         Destroy(parentUnit.pathParent.gameObject);

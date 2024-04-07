@@ -48,7 +48,7 @@ public class BattleAI : MonoBehaviour
             }
         }
         if (!have) Turns.unitChoose = SeekMaxMinDamageHpUnit(Turns.listAllowHit, "max", "damage");
-        StartIni.battleNetwork.AttackQuery(-666, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, Turns.unitChoose.sideOnMap, Turns.unitChoose.placeOnMap);
+        StartIni.battleNetwork.AttackQuery(-666, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, Turns.unitChoose.Side, Turns.unitChoose.Place);
     }
 
     public bool AI()
@@ -621,8 +621,8 @@ public class BattleAI : MonoBehaviour
 
             if (allow[rand2] != null &&
 
-                ((currentSpell.ToEnemy == true && allow[rand2].sideOnMap != Turns.turnUnit.sideOnMap) ||
-                (currentSpell.ToEnemy == false && allow[rand2].sideOnMap == Turns.turnUnit.sideOnMap))
+                ((currentSpell.ToEnemy == true && allow[rand2].Side != Turns.turnUnit.Side) ||
+                (currentSpell.ToEnemy == false && allow[rand2].Side == Turns.turnUnit.Side))
                 &&
                 (currentSpell.AllPlace == true ||
                 (currentSpell.AllPlace == false && allow[rand2].allowHit == true))
@@ -690,7 +690,7 @@ public class BattleAI : MonoBehaviour
     private void UseSpell(UnitProperties unitTarget, int spellIndex)
     {
         Turns.unitChoose = unitTarget;
-        StartIni.battleNetwork.AttackQuery(spellIndex, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, unitTarget.sideOnMap, unitTarget.placeOnMap);
+        StartIni.battleNetwork.AttackQuery(spellIndex, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, unitTarget.Side, unitTarget.Place);
     }
     private IEnumerator Async(int id)
     {

@@ -42,8 +42,8 @@ public class DuelistPassive : AbstractSpell
     {
         for(int i = 0; i < inpData.Count; i++)
         {
-            if (inpData[i]["side"] == parentUnit.sideOnMap &&
-                inpData[i]["place"] == parentUnit.placeOnMap &&
+            if (inpData[i]["side"] == parentUnit.Side &&
+                inpData[i]["place"] == parentUnit.Place &&
                 inpData[i]["debuffId"] == id)
             {
                 BattleSound.sound.Stop();

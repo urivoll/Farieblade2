@@ -26,8 +26,8 @@ public class NecromancerResurect : AbstractSpell
     private void CastDebuff(UnitProperties Victim, Dictionary<string, int> inpData)
     {
         if (inpData.ContainsKey("sideFrom") &&
-            inpData["sideFrom"] == parentUnit.sideOnMap &&
-            inpData["placeFrom"] == parentUnit.placeOnMap &&
+            inpData["sideFrom"] == parentUnit.Side &&
+            inpData["placeFrom"] == parentUnit.Place &&
             inpData["debuffId"] == id)
         {
             UnitProperties unit = Turns.circlesMap[inpData["side"], inpData["place"]].newObject;

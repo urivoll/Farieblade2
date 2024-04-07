@@ -26,8 +26,8 @@ public class CocaroachFroledDance : AbstractSpell
     }
     private void Buff(UnitProperties victim, Dictionary<string, int> inpData)
     {
-        if (inpData["side"] == parentUnit.sideOnMap &&
-            inpData["place"] == parentUnit.placeOnMap &&
+        if (inpData["side"] == parentUnit.Side &&
+            inpData["place"] == parentUnit.Place &&
             inpData["debuffIndex"] == parentUnit.idDebuff.IndexOf(gameObject))
         {
             for (int i = 0; i < inpData["count"]; i++)

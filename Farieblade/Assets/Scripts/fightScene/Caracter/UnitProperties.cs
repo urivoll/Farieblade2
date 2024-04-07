@@ -1,15 +1,17 @@
-using Spine.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.EventSystems;
+
 public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
 {
     // ŒŒ–ƒ»Õ¿“€ Õ¿  ¿–“≈
-    [HideInInspector] public int sideOnMap;
-    [HideInInspector] public int placeOnMap;
+    [HideInInspector] public int Side => _side;
+    [HideInInspector] public int Place => _place;
+    private int _side;
+    private int _place;
+
     //œ¿–¿Ã≈“–€ œ≈–—ŒÕ¿∆¿
     [HideInInspector] public int initiative;
     [HideInInspector] public int hp;
@@ -58,6 +60,11 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
     public int indexVoice;
     public bool moved = false;
     public UnitProperties pushUnit;
+    public void Init(int side, int place)
+    {
+        _side = side;
+        _place = place;
+    }
     public void Awake()
     {
         //»Õ»÷»¿À»«¿÷»ﬂ œ”“≈…
@@ -96,7 +103,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
             !eventData.pointerClick.GetComponent<UnitProperties>().allowHit ||
             SideUnitUi.modeBlock == true || 
             SideUnitUi.spell == -555) return;
-        StartIni.battleNetwork.AttackQuery(SideUnitUi.spell, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, sideOnMap, placeOnMap);
+        StartIni.battleNetwork.AttackQuery(SideUnitUi.spell, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, Side, Place);
         SideUnitUi.spell = -555;
     }
     //œÓÎÛ˜ÂÌËÂ ÛÓÌ‡!
@@ -157,17 +164,17 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
         if (state == 1) StartCoroutine(_shooter.Shoot(unitTarget, this, attack));
         else
         {
-            if(Turns.turnUnit.placeOnMap != unitTarget.placeOnMap)
+            if(Turns.turnUnit.Place != unitTarget.Place)
             {
                 moved = true;
                 Transform newPosition;
-                if(unitTarget.placeOnMap % 2 != 0) newPosition = Turns.circlesMap[Turns.enemySide, unitTarget.placeOnMap - 1].transform;
+                if(unitTarget.Place % 2 != 0) newPosition = Turns.circlesMap[Turns.enemySide, unitTarget.Place - 1].transform;
                 else
                 {
-                    if(Turns.circlesMap[Turns.turnUnit.sideOnMap, unitTarget.placeOnMap].newObject != null)
+                    if(Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].newObject != null)
                     {
-                        pushUnit = Turns.circlesMap[Turns.turnUnit.sideOnMap, unitTarget.placeOnMap].newObject;
-                        if (pushUnit.sideOnMap == 1) pushUnit.transform.localPosition += new Vector3(2f, 0, 0);
+                        pushUnit = Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].newObject;
+                        if (pushUnit.Side == 1) pushUnit.transform.localPosition += new Vector3(2f, 0, 0);
                         else pushUnit.transform.localPosition -= new Vector3(2f, 0, 0);
                         //pushUnit.Skins[pushUnit.currentSkin].GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingLayerName = "Default";
                         newPosition = pushUnit.pathCircle.transform;
@@ -175,7 +182,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
                         pathParent.transform.localScale = new Vector2(1, 1);
                         //transform.localScale = new Vector2(0.55f * pathCircle.intState, 0.55f);
                     }
-                    else newPosition = Turns.circlesMap[Turns.turnUnit.sideOnMap, unitTarget.placeOnMap].transform;
+                    else newPosition = Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].transform;
                 }
                 gameObject.transform.position = newPosition.position;
             }
@@ -205,8 +212,8 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
         {
             for (int i = 0; i < Turns.currentTryDeath.Count; i++)
             {
-                if (sideOnMap != Turns.currentTryDeath[i]["side"] ||
-                   placeOnMap != Turns.currentTryDeath[i]["place"]) continue;
+                if (Side != Turns.currentTryDeath[i]["side"] ||
+                   Place != Turns.currentTryDeath[i]["place"]) continue;
                 Turns.tryDeath?.Invoke(this, Turns.currentTryDeath[i]);
             }
         }
@@ -222,8 +229,8 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
         if (this == Turns.turnUnit) Turns.turnUnit = null;
         if (this == Turns.unitChoose) Turns.unitChoose = null;
         Turns.listUnitAll.Remove(this);
-        if (sideOnMap == 0) Turns.listUnitLeft.Remove(this);
-        else if (sideOnMap == 1) Turns.listUnitRight.Remove(this);
+        if (Side == 0) Turns.listUnitLeft.Remove(this);
+        else if (Side == 1) Turns.listUnitRight.Remove(this);
         pathCircle.newObject = null;
         Destroy(pathParent.transform.Find("Fight/Canvas").gameObject, 0.8f);
         Destroy(pathParent.gameObject, 1.5f);
