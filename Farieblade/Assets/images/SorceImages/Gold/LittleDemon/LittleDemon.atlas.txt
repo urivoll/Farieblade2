@@ -1,0 +1,69 @@
+
+LittleDemon.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 344, 111
+  size: 361, 399
+  orig: 361, 399
+  offset: 0, 0
+  index: -1
+headBot
+  rotate: false
+  xy: 196, 6
+  size: 105, 93
+  orig: 105, 93
+  offset: 0, 0
+  index: -1
+headTop
+  rotate: true
+  xy: 2, 101
+  size: 409, 340
+  orig: 409, 340
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 303, 17
+  size: 82, 201
+  orig: 82, 201
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: true
+  xy: 851, 26
+  size: 216, 155
+  orig: 216, 155
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 851, 244
+  size: 242, 266
+  orig: 242, 266
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 2, 3
+  size: 96, 192
+  orig: 96, 192
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 506, 2
+  size: 107, 195
+  orig: 107, 195
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 707, 158
+  size: 142, 352
+  orig: 142, 352
+  offset: 0, 0
+  index: -1

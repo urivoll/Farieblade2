@@ -1,0 +1,20 @@
+
+bullet.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Слой 3
+  rotate: false
+  xy: 2, 47
+  size: 226, 113
+  orig: 226, 113
+  offset: 0, 0
+  index: -1
+Слой 5
+  rotate: false
+  xy: 230, 2
+  size: 161, 158
+  orig: 161, 158
+  offset: 0, 0
+  index: -1

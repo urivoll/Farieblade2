@@ -1,0 +1,111 @@
+
+Zombie.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Swish
+  rotate: false
+  xy: 2, 210
+  size: 611, 688
+  orig: 611, 688
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 330, 23
+  size: 185, 297
+  orig: 185, 297
+  offset: 0, 0
+  index: -1
+chestSmooth
+  rotate: true
+  xy: 2, 2
+  size: 206, 326
+  orig: 206, 326
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 864, 660
+  size: 92, 115
+  orig: 92, 115
+  offset: 0, 0
+  index: -1
+headSmooth
+  rotate: false
+  xy: 864, 754
+  size: 113, 144
+  orig: 113, 144
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 741, 199
+  size: 90, 111
+  orig: 90, 111
+  offset: 0, 0
+  index: -1
+leftArmSmooth
+  rotate: false
+  xy: 629, 150
+  size: 110, 139
+  orig: 110, 139
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 739, 461
+  size: 138, 93
+  orig: 138, 93
+  offset: 0, 0
+  index: -1
+leftForearmSmooth
+  rotate: false
+  xy: 615, 291
+  size: 158, 121
+  orig: 158, 121
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 615, 657
+  size: 164, 241
+  orig: 164, 241
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 775, 370
+  size: 89, 109
+  orig: 89, 109
+  offset: 0, 0
+  index: -1
+rightArmSmooth
+  rotate: true
+  xy: 629, 39
+  size: 109, 138
+  orig: 109, 138
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 781, 720
+  size: 81, 178
+  orig: 81, 178
+  offset: 0, 0
+  index: -1
+rightForearmSmooth
+  rotate: true
+  xy: 739, 556
+  size: 99, 207
+  orig: 99, 207
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 615, 414
+  size: 122, 241
+  orig: 122, 241
+  offset: 0, 0
+  index: -1

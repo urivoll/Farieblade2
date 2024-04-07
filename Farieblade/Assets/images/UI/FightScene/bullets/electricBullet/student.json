@@ -1,0 +1,571 @@
+{
+"skeleton": { "hash": "HVf/tX+y840OUqUdPBZQQmW1VqM", "spine": "3.8.0", "x": -151.37, "y": -49.66, "width": 281.36, "height": 100.63 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "VerticalLarge", "parent": "root", "x": 1.29, "y": -0.13 },
+	{ "name": "death effect", "parent": "root", "x": 3.02, "y": 1.06 },
+	{ "name": "horizontal", "parent": "root", "x": 0.75, "y": 0.92 },
+	{ "name": "death effect2", "parent": "root", "x": 3.02, "y": 1.06 }
+],
+"slots": [
+	{ "name": "lightning5", "bone": "horizontal", "attachment": "lightning8", "blend": "additive" },
+	{ "name": "lightning6", "bone": "VerticalLarge", "attachment": "lightning8", "blend": "additive" },
+	{ "name": "lightning7", "bone": "death effect", "attachment": "lightning8", "blend": "additive" },
+	{ "name": "lightning8", "bone": "death effect2", "attachment": "lightning8", "blend": "additive" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"lightning5": {
+				"lightning1": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0.00778, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ 54.69, -48.61, -44.9, -49.96, -46.13, 50.56, 54.54, 50.44 ],
+					"hull": 4
+				},
+				"lightning2": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0.00665, 1.0E-5, 1, 1.0E-5 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ 55.33, -48.2, -45.08, -50.43, -45.59, 49.42, 53.75, 50.88 ],
+					"hull": 4
+				},
+				"lightning3": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 54.54, -48.33, -45.89, -50.3, -45.81, 49.59, 54.5, 51.19 ],
+					"hull": 4
+				},
+				"lightning4": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ 53.29, -48.81, -45.24, -49.41, -46.07, 48.3, 53.91, 49.89 ],
+					"hull": 4
+				},
+				"lightning5": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ 54.81, -48.91, -47.2, -50.2, -45.57, 49.21, 53.91, 50.68 ],
+					"hull": 4
+				},
+				"lightning6": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ 56.41, -48.34, -45.17, -47.62, -45.07, 48.97, 54.69, 50.38 ],
+					"hull": 4
+				},
+				"lightning7": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 56.01, -48.58, -46.8, -50.67, -44.22, 49.41, 53.14, 50.5 ],
+					"hull": 4
+				},
+				"lightning8": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 1.0E-5, 1, 0, 0, 1, 6.8E-4 ],
+					"triangles": [ 3, 1, 2, 0, 1, 3 ],
+					"vertices": [ 55.22, -50.58, -45.35, -48.86, -45.7, 49.84, 52.31, 50.06 ],
+					"hull": 4
+				}
+			},
+			"lightning6": {
+				"lightning1": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0.00778, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ -147.34, -24.19, -137.76, 30.29, 130.68, 28.23, 117.04, -26.79 ],
+					"hull": 4
+				},
+				"lightning2": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0.00665, 1.0E-5, 1, 1.0E-5 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -146.33, -24.55, -139, 30.4, 127.57, 27.97, 118.31, -26.37 ],
+					"hull": 4
+				},
+				"lightning3": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -146.57, -24.12, -138.55, 30.84, 128.04, 28.09, 119.04, -26.79 ],
+					"hull": 4
+				},
+				"lightning4": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ -147.68, -23.42, -136.24, 30.46, 124.65, 28.26, 115.65, -26.44 ],
+					"hull": 4
+				},
+				"lightning5": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -148.16, -24.25, -138.1, 31.55, 126.99, 27.96, 117.77, -26.46 ],
+					"hull": 4
+				},
+				"lightning6": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -146.84, -25.14, -131.48, 30.37, 126.31, 27.7, 116.85, -26.88 ],
+					"hull": 4
+				},
+				"lightning7": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -147.44, -24.91, -139.41, 31.35, 127.35, 27.22, 117.37, -26.03 ],
+					"hull": 4
+				},
+				"lightning8": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 1.0E-5, 1, 0, 0, 1, 6.8E-4 ],
+					"triangles": [ 3, 1, 2, 0, 1, 3 ],
+					"vertices": [ -152.66, -24.43, -134.77, 30.5, 128.71, 28.02, 116.31, -25.57 ],
+					"hull": 4
+				}
+			},
+			"lightning7": {
+				"lightning1": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0.00778, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ -56.37, -46.75, -52.78, 52.79, 47.68, 49.04, 42.57, -51.5 ],
+					"hull": 4
+				},
+				"lightning2": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0.00665, 1.0E-5, 1, 1.0E-5 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -55.99, -47.4, -53.24, 52.99, 46.51, 48.56, 43.05, -50.73 ],
+					"hull": 4
+				},
+				"lightning3": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -56.07, -46.61, -53.07, 53.8, 46.69, 48.77, 43.32, -51.49 ],
+					"hull": 4
+				},
+				"lightning4": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ -56.49, -45.34, -52.21, 53.1, 45.42, 49.09, 42.05, -50.85 ],
+					"hull": 4
+				},
+				"lightning5": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -56.67, -46.85, -52.91, 55.09, 46.3, 48.55, 42.85, -50.88 ],
+					"hull": 4
+				},
+				"lightning6": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -56.18, -48.48, -50.43, 52.94, 46.04, 48.06, 42.5, -51.65 ],
+					"hull": 4
+				},
+				"lightning7": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -56.4, -48.06, -53.4, 54.73, 46.43, 47.19, 42.7, -50.1 ],
+					"hull": 4
+				},
+				"lightning8": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 1.0E-5, 1, 0, 0, 1, 6.8E-4 ],
+					"triangles": [ 3, 1, 2, 0, 1, 3 ],
+					"vertices": [ -58.35, -47.18, -51.66, 53.18, 46.94, 48.65, 42.3, -49.26 ],
+					"hull": 4
+				}
+			},
+			"lightning8": {
+				"lightning1": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0.00778, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ -56.37, -46.75, -52.78, 52.79, 47.68, 49.04, 42.57, -51.5 ],
+					"hull": 4
+				},
+				"lightning2": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0.00665, 1.0E-5, 1, 1.0E-5 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -55.99, -47.4, -53.24, 52.99, 46.51, 48.56, 43.05, -50.73 ],
+					"hull": 4
+				},
+				"lightning3": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -56.07, -46.61, -53.07, 53.8, 46.69, 48.77, 43.32, -51.49 ],
+					"hull": 4
+				},
+				"lightning4": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 0, 1, 2, 3, 0, 2 ],
+					"vertices": [ -56.49, -45.34, -52.21, 53.1, 45.42, 49.09, 42.05, -50.85 ],
+					"hull": 4
+				},
+				"lightning5": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -56.67, -46.85, -52.91, 55.09, 46.3, 48.55, 42.85, -50.88 ],
+					"hull": 4
+				},
+				"lightning6": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 0, 2, 3, 1, 2, 0 ],
+					"vertices": [ -56.18, -48.48, -50.43, 52.94, 46.04, 48.06, 42.5, -51.65 ],
+					"hull": 4
+				},
+				"lightning7": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 0.99999, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -56.4, -48.06, -53.4, 54.73, 46.43, 47.19, 42.7, -50.1 ],
+					"hull": 4
+				},
+				"lightning8": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 1.0E-5, 1, 0, 0, 1, 6.8E-4 ],
+					"triangles": [ 3, 1, 2, 0, 1, 3 ],
+					"vertices": [ -58.35, -47.18, -51.66, 53.18, 46.94, 48.65, 42.3, -49.26 ],
+					"hull": 4
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"lightning7": {
+				"attachment": [
+					{ "name": "lightning1" },
+					{ "time": 0.0333, "name": "lightning2" },
+					{ "time": 0.0667, "name": "lightning3" },
+					{ "time": 0.1, "name": "lightning4" },
+					{ "time": 0.1333, "name": "lightning5" },
+					{ "time": 0.1667, "name": "lightning6" },
+					{ "time": 0.2, "name": "lightning7" },
+					{ "time": 0.2333, "name": "lightning8" }
+				]
+			},
+			"lightning8": {
+				"attachment": [
+					{ "name": "lightning1" },
+					{ "time": 0.0333, "name": "lightning2" },
+					{ "time": 0.0667, "name": "lightning3" },
+					{ "time": 0.1, "name": "lightning4" },
+					{ "time": 0.1333, "name": "lightning5" },
+					{ "time": 0.1667, "name": "lightning6" },
+					{ "time": 0.2, "name": "lightning7" },
+					{ "time": 0.2333, "name": "lightning8" }
+				]
+			},
+			"lightning6": {
+				"attachment": [
+					{ "name": "lightning1" },
+					{ "time": 0.0333, "name": "lightning2" },
+					{ "time": 0.0667, "name": "lightning3" },
+					{ "time": 0.1, "name": "lightning4" },
+					{ "time": 0.1333, "name": "lightning5" },
+					{ "time": 0.1667, "name": "lightning6" },
+					{ "time": 0.2, "name": "lightning7" },
+					{ "time": 0.2333, "name": "lightning8" }
+				]
+			},
+			"lightning5": {
+				"attachment": [
+					{ "name": "lightning1" },
+					{ "time": 0.0333, "name": "lightning2" },
+					{ "time": 0.0667, "name": "lightning3" },
+					{ "time": 0.1, "name": "lightning4" },
+					{ "time": 0.1333, "name": "lightning5" },
+					{ "time": 0.1667, "name": "lightning6" },
+					{ "time": 0.2, "name": "lightning7" },
+					{ "time": 0.2333, "name": "lightning8" }
+				]
+			}
+		}
+	},
+	"death": {
+		"slots": {
+			"lightning7": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" },
+					{ "time": 0.3, "name": "lightning8" },
+					{ "time": 0.3333, "name": "lightning1" },
+					{ "time": 0.3667, "name": "lightning2" },
+					{ "time": 0.4, "name": "lightning3" },
+					{ "time": 0.4333, "name": "lightning4" },
+					{ "time": 0.4667, "name": "lightning5" },
+					{ "time": 0.5, "name": "lightning6" },
+					{ "time": 0.5333, "name": "lightning7" },
+					{ "time": 0.5667, "name": "lightning8" },
+					{ "time": 0.6, "name": "lightning5" },
+					{ "time": 0.6333, "name": "lightning8" }
+				]
+			},
+			"lightning8": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" },
+					{ "time": 0.3, "name": "lightning8" },
+					{ "time": 0.3333, "name": "lightning1" },
+					{ "time": 0.3667, "name": "lightning2" },
+					{ "time": 0.4, "name": "lightning3" },
+					{ "time": 0.4333, "name": "lightning4" },
+					{ "time": 0.4667, "name": "lightning5" },
+					{ "time": 0.5, "name": "lightning6" },
+					{ "time": 0.5333, "name": "lightning7" },
+					{ "time": 0.5667, "name": "lightning8" },
+					{ "time": 0.6, "name": "lightning5" },
+					{ "time": 0.6333, "name": "lightning8" }
+				]
+			},
+			"lightning6": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" },
+					{ "time": 0.3, "name": "lightning8" },
+					{ "time": 0.3333, "name": "lightning1" },
+					{ "time": 0.3667, "name": "lightning2" },
+					{ "time": 0.4, "name": "lightning3" },
+					{ "time": 0.4333, "name": "lightning4" },
+					{ "time": 0.4667, "name": "lightning5" },
+					{ "time": 0.5, "name": "lightning6" },
+					{ "time": 0.5333, "name": "lightning7" },
+					{ "time": 0.5667, "name": "lightning8" },
+					{ "time": 0.6, "name": "lightning5" },
+					{ "time": 0.6333, "name": "lightning8" }
+				]
+			},
+			"lightning5": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" },
+					{ "time": 0.3, "name": "lightning8" },
+					{ "time": 0.3333, "name": "lightning1" },
+					{ "time": 0.3667, "name": "lightning2" },
+					{ "time": 0.4, "name": "lightning3" },
+					{ "time": 0.4333, "name": "lightning4" },
+					{ "time": 0.4667, "name": "lightning5" },
+					{ "time": 0.5, "name": "lightning6" },
+					{ "time": 0.5333, "name": "lightning7" },
+					{ "time": 0.5667, "name": "lightning8" },
+					{ "time": 0.6, "name": "lightning5" },
+					{ "time": 0.6333, "name": "lightning8" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{}
+				],
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				],
+				"shear": [
+					{}
+				]
+			},
+			"VerticalLarge": {
+				"rotate": [
+					{}
+				],
+				"translate": [
+					{},
+					{ "time": 0.1, "x": 1.14, "y": 1.84 },
+					{ "time": 0.6667, "x": -72, "y": 31.61 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.1, "x": 1.35, "y": 1.695 },
+					{ "time": 0.6667, "x": 0.015, "y": 0.419 }
+				],
+				"shear": [
+					{}
+				]
+			},
+			"death effect": {
+				"rotate": [
+					{},
+					{ "time": 0.1, "angle": -10 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 },
+					{ "time": 0.6667, "x": -36.44, "y": -23.27 }
+				],
+				"scale": [
+					{ "x": 0.669, "y": 0.215 },
+					{ "time": 0.1 },
+					{ "time": 0.6667, "x": 0.022, "y": 0.439 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 }
+				]
+			},
+			"horizontal": {
+				"rotate": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 },
+					{ "time": 0.6667, "y": -43.9 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.1, "x": 1.35, "y": 1.741 },
+					{ "time": 0.6667, "x": 0.082, "y": 0.136 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 }
+				]
+			},
+			"death effect2": {
+				"rotate": [
+					{ "angle": 30, "curve": "stepped" },
+					{ "time": 0.1, "angle": 30 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 },
+					{ "time": 0.6667, "x": 21.07, "y": 27.22 }
+				],
+				"scale": [
+					{ "x": 0.785, "y": 0.498 },
+					{ "time": 0.1 },
+					{ "time": 0.6667, "x": 0.01, "y": 0.242 }
+				],
+				"shear": [
+					{ "curve": "stepped" },
+					{ "time": 0.1 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"lightning6": {
+					"lightning8": [
+						{
+							"time": 0.6667,
+							"vertices": [ 65.42865, 28.63909, 64.47913, -17.88528, -64.73724, -28.14437, -66.27982, 17.00501 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"idle": {
+		"slots": {
+			"lightning7": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" }
+				]
+			},
+			"lightning8": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" }
+				]
+			},
+			"lightning6": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" }
+				]
+			},
+			"lightning5": {
+				"attachment": [
+					{ "name": "lightning8" },
+					{ "time": 0.0333, "name": "lightning1" },
+					{ "time": 0.0667, "name": "lightning2" },
+					{ "time": 0.1, "name": "lightning3" },
+					{ "time": 0.1333, "name": "lightning4" },
+					{ "time": 0.1667, "name": "lightning5" },
+					{ "time": 0.2, "name": "lightning6" },
+					{ "time": 0.2333, "name": "lightning7" },
+					{ "time": 0.2667, "name": "lightning8" }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,83 @@
+
+witch.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 1009, 236
+  size: 266, 556
+  orig: 266, 556
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: true
+  xy: 281, 51
+  size: 451, 726
+  orig: 451, 726
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1009, 19
+  size: 201, 215
+  orig: 201, 215
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 1492, 2
+  size: 83, 129
+  orig: 83, 129
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 1212, 29
+  size: 76, 205
+  orig: 76, 205
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 1492, 133
+  size: 101, 516
+  orig: 101, 516
+  offset: 0, 0
+  index: -1
+magic
+  rotate: true
+  xy: 1290, 30
+  size: 204, 200
+  orig: 204, 200
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 1577, 2
+  size: 83, 129
+  orig: 83, 129
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 1662, 10
+  size: 168, 121
+  orig: 168, 121
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 4
+  size: 113, 498
+  orig: 113, 498
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 117, 35
+  size: 162, 467
+  orig: 162, 467
+  offset: 0, 0
+  index: -1

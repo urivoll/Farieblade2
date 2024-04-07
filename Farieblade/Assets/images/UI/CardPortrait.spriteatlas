@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CardPortrait
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: b0c70e287b70ca34d88a898863752b5f, type: 3}
+    - {fileID: 2800000, guid: ed653b0fbe3334c4b93f58940ecdfa3a, type: 3}
+    - {fileID: 2800000, guid: b4ea20fab55bb2d41a9f112a0fe7bb1f, type: 3}
+    - {fileID: 2800000, guid: d58a16370f24b224995822b688d9cc3b, type: 3}
+    - {fileID: 2800000, guid: bf765d78dc5247342b0c8b1ecdd53bd8, type: 3}
+    - {fileID: 2800000, guid: 2cf3baf01c8470e40bf22e174a6f8038, type: 3}
+    - {fileID: 2800000, guid: 160e6c9d01ce9084aa979eafb428f218, type: 3}
+    - {fileID: 2800000, guid: 3eaa8ebea7d1c8249bc2bfe7782f73d3, type: 3}
+    - {fileID: 2800000, guid: 92422bce4364c434d8c0936f7f50ba7d, type: 3}
+    - {fileID: 2800000, guid: 6574671ee5b9d8344b0c9023e40935d3, type: 3}
+    - {fileID: 2800000, guid: 941e80f243dd2ce4a9547bbe11c25369, type: 3}
+    - {fileID: 2800000, guid: f3c53033f1c05d8419656417aeefa8a2, type: 3}
+    - {fileID: 2800000, guid: ad3ffed88a50ef74e8681db2ca404feb, type: 3}
+    - {fileID: 2800000, guid: 942284cae34731e47ab4de53ff423de0, type: 3}
+    - {fileID: 2800000, guid: 62b687aacbd6a1246815b8373bd07b1c, type: 3}
+    - {fileID: 2800000, guid: f53e8d9762e90f14696ca3296c6e417a, type: 3}
+    - {fileID: 2800000, guid: 6ad859fe2be09b341b7569deb8f50e56, type: 3}
+    - {fileID: 2800000, guid: 8387991fe65fce64ba8d363c414272e3, type: 3}
+    - {fileID: 2800000, guid: 5cf83701df7d813468d52517c576f8c4, type: 3}
+    - {fileID: 2800000, guid: 01c2d6ee389d4b345a4b4c4cca6af41f, type: 3}
+    - {fileID: 2800000, guid: 5efe5ff5aed598f46bad1a39a098a025, type: 3}
+    - {fileID: 2800000, guid: abcc77fb4cdc4ad43a88396d6aee8eb6, type: 3}
+    - {fileID: 2800000, guid: dbeacc42fe1225d4cad1fd02f0507153, type: 3}
+    - {fileID: 2800000, guid: 44e6c2d4118f4cc49a1c95832e924d1f, type: 3}
+    - {fileID: 2800000, guid: 1b396f71d05af75458845b81aa3e1f6d, type: 3}
+    - {fileID: 2800000, guid: 29fb78db113a496429d9a2fa6990b1cb, type: 3}
+    - {fileID: 2800000, guid: f7680b6f14c84e841b61891ab282865b, type: 3}
+    - {fileID: 2800000, guid: 19aa34b4c86c459499f20e7aa18a6a9c, type: 3}
+    - {fileID: 2800000, guid: 15439677731bfa54db6b3311797dd28e, type: 3}
+    - {fileID: 2800000, guid: a46dadaf618daed478a74486a01aa98e, type: 3}
+    - {fileID: 2800000, guid: 4a383d148ade1b34bb029cfef75ee82c, type: 3}
+    - {fileID: 2800000, guid: e984db232091cf34a806f3560c01c78d, type: 3}
+    - {fileID: 2800000, guid: 4a2ea7f0b2c279643854767eebede381, type: 3}
+    - {fileID: 2800000, guid: 50690f34d099a1d49b64966e47773b17, type: 3}
+    - {fileID: 2800000, guid: 9951eec5f44039047982d68c6fa09fe1, type: 3}
+    - {fileID: 2800000, guid: bbb52e91c00b9ad48a2224417fd98be9, type: 3}
+    - {fileID: 2800000, guid: 049c201d7805f324ab4598b1985e08de, type: 3}
+    - {fileID: 2800000, guid: 1582963bbeb71cb4e8a1c991ec2401e0, type: 3}
+    - {fileID: 2800000, guid: ed6fb737ae1a29f48ab793fe397cefbf, type: 3}
+    - {fileID: 2800000, guid: f4eb3f8e6c5db73498b302aa143eb53b, type: 3}
+    - {fileID: 2800000, guid: a79965bc98c868a4c9b92f2e2c30e101, type: 3}
+    - {fileID: 2800000, guid: 23682a2141cb3174592946510ac3d73b, type: 3}
+    - {fileID: 2800000, guid: 04a4faa0e53075642b427c847e045bf4, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 04a4faa0e53075642b427c847e045bf4, type: 3}
+  - {fileID: 21300000, guid: 4a2ea7f0b2c279643854767eebede381, type: 3}
+  - {fileID: 21300000, guid: 2cf3baf01c8470e40bf22e174a6f8038, type: 3}
+  - {fileID: 21300000, guid: 5cf83701df7d813468d52517c576f8c4, type: 3}
+  - {fileID: 21300000, guid: 23682a2141cb3174592946510ac3d73b, type: 3}
+  - {fileID: 21300000, guid: 1b396f71d05af75458845b81aa3e1f6d, type: 3}
+  - {fileID: 21300000, guid: bbb52e91c00b9ad48a2224417fd98be9, type: 3}
+  - {fileID: 21300000, guid: dbeacc42fe1225d4cad1fd02f0507153, type: 3}
+  - {fileID: 21300000, guid: 941e80f243dd2ce4a9547bbe11c25369, type: 3}
+  - {fileID: 21300000, guid: e984db232091cf34a806f3560c01c78d, type: 3}
+  - {fileID: 21300000, guid: f3c53033f1c05d8419656417aeefa8a2, type: 3}
+  - {fileID: 21300000, guid: 4a383d148ade1b34bb029cfef75ee82c, type: 3}
+  - {fileID: 21300000, guid: 50690f34d099a1d49b64966e47773b17, type: 3}
+  - {fileID: 21300000, guid: 19aa34b4c86c459499f20e7aa18a6a9c, type: 3}
+  - {fileID: 21300000, guid: 44e6c2d4118f4cc49a1c95832e924d1f, type: 3}
+  - {fileID: 21300000, guid: 9951eec5f44039047982d68c6fa09fe1, type: 3}
+  - {fileID: 21300000, guid: 5efe5ff5aed598f46bad1a39a098a025, type: 3}
+  - {fileID: 21300000, guid: d58a16370f24b224995822b688d9cc3b, type: 3}
+  - {fileID: 21300000, guid: ed6fb737ae1a29f48ab793fe397cefbf, type: 3}
+  - {fileID: 21300000, guid: 15439677731bfa54db6b3311797dd28e, type: 3}
+  - {fileID: 21300000, guid: f53e8d9762e90f14696ca3296c6e417a, type: 3}
+  - {fileID: 21300000, guid: b0c70e287b70ca34d88a898863752b5f, type: 3}
+  - {fileID: 21300000, guid: bf765d78dc5247342b0c8b1ecdd53bd8, type: 3}
+  - {fileID: 21300000, guid: ad3ffed88a50ef74e8681db2ca404feb, type: 3}
+  - {fileID: 21300000, guid: 62b687aacbd6a1246815b8373bd07b1c, type: 3}
+  - {fileID: 21300000, guid: 942284cae34731e47ab4de53ff423de0, type: 3}
+  - {fileID: 21300000, guid: b4ea20fab55bb2d41a9f112a0fe7bb1f, type: 3}
+  - {fileID: 21300000, guid: 1582963bbeb71cb4e8a1c991ec2401e0, type: 3}
+  - {fileID: 21300000, guid: 29fb78db113a496429d9a2fa6990b1cb, type: 3}
+  - {fileID: 21300000, guid: abcc77fb4cdc4ad43a88396d6aee8eb6, type: 3}
+  - {fileID: 21300000, guid: a79965bc98c868a4c9b92f2e2c30e101, type: 3}
+  - {fileID: 21300000, guid: 049c201d7805f324ab4598b1985e08de, type: 3}
+  - {fileID: 21300000, guid: 160e6c9d01ce9084aa979eafb428f218, type: 3}
+  - {fileID: 21300000, guid: 6574671ee5b9d8344b0c9023e40935d3, type: 3}
+  - {fileID: 21300000, guid: f4eb3f8e6c5db73498b302aa143eb53b, type: 3}
+  - {fileID: 21300000, guid: 3eaa8ebea7d1c8249bc2bfe7782f73d3, type: 3}
+  - {fileID: 21300000, guid: 92422bce4364c434d8c0936f7f50ba7d, type: 3}
+  - {fileID: 21300000, guid: 01c2d6ee389d4b345a4b4c4cca6af41f, type: 3}
+  - {fileID: 21300000, guid: 6ad859fe2be09b341b7569deb8f50e56, type: 3}
+  - {fileID: 21300000, guid: ed653b0fbe3334c4b93f58940ecdfa3a, type: 3}
+  - {fileID: 21300000, guid: 8387991fe65fce64ba8d363c414272e3, type: 3}
+  - {fileID: 21300000, guid: f7680b6f14c84e841b61891ab282865b, type: 3}
+  - {fileID: 21300000, guid: a46dadaf618daed478a74486a01aa98e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - ZombiePortrait
+  - Soul seekerPortrait
+  - dead treePortrait
+  - Froled minionPortrait
+  - WitchPortrait
+  - HealerPortrait
+  - studentPortrait
+  - GodPortrait
+  - Duelist(Female)Portrait
+  - RiderPortrait
+  - Dwarf AlchemistPortrait
+  - Poison FlancePortrait
+  - SpiderPortrait
+  - lizard warriorPortrait
+  - GolemPortrait
+  - squirePortrait
+  - ghostPortrait
+  - cocaroachPortrait
+  - TwinsPortrait
+  - NecromancerPortrait
+  - FermorPortrait
+  - Animated rocksPortrait
+  - CritterPortrait
+  - ExistingPortrait
+  - Fat manPortrait
+  - Fat demonPortrait
+  - CerberusPortrait
+  - Terrable FlancePortrait
+  - Light wizardPortrait
+  - Giant hunterPortrait
+  - WalkerPortrait
+  - Swamp FlancePortrait
+  - DeadKingPortrait
+  - DragonPortrait
+  - Urba-LichPortrait
+  - DemonPortrait
+  - Disciple of the Exiled MonksPortrait
+  - geoLich2Portrait
+  - FighterPortrait
+  - ArcherPortrait
+  - Flance shamanPortrait
+  - lightPortrait
+  - obsessedPortrait
+  m_RenderDataMap: {}
+  m_Tag: CardPortrait
+  m_IsVariant: 0

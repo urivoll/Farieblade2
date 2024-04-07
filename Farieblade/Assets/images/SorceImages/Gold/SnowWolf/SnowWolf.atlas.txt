@@ -1,0 +1,62 @@
+
+SnowWolf.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 458, 2
+  size: 564, 410
+  orig: 564, 410
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 291, 414
+  size: 445, 571
+  orig: 445, 571
+  offset: 0, 0
+  index: -1
+leftHand
+  rotate: false
+  xy: 2, 354
+  size: 287, 631
+  orig: 287, 631
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 738, 443
+  size: 243, 542
+  orig: 243, 542
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: true
+  xy: 1191, 254
+  size: 246, 160
+  orig: 246, 160
+  offset: 0, 0
+  index: -1
+rightHand
+  rotate: true
+  xy: 2, 92
+  size: 260, 454
+  orig: 260, 454
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 1024, 23
+  size: 165, 477
+  orig: 165, 477
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 983, 502
+  size: 231, 483
+  orig: 231, 483
+  offset: 0, 0
+  index: -1

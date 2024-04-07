@@ -1,0 +1,62 @@
+
+Fighter.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 2
+  size: 237, 444
+  orig: 237, 444
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 448, 39
+  size: 159, 200
+  orig: 159, 200
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 609, 92
+  size: 173, 187
+  orig: 173, 187
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: true
+  xy: 765, 347
+  size: 239, 206
+  orig: 239, 206
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 2, 241
+  size: 590, 652
+  orig: 590, 652
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 784, 163
+  size: 173, 182
+  orig: 173, 182
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 765, 588
+  size: 193, 305
+  orig: 193, 305
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 594, 281
+  size: 169, 612
+  orig: 169, 612
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,62 @@
+
+Spider.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bottomChest
+  rotate: false
+  xy: 2, 53
+  size: 454, 218
+  orig: 454, 218
+  offset: 0, 0
+  index: -1
+left1Leg
+  rotate: false
+  xy: 547, 155
+  size: 187, 466
+  orig: 187, 466
+  offset: 0, 0
+  index: -1
+left2Leg
+  rotate: true
+  xy: 458, 2
+  size: 151, 376
+  orig: 151, 376
+  offset: 0, 0
+  index: -1
+left3Leg
+  rotate: true
+  xy: 458, 2
+  size: 151, 376
+  orig: 151, 376
+  offset: 0, 0
+  index: -1
+right1Leg
+  rotate: true
+  xy: 2, 273
+  size: 187, 466
+  orig: 187, 466
+  offset: 0, 0
+  index: -1
+right2Leg
+  rotate: false
+  xy: 736, 205
+  size: 247, 416
+  orig: 247, 416
+  offset: 0, 0
+  index: -1
+right3Leg
+  rotate: false
+  xy: 547, 623
+  size: 272, 365
+  orig: 272, 365
+  offset: 0, 0
+  index: -1
+topChest
+  rotate: false
+  xy: 2, 462
+  size: 543, 526
+  orig: 543, 526
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,111 @@
+
+Rider.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 717, 200
+  size: 175, 249
+  orig: 175, 249
+  offset: 0, 0
+  index: -1
+chestHorse
+  rotate: false
+  xy: 2, 724
+  size: 536, 286
+  orig: 536, 286
+  offset: 0, 0
+  index: -1
+heaadHorse
+  rotate: true
+  xy: 540, 546
+  size: 464, 470
+  orig: 464, 470
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 823, 69
+  size: 129, 146
+  orig: 129, 146
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 337, 257
+  size: 114, 137
+  orig: 114, 137
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: true
+  xy: 717, 47
+  size: 151, 104
+  orig: 151, 104
+  offset: 0, 0
+  index: -1
+leftHandHorse
+  rotate: true
+  xy: 2, 568
+  size: 154, 518
+  orig: 154, 518
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 223, 11
+  size: 112, 383
+  orig: 112, 383
+  offset: 0, 0
+  index: -1
+leftLegHorse
+  rotate: true
+  xy: 2, 396
+  size: 170, 451
+  orig: 170, 451
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 455, 449
+  size: 60, 117
+  orig: 60, 117
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 337, 106
+  size: 149, 105
+  orig: 149, 105
+  offset: 0, 0
+  index: -1
+rightHandHorse
+  rotate: false
+  xy: 455, 14
+  size: 133, 433
+  orig: 133, 433
+  offset: 0, 0
+  index: -1
+rightLegHorse
+  rotate: true
+  xy: 590, 377
+  size: 167, 375
+  orig: 167, 375
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 590, 6
+  size: 125, 369
+  orig: 125, 369
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 2, 2
+  size: 219, 392
+  orig: 219, 392
+  offset: 0, 0
+  index: -1

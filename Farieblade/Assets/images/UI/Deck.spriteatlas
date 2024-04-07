@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Deck
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 8954a4c87c469934e8d66d3c8d28d6ca, type: 3}
+    - {fileID: 2800000, guid: f81349e028c6cc445ad1f0a08355802f, type: 3}
+    - {fileID: 2800000, guid: 57349e6b02ffd6b4b941abad774b7bef, type: 3}
+    - {fileID: 2800000, guid: 52ecc2e34fbae3c46b00cbba3802cfad, type: 3}
+    - {fileID: 2800000, guid: a8c7bc646045be141a51e8bafe7f9beb, type: 3}
+    - {fileID: 2800000, guid: 223ad3861c6bbff468a2347adb0ec109, type: 3}
+    - {fileID: 2800000, guid: f16a78728769738409c24d51de0d3509, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f81349e028c6cc445ad1f0a08355802f, type: 3}
+  - {fileID: 21300000, guid: f16a78728769738409c24d51de0d3509, type: 3}
+  - {fileID: 21300000, guid: 52ecc2e34fbae3c46b00cbba3802cfad, type: 3}
+  - {fileID: 21300000, guid: a8c7bc646045be141a51e8bafe7f9beb, type: 3}
+  - {fileID: 21300000, guid: 223ad3861c6bbff468a2347adb0ec109, type: 3}
+  - {fileID: 21300000, guid: 8954a4c87c469934e8d66d3c8d28d6ca, type: 3}
+  - {fileID: 21300000, guid: 57349e6b02ffd6b4b941abad774b7bef, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - DeckDimond
+  - shirtCard
+  - DeckSilver
+  - Frame
+  - open
+  - DeckBronze
+  - DeckGold
+  m_RenderDataMap: {}
+  m_Tag: Deck
+  m_IsVariant: 0

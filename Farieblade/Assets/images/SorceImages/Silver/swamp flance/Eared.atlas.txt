@@ -1,0 +1,76 @@
+
+Eared.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 327, 131
+  size: 294, 374
+  orig: 294, 374
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: false
+  xy: 623, 205
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 70
+  size: 435, 323
+  orig: 435, 323
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 1238, 162
+  size: 133, 144
+  orig: 133, 144
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 1070, 66
+  size: 166, 221
+  orig: 166, 221
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 925, 289
+  size: 216, 200
+  orig: 216, 200
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 549, 24
+  size: 94, 105
+  orig: 94, 105
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 327, 19
+  size: 220, 110
+  orig: 220, 110
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 1127, 308
+  size: 197, 175
+  orig: 197, 175
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 645, 2
+  size: 201, 423
+  orig: 201, 423
+  offset: 0, 0
+  index: -1

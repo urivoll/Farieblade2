@@ -1,0 +1,111 @@
+
+Monk student.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 14
+  size: 218, 332
+  orig: 218, 332
+  offset: 0, 0
+  index: -1
+fire1
+  rotate: false
+  xy: 1563, 18
+  size: 82, 80
+  orig: 82, 80
+  offset: 0, 0
+  index: -1
+fire2
+  rotate: true
+  xy: 1078, 12
+  size: 72, 95
+  orig: 72, 95
+  offset: 0, 0
+  index: -1
+fire3
+  rotate: true
+  xy: 1426, 30
+  size: 54, 76
+  orig: 54, 76
+  offset: 0, 0
+  index: -1
+fire4
+  rotate: true
+  xy: 1344, 26
+  size: 58, 80
+  orig: 58, 80
+  offset: 0, 0
+  index: -1
+fire5
+  rotate: false
+  xy: 1647, 24
+  size: 61, 74
+  orig: 61, 74
+  offset: 0, 0
+  index: -1
+fire6
+  rotate: true
+  xy: 1842, 35
+  size: 87, 80
+  orig: 87, 80
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 336, 28
+  size: 204, 226
+  orig: 204, 226
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 1175, 23
+  size: 61, 167
+  orig: 61, 167
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 1943, 19
+  size: 97, 213
+  orig: 97, 213
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 1078, 86
+  size: 146, 483
+  orig: 146, 483
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 1717, 2
+  size: 123, 120
+  orig: 123, 120
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 1563, 100
+  size: 132, 152
+  orig: 132, 152
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 1717, 124
+  size: 108, 224
+  orig: 108, 224
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 564, 32
+  size: 200, 512
+  orig: 200, 512
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,55 @@
+
+critter.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+botHead
+  rotate: false
+  xy: 2, 3
+  size: 402, 288
+  orig: 402, 288
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 2, 293
+  size: 428, 339
+  orig: 428, 339
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 634
+  size: 495, 387
+  orig: 495, 387
+  offset: 0, 0
+  index: -1
+leftHand
+  rotate: true
+  xy: 499, 514
+  size: 229, 435
+  orig: 229, 435
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 406, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+rightHand
+  rotate: true
+  xy: 499, 745
+  size: 276, 449
+  orig: 276, 449
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 432, 260
+  size: 252, 327
+  orig: 252, 327
+  offset: 0, 0
+  index: -1

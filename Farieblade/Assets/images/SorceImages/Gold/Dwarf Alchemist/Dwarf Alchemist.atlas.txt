@@ -1,0 +1,69 @@
+
+Dwarf Alchemist.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 7
+  size: 444, 438
+  orig: 444, 438
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 442, 115
+  size: 301, 403
+  orig: 301, 403
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 745, 311
+  size: 175, 332
+  orig: 175, 332
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 745, 11
+  size: 294, 298
+  orig: 294, 298
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 384, 520
+  size: 278, 483
+  orig: 278, 483
+  offset: 0, 0
+  index: -1
+poison
+  rotate: true
+  xy: 442, 2
+  size: 111, 154
+  orig: 111, 154
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 887, 711
+  size: 201, 292
+  orig: 201, 292
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 664, 645
+  size: 221, 358
+  orig: 221, 358
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 453
+  size: 380, 550
+  orig: 380, 550
+  offset: 0, 0
+  index: -1

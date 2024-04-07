@@ -1,0 +1,47 @@
+
+Twins.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+leftHead
+  rotate: false
+  xy: 905, 2
+  size: 386, 365
+  orig: 386, 365
+  offset: 0, 0
+  index: -1
+Слой 13
+  rotate: true
+  xy: 220, 249
+  size: 118, 334
+  orig: 118, 334
+  offset: 0, 0
+  index: -1
+Слой 14
+  rotate: true
+  xy: 556, 96
+  size: 271, 347
+  orig: 271, 347
+  offset: 0, 0
+  index: -1
+Слой 6
+  rotate: true
+  xy: 2, 272
+  size: 95, 216
+  orig: 95, 216
+  offset: 0, 0
+  index: -1
+
+Twins2.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Слой 12
+  rotate: false
+  xy: 2, 2
+  size: 1928, 1929
+  orig: 1928, 1929
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,62 @@
+
+Cerberus.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 2, 618
+  size: 597, 397
+  orig: 597, 397
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 601, 590
+  size: 425, 346
+  orig: 425, 346
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 2, 144
+  size: 247, 472
+  orig: 247, 472
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 556, 141
+  size: 245, 447
+  orig: 245, 447
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 251, 242
+  size: 303, 374
+  orig: 303, 374
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 803, 215
+  size: 203, 373
+  orig: 203, 373
+  offset: 0, 0
+  index: -1
+tail
+  rotate: true
+  xy: 251, 2
+  size: 238, 270
+  orig: 238, 270
+  offset: 0, 0
+  index: -1
+teeth
+  rotate: false
+  xy: 2, 25
+  size: 155, 117
+  orig: 155, 117
+  offset: 0, 0
+  index: -1

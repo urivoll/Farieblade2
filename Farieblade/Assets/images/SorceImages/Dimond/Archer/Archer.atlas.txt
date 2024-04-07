@@ -1,0 +1,83 @@
+
+Archer.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 155
+  size: 354, 828
+  orig: 354, 828
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 1063, 11
+  size: 142, 154
+  orig: 142, 154
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 674, 2
+  size: 151, 191
+  orig: 151, 191
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: true
+  xy: 867, 15
+  size: 138, 194
+  orig: 138, 194
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 1306, 170
+  size: 154, 468
+  orig: 154, 468
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 1409, 83
+  size: 85, 171
+  orig: 85, 171
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 1219, 74
+  size: 188, 79
+  orig: 188, 79
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 832, 155
+  size: 169, 472
+  orig: 169, 472
+  offset: 0, 0
+  index: -1
+string
+  rotate: true
+  xy: 2, 28
+  size: 125, 670
+  orig: 125, 670
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 832, 326
+  size: 183, 703
+  orig: 183, 703
+  offset: 0, 0
+  index: -1
+Слой 1
+  rotate: true
+  xy: 1219, 30
+  size: 42, 247
+  orig: 42, 247
+  offset: 0, 0
+  index: -1

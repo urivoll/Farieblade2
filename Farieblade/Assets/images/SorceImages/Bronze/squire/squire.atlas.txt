@@ -1,0 +1,146 @@
+
+squire.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 541, 113
+  size: 248, 397
+  orig: 248, 397
+  offset: 0, 0
+  index: -1
+chestSmooth
+  rotate: false
+  xy: 272, 85
+  size: 267, 425
+  orig: 267, 425
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 91, 28
+  size: 60, 27
+  orig: 60, 27
+  offset: 0, 0
+  index: -1
+eyes2
+  rotate: false
+  xy: 2, 18
+  size: 87, 37
+  orig: 87, 37
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 1097, 241
+  size: 269, 212
+  orig: 269, 212
+  offset: 0, 0
+  index: -1
+headSmooth
+  rotate: true
+  xy: 1012, 3
+  size: 172, 204
+  orig: 172, 204
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 304, 23
+  size: 60, 122
+  orig: 60, 122
+  offset: 0, 0
+  index: -1
+leftArmSmooth
+  rotate: true
+  xy: 153, 2
+  size: 79, 149
+  orig: 79, 149
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 1218, 22
+  size: 83, 217
+  orig: 83, 217
+  offset: 0, 0
+  index: -1
+leftForearmSmooth
+  rotate: true
+  xy: 541, 11
+  size: 100, 245
+  orig: 100, 245
+  offset: 0, 0
+  index: -1
+leftHair
+  rotate: false
+  xy: 1432, 329
+  size: 110, 181
+  orig: 110, 181
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 139, 83
+  size: 131, 427
+  orig: 131, 427
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 1437, 162
+  size: 114, 165
+  orig: 114, 165
+  offset: 0, 0
+  index: -1
+rightArmSmooth
+  rotate: false
+  xy: 1303, 46
+  size: 132, 193
+  orig: 132, 193
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 788, 12
+  size: 99, 222
+  orig: 99, 222
+  offset: 0, 0
+  index: -1
+rightForearmSmooth
+  rotate: false
+  xy: 1311, 260
+  size: 119, 250
+  orig: 119, 250
+  offset: 0, 0
+  index: -1
+rightHair
+  rotate: false
+  xy: 1437, 23
+  size: 111, 137
+  orig: 111, 137
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 57
+  size: 135, 453
+  orig: 135, 453
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 969, 177
+  size: 333, 126
+  orig: 333, 126
+  offset: 0, 0
+  index: -1
+weaponSmooth
+  rotate: true
+  xy: 791, 145
+  size: 365, 176
+  orig: 365, 176
+  offset: 0, 0
+  index: -1

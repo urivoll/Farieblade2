@@ -1,0 +1,62 @@
+
+Minon.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bottomLeg
+  rotate: true
+  xy: 878, 6
+  size: 31, 57
+  orig: 31, 57
+  offset: 0, 0
+  index: -1
+chest
+  rotate: true
+  xy: 465, 2
+  size: 245, 273
+  orig: 245, 273
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 2
+  size: 245, 461
+  orig: 245, 461
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 878, 39
+  size: 97, 92
+  orig: 97, 92
+  offset: 0, 0
+  index: -1
+righArm
+  rotate: true
+  xy: 878, 39
+  size: 97, 92
+  orig: 97, 92
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 740, 111
+  size: 136, 100
+  orig: 136, 100
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 740, 9
+  size: 136, 100
+  orig: 136, 100
+  offset: 0, 0
+  index: -1
+topLeg
+  rotate: false
+  xy: 842, 138
+  size: 92, 109
+  orig: 92, 109
+  offset: 0, 0
+  index: -1

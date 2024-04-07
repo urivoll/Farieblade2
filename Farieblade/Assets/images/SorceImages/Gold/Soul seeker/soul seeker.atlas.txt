@@ -1,0 +1,48 @@
+
+soul seeker.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 345
+  size: 439, 762
+  orig: 439, 762
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 3
+  size: 340, 627
+  orig: 340, 627
+  offset: 0, 0
+  index: -1
+leftHand
+  rotate: true
+  xy: 1373, 266
+  size: 518, 399
+  orig: 518, 399
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 766, 14
+  size: 386, 332
+  orig: 386, 332
+  offset: 0, 0
+  index: -1
+rightHands
+  rotate: true
+  xy: 766, 348
+  size: 436, 605
+  orig: 436, 605
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 1154, 2
+  size: 262, 346
+  orig: 262, 346
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,62 @@
+
+Demon tree.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 563, 165
+  size: 271, 332
+  orig: 271, 332
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1063, 9
+  size: 194, 250
+  orig: 194, 250
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 1063, 261
+  size: 210, 236
+  orig: 210, 236
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 836, 136
+  size: 225, 361
+  orig: 225, 361
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 331, 2
+  size: 230, 495
+  orig: 230, 495
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 563, 4
+  size: 159, 151
+  orig: 159, 151
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 1259, 41
+  size: 218, 186
+  orig: 218, 186
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 4
+  size: 327, 493
+  orig: 327, 493
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,83 @@
+
+obsessed.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 2, 2
+  size: 307, 490
+  orig: 307, 490
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1161, 3
+  size: 253, 194
+  orig: 253, 194
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 1045, 30
+  size: 114, 126
+  orig: 114, 126
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 803, 19
+  size: 240, 129
+  orig: 240, 129
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 1081, 199
+  size: 240, 293
+  orig: 240, 293
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 1323, 366
+  size: 114, 126
+  orig: 114, 126
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 508, 13
+  size: 134, 293
+  orig: 134, 293
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 311, 85
+  size: 195, 407
+  orig: 195, 407
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 847, 158
+  size: 232, 334
+  orig: 232, 334
+  offset: 0, 0
+  index: -1
+Слой 2
+  rotate: true
+  xy: 674, 150
+  size: 342, 171
+  orig: 342, 171
+  offset: 0, 0
+  index: -1
+Слой 3
+  rotate: true
+  xy: 508, 149
+  size: 343, 164
+  orig: 343, 164
+  offset: 0, 0
+  index: -1

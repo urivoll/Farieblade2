@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CardAthlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a8bf11860d2be71408636046f951a73c, type: 3}
+    - {fileID: 2800000, guid: 1164c3f3cc1c9244ab148bb352f13f5b, type: 3}
+    - {fileID: 2800000, guid: f72effdd6477b194b9011938a4481b6d, type: 3}
+    - {fileID: 2800000, guid: 61a2612de34a8754cb7b8ec686ad87fa, type: 3}
+    - {fileID: 2800000, guid: 317c0b249dddd134ca0c7e2a5b3b453a, type: 3}
+    - {fileID: 2800000, guid: bcfde4747c814e74faf6169237f35a68, type: 3}
+    - {fileID: 2800000, guid: 8dfa1370cd4fce340b3bcd19c322be04, type: 3}
+    - {fileID: 2800000, guid: 69119944dcb39a043af7f6fb343dc854, type: 3}
+    - {fileID: 2800000, guid: 86f6657aa743f5e46a9a7a58d60c1869, type: 3}
+    - {fileID: 2800000, guid: 3b621ec5cba364a4cb042d8352bd5359, type: 3}
+    - {fileID: 2800000, guid: 6cc886fedc569464aad616d2e34c8745, type: 3}
+    - {fileID: 2800000, guid: 2f2e72f111cc2ef408d0df58cc551669, type: 3}
+    - {fileID: 2800000, guid: f6603a8cb2622ff4e91b447b6763b0ce, type: 3}
+    - {fileID: 2800000, guid: ea06c78740be05b4eb2a9d303dc61ed1, type: 3}
+    - {fileID: 2800000, guid: 190e536dc4fe222478735de53c1731bb, type: 3}
+    - {fileID: 2800000, guid: df98dfc21d633254a8c1d6e0c8469bca, type: 3}
+    - {fileID: 2800000, guid: 8df24cb3b3e5f644da500cabe8d4b454, type: 3}
+    - {fileID: 2800000, guid: fd33697b1c68d8046b70cc29475685f4, type: 3}
+    - {fileID: 2800000, guid: 2d3e45f7b5502c645a07b3af6ee0c60d, type: 3}
+    - {fileID: 2800000, guid: 84014c2a12997704a86383affdd9b9b7, type: 3}
+    - {fileID: 2800000, guid: 155107f3cc0b9e243a0c0e263585c284, type: 3}
+    - {fileID: 2800000, guid: dc472cecfd5727845a580ba3f02c7390, type: 3}
+    - {fileID: 2800000, guid: f9a8ece6f8cad0a478992507700c01fd, type: 3}
+    - {fileID: 2800000, guid: f7e6f0339a8f7ff4b9d88c63d88771d8, type: 3}
+    - {fileID: 2800000, guid: 4c813872d4aa9ef4c9c4e9f95eca5f37, type: 3}
+    - {fileID: 2800000, guid: 5ddbce1a714515a42a426c2a92862524, type: 3}
+    - {fileID: 2800000, guid: fcf5b68a590e34c469c69f2fefec53f4, type: 3}
+    - {fileID: 2800000, guid: 7f3e3fd5867a8ef45a4df2bc48650d9f, type: 3}
+    - {fileID: 2800000, guid: afbab756cd9db4e4bbbe2613f363d19b, type: 3}
+    - {fileID: 2800000, guid: bfa602e4434a24740a35dd8a5a488caf, type: 3}
+    - {fileID: 2800000, guid: a56ea416607926b4ab00ef7d534b1044, type: 3}
+    - {fileID: 2800000, guid: 7664895f98a9cce4798f7d96d1a195ab, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8dfa1370cd4fce340b3bcd19c322be04, type: 3}
+  - {fileID: 21300000, guid: 2f2e72f111cc2ef408d0df58cc551669, type: 3}
+  - {fileID: 21300000, guid: 4c813872d4aa9ef4c9c4e9f95eca5f37, type: 3}
+  - {fileID: 21300000, guid: df98dfc21d633254a8c1d6e0c8469bca, type: 3}
+  - {fileID: 21300000, guid: f7e6f0339a8f7ff4b9d88c63d88771d8, type: 3}
+  - {fileID: 21300000, guid: 8df24cb3b3e5f644da500cabe8d4b454, type: 3}
+  - {fileID: 21300000, guid: 1164c3f3cc1c9244ab148bb352f13f5b, type: 3}
+  - {fileID: 21300000, guid: 155107f3cc0b9e243a0c0e263585c284, type: 3}
+  - {fileID: 21300000, guid: 317c0b249dddd134ca0c7e2a5b3b453a, type: 3}
+  - {fileID: 21300000, guid: 69119944dcb39a043af7f6fb343dc854, type: 3}
+  - {fileID: 21300000, guid: bcfde4747c814e74faf6169237f35a68, type: 3}
+  - {fileID: 21300000, guid: bfa602e4434a24740a35dd8a5a488caf, type: 3}
+  - {fileID: 21300000, guid: 3b621ec5cba364a4cb042d8352bd5359, type: 3}
+  - {fileID: 21300000, guid: 7f3e3fd5867a8ef45a4df2bc48650d9f, type: 3}
+  - {fileID: 21300000, guid: a56ea416607926b4ab00ef7d534b1044, type: 3}
+  - {fileID: 21300000, guid: afbab756cd9db4e4bbbe2613f363d19b, type: 3}
+  - {fileID: 21300000, guid: a8bf11860d2be71408636046f951a73c, type: 3}
+  - {fileID: 21300000, guid: f9a8ece6f8cad0a478992507700c01fd, type: 3}
+  - {fileID: 21300000, guid: ea06c78740be05b4eb2a9d303dc61ed1, type: 3}
+  - {fileID: 21300000, guid: 2d3e45f7b5502c645a07b3af6ee0c60d, type: 3}
+  - {fileID: 21300000, guid: 5ddbce1a714515a42a426c2a92862524, type: 3}
+  - {fileID: 21300000, guid: 84014c2a12997704a86383affdd9b9b7, type: 3}
+  - {fileID: 21300000, guid: 86f6657aa743f5e46a9a7a58d60c1869, type: 3}
+  - {fileID: 21300000, guid: fcf5b68a590e34c469c69f2fefec53f4, type: 3}
+  - {fileID: 21300000, guid: fd33697b1c68d8046b70cc29475685f4, type: 3}
+  - {fileID: 21300000, guid: f6603a8cb2622ff4e91b447b6763b0ce, type: 3}
+  - {fileID: 21300000, guid: dc472cecfd5727845a580ba3f02c7390, type: 3}
+  - {fileID: 21300000, guid: 61a2612de34a8754cb7b8ec686ad87fa, type: 3}
+  - {fileID: 21300000, guid: 190e536dc4fe222478735de53c1731bb, type: 3}
+  - {fileID: 21300000, guid: f72effdd6477b194b9011938a4481b6d, type: 3}
+  - {fileID: 21300000, guid: 6cc886fedc569464aad616d2e34c8745, type: 3}
+  - {fileID: 21300000, guid: 7664895f98a9cce4798f7d96d1a195ab, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - shadeCard
+  - army of light
+  - support
+  - Flance Trible
+  - tank
+  - Froled World
+  - card2
+  - lightEnergy
+  - hp_
+  - GradeBronze
+  - damage_
+  - shooterSlot
+  - GradeGold
+  - giantSlot
+  - supportSlot
+  - MeleeSlot
+  - card1
+  - dd
+  - Consolidated Forsaken Monks
+  - Lands of Zotak
+  - UnitSlot
+  - Lost Souls
+  - GradeDimond
+  - Unit Field
+  - Horror Dungeons
+  - Beam of secrets
+  - giant
+  - card4
+  - Curse of the world
+  - card3
+  - GradeSilver
+  - arrow
+  m_RenderDataMap: {}
+  m_Tag: CardAthlas
+  m_IsVariant: 0

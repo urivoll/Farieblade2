@@ -1,0 +1,62 @@
+
+student.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lightning1
+  rotate: false
+  xy: 2, 1006
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+lightning2
+  rotate: false
+  xy: 964, 1006
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+lightning3
+  rotate: false
+  xy: 2, 2
+  size: 956, 339
+  orig: 956, 339
+  offset: 0, 0
+  index: -1
+lightning4
+  rotate: false
+  xy: 960, 2
+  size: 956, 339
+  orig: 956, 339
+  offset: 0, 0
+  index: -1
+lightning5
+  rotate: false
+  xy: 2, 675
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+lightning6
+  rotate: false
+  xy: 2, 343
+  size: 960, 330
+  orig: 960, 330
+  offset: 0, 0
+  index: -1
+lightning7
+  rotate: false
+  xy: 964, 343
+  size: 960, 330
+  orig: 960, 330
+  offset: 0, 0
+  index: -1
+lightning8
+  rotate: false
+  xy: 964, 675
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1

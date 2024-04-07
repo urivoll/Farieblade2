@@ -1,0 +1,20 @@
+
+upgrade.png
+size: 256,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Слой 1
+  rotate: true
+  xy: 2, 2
+  size: 209, 219
+  orig: 209, 219
+  offset: 0, 0
+  index: -1
+Слой 2
+  rotate: false
+  xy: 2, 213
+  size: 244, 252
+  orig: 244, 252
+  offset: 0, 0
+  index: -1

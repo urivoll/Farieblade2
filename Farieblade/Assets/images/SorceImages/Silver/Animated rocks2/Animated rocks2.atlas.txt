@@ -1,0 +1,62 @@
+
+Animated rocks2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 2, 380
+  size: 423, 490
+  orig: 423, 490
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 49
+  size: 373, 329
+  orig: 373, 329
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 427, 508
+  size: 314, 362
+  orig: 314, 362
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: true
+  xy: 743, 550
+  size: 320, 279
+  orig: 320, 279
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 377, 2
+  size: 261, 324
+  orig: 261, 324
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 743, 363
+  size: 185, 279
+  orig: 185, 279
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 427, 265
+  size: 241, 267
+  orig: 241, 267
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 703, 37
+  size: 261, 324
+  orig: 261, 324
+  offset: 0, 0
+  index: -1

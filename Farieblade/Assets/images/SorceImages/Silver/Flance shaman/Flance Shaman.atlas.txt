@@ -1,0 +1,76 @@
+
+Flance Shaman.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 285, 505
+  size: 459, 516
+  orig: 459, 516
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 746, 573
+  size: 424, 448
+  orig: 424, 448
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 285, 336
+  size: 136, 167
+  orig: 136, 167
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 574, 348
+  size: 252, 155
+  orig: 252, 155
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 828, 365
+  size: 206, 252
+  orig: 206, 252
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 423, 340
+  size: 149, 163
+  orig: 149, 163
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 2, 23
+  size: 243, 301
+  orig: 243, 301
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 247, 30
+  size: 244, 294
+  orig: 244, 294
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: false
+  xy: 2, 326
+  size: 281, 695
+  orig: 281, 695
+  offset: 0, 0
+  index: -1
+Слой 1
+  rotate: true
+  xy: 493, 2
+  size: 336, 365
+  orig: 336, 365
+  offset: 0, 0
+  index: -1

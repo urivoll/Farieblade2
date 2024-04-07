@@ -1,0 +1,83 @@
+
+fermor.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 164
+  size: 343, 581
+  orig: 343, 581
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 733, 6
+  size: 189, 269
+  orig: 189, 269
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 282, 19
+  size: 143, 250
+  orig: 143, 250
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 534, 2
+  size: 197, 160
+  orig: 197, 160
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 1076, 243
+  size: 264, 454
+  orig: 264, 454
+  offset: 0, 0
+  index: -1
+magic
+  rotate: true
+  xy: 1535, 59
+  size: 204, 200
+  orig: 204, 200
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 1248, 17
+  size: 224, 285
+  orig: 224, 285
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 2, 25
+  size: 137, 278
+  orig: 137, 278
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 585, 197
+  size: 310, 489
+  orig: 310, 489
+  offset: 0, 0
+  index: -1
+Слой 1
+  rotate: true
+  xy: 1004, 14
+  size: 181, 242
+  orig: 181, 242
+  offset: 0, 0
+  index: -1
+Слой 2
+  rotate: false
+  xy: 1532, 265
+  size: 181, 242
+  orig: 181, 242
+  offset: 0, 0
+  index: -1

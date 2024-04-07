@@ -1,0 +1,62 @@
+
+existing.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 356, 129
+  size: 370, 365
+  orig: 370, 365
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 2, 89
+  size: 410, 352
+  orig: 410, 352
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 723, 2
+  size: 210, 222
+  orig: 210, 222
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 1147, 76
+  size: 176, 179
+  orig: 176, 179
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 934, 230
+  size: 203, 269
+  orig: 203, 269
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 935, 6
+  size: 210, 222
+  orig: 210, 222
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 1139, 257
+  size: 178, 242
+  orig: 178, 242
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 723, 226
+  size: 209, 273
+  orig: 209, 273
+  offset: 0, 0
+  index: -1

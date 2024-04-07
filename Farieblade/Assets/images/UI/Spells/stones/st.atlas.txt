@@ -1,0 +1,27 @@
+
+st.png
+size: 256,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+st1
+  rotate: false
+  xy: 2, 2
+  size: 59, 57
+  orig: 59, 57
+  offset: 0, 0
+  index: -1
+st2
+  rotate: false
+  xy: 63, 4
+  size: 56, 55
+  orig: 56, 55
+  offset: 0, 0
+  index: -1
+st3
+  rotate: false
+  xy: 121, 4
+  size: 56, 55
+  orig: 56, 55
+  offset: 0, 0
+  index: -1

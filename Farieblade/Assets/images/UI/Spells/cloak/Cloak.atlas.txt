@@ -1,0 +1,20 @@
+
+Cloak.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Слой 12
+  rotate: false
+  xy: 257, 2
+  size: 234, 264
+  orig: 234, 264
+  offset: 0, 0
+  index: -1
+Слой 13
+  rotate: false
+  xy: 2, 4
+  size: 253, 262
+  orig: 253, 262
+  offset: 0, 0
+  index: -1

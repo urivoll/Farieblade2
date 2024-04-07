@@ -1,0 +1,72 @@
+{
+"skeleton": { "hash": "mGTjetkAAbbapNeaIoHONXYe6zk", "spine": "3.8.0", "x": -36, "y": -36, "width": 72, "height": 72 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "hit", "bone": "root" },
+	{ "name": "idle", "bone": "root", "attachment": "idle" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"idle": {
+				"hit": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 21, -15, -21, -15, -21, 15, 21, 15 ],
+					"hull": 4
+				},
+				"idle": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 36, -36, -36, -36, -36, 36, 36, 36 ],
+					"hull": 4
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"hit": {
+		"slots": {
+			"idle": {
+				"attachment": [
+					{ "name": "hit" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	}
+}
+}

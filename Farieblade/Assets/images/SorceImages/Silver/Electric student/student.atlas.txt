@@ -1,0 +1,160 @@
+
+student.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Chest
+  rotate: true
+  xy: 272, 1441
+  size: 278, 630
+  orig: 278, 630
+  offset: 0, 0
+  index: -1
+armLeft
+  rotate: true
+  xy: 843, 1721
+  size: 106, 137
+  orig: 106, 137
+  offset: 0, 0
+  index: -1
+armRight
+  rotate: true
+  xy: 267, 1727
+  size: 100, 140
+  orig: 100, 140
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 94, 1738
+  size: 171, 89
+  orig: 171, 89
+  offset: 0, 0
+  index: -1
+forearmLeft
+  rotate: false
+  xy: 409, 1725
+  size: 154, 102
+  orig: 154, 102
+  offset: 0, 0
+  index: -1
+forearmRight
+  rotate: false
+  xy: 409, 1725
+  size: 154, 102
+  orig: 154, 102
+  offset: 0, 0
+  index: -1
+forearmLeft2
+  rotate: true
+  xy: 2, 1791
+  size: 36, 90
+  orig: 36, 90
+  offset: 0, 0
+  index: -1
+forearmRight2
+  rotate: true
+  xy: 2, 1791
+  size: 36, 90
+  orig: 36, 90
+  offset: 0, 0
+  index: -1
+headBottom
+  rotate: false
+  xy: 1546, 1668
+  size: 264, 159
+  orig: 264, 159
+  offset: 0, 0
+  index: -1
+headTop
+  rotate: false
+  xy: 2, 1487
+  size: 268, 238
+  orig: 268, 238
+  offset: 0, 0
+  index: -1
+legLeft
+  rotate: true
+  xy: 565, 1722
+  size: 105, 276
+  orig: 105, 276
+  offset: 0, 0
+  index: -1
+legRight
+  rotate: true
+  xy: 1285, 1669
+  size: 158, 259
+  orig: 158, 259
+  offset: 0, 0
+  index: -1
+lightning1
+  rotate: false
+  xy: 904, 1337
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+lightning2
+  rotate: false
+  xy: 2, 1006
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+lightning3
+  rotate: false
+  xy: 964, 333
+  size: 956, 339
+  orig: 956, 339
+  offset: 0, 0
+  index: -1
+lightning4
+  rotate: false
+  xy: 2, 2
+  size: 956, 339
+  orig: 956, 339
+  offset: 0, 0
+  index: -1
+lightning5
+  rotate: false
+  xy: 964, 1006
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+lightning6
+  rotate: false
+  xy: 964, 674
+  size: 960, 330
+  orig: 960, 330
+  offset: 0, 0
+  index: -1
+lightning7
+  rotate: false
+  xy: 2, 343
+  size: 960, 330
+  orig: 960, 330
+  offset: 0, 0
+  index: -1
+lightning8
+  rotate: false
+  xy: 2, 675
+  size: 960, 329
+  orig: 960, 329
+  offset: 0, 0
+  index: -1
+wristLeft
+  rotate: false
+  xy: 982, 1718
+  size: 159, 109
+  orig: 159, 109
+  offset: 0, 0
+  index: -1
+wristRight
+  rotate: false
+  xy: 1143, 1708
+  size: 140, 119
+  orig: 140, 119
+  offset: 0, 0
+  index: -1

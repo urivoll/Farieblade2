@@ -1,0 +1,204 @@
+{
+"skeleton": { "hash": "kYSr+VdTy6mDqxkhm/S8Gyo5wOg", "spine": "3.8.0", "x": -69.4, "y": -32.6, "width": 136.42, "height": 133.1 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "bone12", "parent": "root", "length": 198.65, "rotation": -103.96, "x": 67.64, "y": 176.35 },
+	{
+		"name": "bone20",
+		"parent": "bone12",
+		"x": 175.1,
+		"y": -29.87,
+		"scaleX": 1.6637,
+		"scaleY": 1.6637,
+		"transform": "noRotationOrReflection"
+	},
+	{ "name": "bone21", "parent": "bone20", "x": 5.19, "y": -10.92 },
+	{ "name": "bone22", "parent": "bone20", "x": 6.32, "y": -14.45 }
+],
+"slots": [
+	{ "name": "light", "bone": "bone21" },
+	{ "name": "light2", "bone": "bone22" },
+	{ "name": "fire1", "bone": "bone20", "attachment": "fire1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"light": {
+				"light": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 3, 0, 1, 2, 3 ],
+					"vertices": [ 1, 3, 58.26, -49.88, 1, 1, 3, -64.74, -49.88, 1, 1, 3, -64.74, 70.12, 1, 1, 3, 58.26, 70.12, 1 ],
+					"hull": 4
+				}
+			},
+			"light2": {
+				"light": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 3, 0, 1, 2, 3 ],
+					"vertices": [ 1, 4, 58.26, -49.88, 1, 1, 4, -64.74, -49.88, 1, 1, 4, -64.74, 70.12, 1, 1, 4, 58.26, 70.12, 1 ],
+					"hull": 4
+				}
+			},
+			"fire1": {
+				"fire1": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 42.45, -27.79, 1, 1, 2, -39.55, -27.79, 1, 1, 2, -39.55, 52.21, 1, 1, 2, 42.45, 52.21, 1 ],
+					"hull": 4
+				},
+				"fire2": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 30.45, -35.79, 1, 1, 2, -41.55, -35.79, 1, 1, 2, -41.55, 59.21, 1, 1, 2, 30.45, 59.21, 1 ],
+					"hull": 4
+				},
+				"fire3": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 28.45, -26.79, 1, 1, 2, -25.55, -26.79, 1, 1, 2, -25.55, 49.21, 1, 1, 2, 28.45, 49.21, 1 ],
+					"hull": 4
+				},
+				"fire4": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 32.45, -23.79, 1, 1, 2, -25.55, -23.79, 1, 1, 2, -25.55, 56.21, 1, 1, 2, 32.45, 56.21, 1 ],
+					"hull": 4
+				},
+				"fire5": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 34.45, -26.79, 1, 1, 2, -26.55, -26.79, 1, 1, 2, -26.55, 47.21, 1, 1, 2, 34.45, 47.21, 1 ],
+					"hull": 4
+				},
+				"fire6": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, 42.45, -35.79, 1, 1, 2, -44.55, -35.79, 1, 1, 2, -44.55, 44.21, 1, 1, 2, 42.45, 44.21, 1 ],
+					"hull": 4
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {
+		"slots": {
+			"fire1": {
+				"attachment": [
+					{ "name": "fire1" },
+					{ "time": 0.0667, "name": "fire2" },
+					{ "time": 0.1333, "name": "fire3" },
+					{ "time": 0.2, "name": "fire4" },
+					{ "time": 0.2667, "name": "fire5" },
+					{ "time": 0.3333, "name": "fire6" }
+				]
+			},
+			"light2": {
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"light": {
+				"attachment": [
+					{ "name": "light" }
+				]
+			}
+		},
+		"bones": {
+			"bone21": {
+				"scale": [
+					{},
+					{ "time": 0.1667, "x": 1.284, "y": 1.284 },
+					{ "time": 0.3333 }
+				]
+			},
+			"bone22": {
+				"scale": [
+					{},
+					{ "time": 0.1667, "x": 1.284, "y": 1.284 },
+					{ "time": 0.3333 }
+				]
+			}
+		}
+	},
+	"death": {
+		"slots": {
+			"fire1": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5333, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "fire1" },
+					{ "time": 0.0667, "name": "fire2" },
+					{ "time": 0.1333, "name": "fire3" },
+					{ "time": 0.2, "name": "fire4" },
+					{ "time": 0.2667, "name": "fire5" },
+					{ "time": 0.3333, "name": "fire1" },
+					{ "time": 0.4, "name": "fire2" },
+					{ "time": 0.4667, "name": "fire3" },
+					{ "time": 0.5333, "name": "fire4" },
+					{ "time": 0.6, "name": "fire5" },
+					{ "time": 0.6667, "name": "fire6" }
+				]
+			},
+			"light2": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.5667, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "light" }
+				]
+			},
+			"light": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1667, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "light" },
+					{ "time": 0.3333, "name": "light" }
+				]
+			}
+		},
+		"bones": {
+			"bone21": {
+				"scale": [
+					{},
+					{ "time": 0.1667, "x": 1.284, "y": 1.284 },
+					{ "time": 0.3333 },
+					{ "time": 0.5, "x": 1.284, "y": 1.284 },
+					{ "time": 0.6667 }
+				]
+			},
+			"bone22": {
+				"scale": [
+					{},
+					{ "time": 0.1667, "x": 1.147, "y": 1.147 },
+					{ "time": 0.2333, "x": 1.658, "y": 1.658 },
+					{ "time": 0.3, "x": 1.147, "y": 1.147 },
+					{ "time": 0.3667, "x": 1.658, "y": 1.658 },
+					{ "time": 0.4333, "x": 1.147, "y": 1.147 },
+					{ "time": 0.5, "x": 1.658, "y": 1.658 },
+					{ "time": 0.5667, "x": 1.5, "y": 1.5 },
+					{ "time": 0.6667, "x": 3, "y": 3 }
+				]
+			}
+		}
+	}
+}
+}
