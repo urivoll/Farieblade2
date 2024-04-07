@@ -9,6 +9,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
     //ÊÎÎÐÄÈÍÀÒÛ ÍÀ ÊÀÐÒÅ
     [HideInInspector] public int Side => _side;
     [HideInInspector] public int Place => _place;
+
     private int _side;
     private int _place;
 
