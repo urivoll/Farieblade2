@@ -31,11 +31,11 @@ public class DebuffPanelSpell : MonoBehaviour
     }
     public void SetSpell(int index)
     {
-        DoIt(Turns.unitChoose.GetComponent<Spells>().SpellList[index].GetComponent<AbstractSpell>());
+        DoIt(Turns.unitChoose.GetComponent<CharacterAbilities2>().SpellList[index].GetComponent<AbstractSpell>());
     }
     public void SetMode(int index)
     {
-        DoIt(Turns.unitChoose.GetComponent<Spells>().modeList[index].GetComponent<AbstractSpell>());
+        DoIt(Turns.unitChoose.GetComponent<CharacterAbilities2>().modeList[index].GetComponent<AbstractSpell>());
     }
     private void DoIt(AbstractSpell debuff2)
     {

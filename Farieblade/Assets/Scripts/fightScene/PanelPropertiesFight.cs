@@ -1,9 +1,7 @@
 using Spine.Unity;
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PanelPropertiesFight : MonoBehaviour
@@ -87,9 +85,9 @@ public class PanelPropertiesFight : MonoBehaviour
         imageFraction.sprite = Fraction[obj.fraction];
         imagePortrait.sprite = BG[obj.fraction];
         textFraction.text = Fractions[obj.fraction].intArray[PlayerData.language];
-        if (obj.transform.Find("Fight/Model").gameObject.GetComponent<Spells>() != null)
+        if (obj.transform.Find("Fight/Model").gameObject.GetComponent<CharacterAbilities2>() != null)
         {
-            Spells spells = obj.transform.Find("Fight/Model").gameObject.GetComponent<Spells>();
+            CharacterAbilities2 spells = obj.transform.Find("Fight/Model").gameObject.GetComponent<CharacterAbilities2>();
             for (int i = 0; i < spells.SpellList.Count; i++)
             {
                 spellListLocal[i].SetActive(true);

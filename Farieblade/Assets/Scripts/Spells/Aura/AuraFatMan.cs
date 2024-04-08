@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class AuraFatMan : Spells
+public class AuraFatMan : CharacterAbilities2
 {
     [SerializeField] private AudioClip clip;
     private float Value;

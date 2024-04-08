@@ -5227,7 +5227,6 @@ GameObject:
   - component: {fileID: 5240016771696048131}
   - component: {fileID: 5440558926237382471}
   - component: {fileID: 1813174559803281390}
-  - component: {fileID: 7312088863518749730}
   m_Layer: 0
   m_Name: Model
   m_TagString: Unit
@@ -5267,8 +5266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9ee33cf2185b541a1dfa64bc746538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sideOnMap: 0
-  placeOnMap: 0
   initiative: 40
   hp: 90
   hpBase: 0
@@ -5299,12 +5296,10 @@ MonoBehaviour:
   inpDamageType: 0
   soundVoiceStrike: []
   idDebuff: []
-  currentSkin: 0
-  Skins:
-  - {fileID: 7821559345300834659}
-  effects: []
   aura: {fileID: 0}
   indexVoice: 6
+  moved: 0
+  pushUnit: {fileID: 0}
 --- !u!61 &5440558926237382471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5350,25 +5345,6 @@ MonoBehaviour:
   attackEffect: {fileID: 0}
   timeBeforeShoot: 0.2
   newBullet: {fileID: 0}
---- !u!114 &7312088863518749730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5412389949374734649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e57c78734ac434d953795db7c2c42a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpellList:
-  - {fileID: 119200251819193186}
-  modeList: []
-  modeIndex: -1
-  effect: {fileID: 0}
-  effectBefore: {fileID: 0}
-  useSpell: {fileID: 2268632183144582270}
 --- !u!1 &5496571940342921100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5834,7 +5810,6 @@ MonoBehaviour:
   stateInGame: 0
   onMultiplayer: 0
   Model: {fileID: 0}
-  currentSkin: 0
   ImgDescription: {fileID: 21300000, guid: e17fac594b0306b44a27e95a4095bcc3, type: 3}
   presentAudio: []
 --- !u!222 &2234916983826294889
@@ -6583,11 +6558,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bce21c4666534114fa23ef309882c85f, type: 3}
---- !u!1 &119200251819193186 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7046058575070358576, guid: bce21c4666534114fa23ef309882c85f, type: 3}
-  m_PrefabInstance: {fileID: 6949013603692846930}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1820866250627359093 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8731036273170202151, guid: bce21c4666534114fa23ef309882c85f, type: 3}

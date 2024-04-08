@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-public class Spells : MonoBehaviour
+public class CharacterAbilities2 : MonoBehaviour
 {
     public List<GameObject> SpellList;
     public List<GameObject> modeList;

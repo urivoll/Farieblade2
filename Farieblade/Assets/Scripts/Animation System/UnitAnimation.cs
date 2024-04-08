@@ -1,46 +1,48 @@
 using Spine;
 using Spine.Unity;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitAnimation : MonoBehaviour
 {
     private SkeletonAnimation _skeletonAnimation;
-    public AnimationReferenceAsset _attack;
-    public AnimationReferenceAsset _idle, _hit, _death, _spell, _spell2, _spell3, _aura, _mode, _passive;
+    private IntentAnimation[] _animations;
+    public AnimationReferenceAsset _attack, _idle, _hit, _death, _spell, _spell2, _spell3, _aura, _mode, _passive;
     private TrackEntry animationEntry = null;
-    private UnitProperties UnitProp;
-    private void Awake()
+    private UnitProperties _model;
+    public void Init(IntentAnimation[] animations)
     {
-        UnitProp = transform.parent.GetComponent<UnitProperties>();
+        _animations = animations;
+        _model = GetComponent<UnitProperties>();
         _skeletonAnimation = GetComponent<SkeletonAnimation>();
     }
     public void SetCaracterState(string state)
     {
-        if (state.Equals("idle"))
-            SetAnimation(_idle, true);
-        else if (state.Equals("attack"))
-            SetAnimation(_attack, false);
-        else if (state.Equals("hit"))
-            SetAnimation(_hit, false);
-        else if (state.Equals("death"))
-            SetAnimation(_death, false);
-        else if (state.Equals("spell"))
-            SetAnimation(_spell, false);
-        else if (state.Equals("spell2"))
-            SetAnimation(_spell2, false);
-        else if (state.Equals("spell3"))
-            SetAnimation(_spell3, false);
-        else if (state.Equals("aura"))
-            SetAnimation(_aura, false);
-        else if (state.Equals("mode"))
-            SetAnimation(_mode, false);
-        else if (state.Equals("passive"))
-            SetAnimation(_passive, false);
+        if (state == "idle") SetAnimation(_idle, true);
+
+        else if (state == "attack") SetAnimation(_attack, false);
+
+        else if (state == "hit") SetAnimation(_hit, false);
+
+        else if (state == "death") SetAnimation(_death, false);
+
+        else if (state == "spell") SetAnimation(_spell, false);
+
+        else if (state == "spell2") SetAnimation(_spell2, false);
+
+        else if (state == "spell3") SetAnimation(_spell3, false);
+
+        else if (state == "aura") SetAnimation(_aura, false);
+
+        else if (state == "mode") SetAnimation(_mode, false);
+
+        else if (state == "passive") SetAnimation(_passive, false);
+
     }
 
     private void AnimationEntry_Complete(TrackEntry trackEntry)
     {
-        if (UnitProp != null && UnitProp.pathCircle.newObject != null && !UnitProp.resurect) SetCaracterState("idle");
+        if (_model != null && _model.pathCircle.newObject != null && !_model.resurect) SetCaracterState("idle");
     }
 
     //Установка анимации персонажа
