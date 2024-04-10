@@ -1,10 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
+public class UnitProperties : MonoBehaviour
 {
     // ŒŒ–ƒ»Õ¿“€ Õ¿  ¿–“≈
     [HideInInspector] public int Side => _side;
@@ -56,8 +54,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
     private GameObject slideDamage2;
     private Animator animatorCanvas;
     public Aura aura;
-    private bool workProperties = false;
-    private Coroutine workCoroutine;
+
     public int indexVoice;
     public bool moved = false;
     public UnitProperties pushUnit;
@@ -98,15 +95,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
         else if (state == 0 || state == 2) _melee = GetComponent<Melee>();
         HpDamage("none");
     }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (pathCircle.newObject == null ||
-            !eventData.pointerClick.GetComponent<UnitProperties>().allowHit ||
-            SideUnitUi.modeBlock == true || 
-            SideUnitUi.spell == -555) return;
-        StartIni.battleNetwork.AttackQuery(SideUnitUi.spell, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, Side, Place);
-        SideUnitUi.spell = -555;
-    }
+
     //œÓÎÛ˜ÂÌËÂ ÛÓÌ‡!
     public void SpellDamage(float inpDamage, int inpdamageType)
     {
@@ -161,7 +150,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
     //¿Ú‡Í‡
     public void AttackedUnit(UnitProperties unitTarget, List<MakeMove> attack)
     {
-        pathAnimation.SetCaracterState("attack");
+        pathAnimation.TryGetAnimation("attack");
         if (state == 1) StartCoroutine(_shooter.Shoot(unitTarget, this, attack));
         else
         {
@@ -177,11 +166,9 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
                         pushUnit = Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].newObject;
                         if (pushUnit.Side == 1) pushUnit.transform.localPosition += new Vector3(2f, 0, 0);
                         else pushUnit.transform.localPosition -= new Vector3(2f, 0, 0);
-                        //pushUnit.Skins[pushUnit.currentSkin].GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingLayerName = "Default";
                         newPosition = pushUnit.pathCircle.transform;
                         pathParent.transform.SetParent(pushUnit.GetComponent<UnitProperties>().pathCircle.transform);
                         pathParent.transform.localScale = new Vector2(1, 1);
-                        //transform.localScale = new Vector2(0.55f * pathCircle.intState, 0.55f);
                     }
                     else newPosition = Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].transform;
                 }
@@ -203,7 +190,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
         {
             if (inpDamage > 0)
             {
-                pathAnimation.SetCaracterState("hit");
+                pathAnimation.TryGetAnimation("hit");
                 StartIni.soundVoice.HitVoices(indexVoice, true);
             }
             return;
@@ -214,7 +201,8 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
             for (int i = 0; i < Turns.currentTryDeath.Count; i++)
             {
                 if (Side != Turns.currentTryDeath[i]["side"] ||
-                   Place != Turns.currentTryDeath[i]["place"]) continue;
+                   Place != Turns.currentTryDeath[i]["place"]) 
+                    continue;
                 Turns.tryDeath?.Invoke(this, Turns.currentTryDeath[i]);
             }
         }
@@ -225,7 +213,7 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
             pathParent.ID != 44 &&
             pathParent.fraction != 9)
             Invoke("BodyFallSound", 0.6f);
-        pathAnimation.SetCaracterState("death");
+        pathAnimation.TryGetAnimation("death");
         if (resurect) return;
         if (this == Turns.turnUnit) Turns.turnUnit = null;
         if (this == Turns.unitChoose) Turns.unitChoose = null;
@@ -240,37 +228,5 @@ public class UnitProperties : MonoBehaviour, IPointerClickHandler, IPointerDownH
     {
         BattleSound.sound.PlayOneShot(BattleSound.soundClip[2]);
         if (pathParent.Type == 3) StartIni.animatorShakeStatic.SetTrigger("shakeShort");
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Turns.unitChoose = this;
-        workCoroutine = StartCoroutine(PointDown());
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        if (workCoroutine == null) return;
-        StopCoroutine(workCoroutine);
-        StartIni.circleProperties.gameObject.SetActive(false);
-        workProperties = false;
-    }
-    private IEnumerator PointDown()
-    {
-        yield return new WaitForSeconds(0.2f);
-        workProperties = true;
-        StartIni.circleProperties.gameObject.SetActive(true);
-        StartIni.circleProperties.transform.position = pathBulletTarget.position;
-        StartIni.circleProperties.fillAmount = 0;
-        yield return new WaitForSeconds(0.3f);
-        workProperties = false;
-        StartIni.circleProperties.gameObject.SetActive(false);
-        workCoroutine = null;
-        StartIni.unitProperties.SetActive(true);
-        pathParent.ShowUnitProperties();
-    }
-    private void Update()
-    {
-        if (workProperties == true) StartIni.circleProperties.fillAmount = Mathf.Lerp(StartIni.circleProperties.fillAmount, 1, 8f * Time.deltaTime);
     }
 }

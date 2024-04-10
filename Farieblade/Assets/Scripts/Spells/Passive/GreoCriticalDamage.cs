@@ -48,7 +48,7 @@ public class GreoCriticalDamage : AbstractSpell
     public override IEnumerator AfterStep(Dictionary<string, int> inpData)
     {
         UnitProperties unit = Turns.circlesMap[inpData["side"], inpData["place"]].newObject;
-        unit.pathAnimation.SetCaracterState("passive");
+        unit.pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.3f);
         BattleSound.sound.PlayOneShot(clip);
         yield return new WaitForSeconds(0.1f);

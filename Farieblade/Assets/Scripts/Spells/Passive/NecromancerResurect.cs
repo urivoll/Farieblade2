@@ -39,7 +39,7 @@ public class NecromancerResurect : AbstractSpell
         int rand = Random.Range(0, 3);
         if (rand != 2) BattleSound.sound.PlayOneShot(voiceAfter[rand]);
         UnitProperties unit = Turns.circlesMap[inpData["sideTarget"], inpData["placeTarget"]].newObject;
-        parentUnit.pathAnimation.SetCaracterState("passive");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.2f);
         BattleSound.sound.PlayOneShot(swish);
         yield return new WaitForSeconds(0.1f);
@@ -48,7 +48,7 @@ public class NecromancerResurect : AbstractSpell
         yield return new WaitForSeconds(0.5f);
         unit.hp = 1;
         unit.HpDamage("hp");
-        unit.pathAnimation.SetCaracterState("idle");
+        unit.pathAnimation.TryGetAnimation("idle");
         unit.transform.parent.gameObject.transform.Find("Canvas").gameObject.GetComponent<Animator>().SetTrigger("start");
         yield return new WaitForSeconds(0.5f);
         unit.resurect = false;

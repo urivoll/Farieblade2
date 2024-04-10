@@ -20,7 +20,7 @@ public class SummonPassive : AbstractSpell
     }
     public override IEnumerator AfterStep(Dictionary<string, int> inpData)
     {
-        parentUnit.pathAnimation.SetCaracterState("death");
+        parentUnit.pathAnimation.TryGetAnimation("death");
         yield return new WaitForSeconds(0.5f);
         Turns.listUnitAll.Remove(parentUnit);
         if (parentUnit.Side == 0) Turns.listUnitLeft.Remove(parentUnit);

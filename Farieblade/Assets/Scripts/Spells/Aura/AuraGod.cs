@@ -13,7 +13,7 @@ public class AuraGod : Aura
     {
         if (inpData.ContainsKey("placeTarget"))
         {
-            parentUnit.pathAnimation.SetCaracterState("aura");
+            parentUnit.pathAnimation.TryGetAnimation("passive");
             yield return new WaitForSeconds(0.2f);
             BattleSound.sound.PlayOneShot(clip);
             yield return new WaitForSeconds(0.1f);
@@ -25,7 +25,7 @@ public class AuraGod : Aura
             newObject.pathParent.SetValues();
             newObject.Instantiate();
             yield return new WaitForSeconds(0.01f);
-            newObject.pathAnimation.SetCaracterState("aura");
+            newObject.pathAnimation.TryGetAnimation("passive");
             yield return new WaitForSeconds(0.2f);
             Instantiate(Effect, newObject.transform.Find("BulletTarget").position, Quaternion.identity);
             yield return new WaitForSeconds(0.2f);

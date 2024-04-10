@@ -14,7 +14,7 @@ public class AuraFatMan : CharacterAbilities2
     public IEnumerator SetAura2(int index)
     {
         Value = 0.2f + (transform.parent.transform.parent.GetComponent<Unit>().grade * 0.01f);
-        gameObject.GetComponent<UnitProperties>().pathAnimation.SetCaracterState("aura");
+        gameObject.GetComponent<UnitProperties>().pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.2f);
         BattleSound.sound.PlayOneShot(clip);
         yield return new WaitForSeconds(0.1f);

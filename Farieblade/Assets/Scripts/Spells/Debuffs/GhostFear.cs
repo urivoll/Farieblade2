@@ -41,6 +41,6 @@ public class GhostFear : AbstractSpell
     {
         parentUnit.paralize = true;
         Instantiate(Effect, parentUnit.pathBulletTarget.position, Quaternion.identity);
-        parentUnit.pathAnimation.SetCaracterState("hit");
+        parentUnit.pathAnimation.TryGetAnimation("hit");
     }
 }

@@ -29,7 +29,7 @@ public class FatManBash : AbstractSpell
     }
     public override void PeriodicMethod(Dictionary<string, int> inpData)
     {
-        parentUnit.pathAnimation.SetCaracterState("hit");
+        parentUnit.pathAnimation.TryGetAnimation("hit");
         parentUnit.paralize = true;
         Destroy(BashEffect);
         Destroy(gameObject);

@@ -13,7 +13,7 @@ public class AuraFermor : Aura
     {
         if (inpData.ContainsKey("placeTarget"))
         {
-            parentUnit.pathAnimation.SetCaracterState("aura");
+            parentUnit.pathAnimation.TryGetAnimation("passive");
             BattleSound.sound.PlayOneShot(auraLanch);
             yield return new WaitForSeconds(0.5f);
             BattleSound.sound.PlayOneShot(clip);
@@ -25,7 +25,7 @@ public class AuraFermor : Aura
             Instantiate(Effect, newObject.pathBulletTarget.position, Quaternion.identity);
             newObject.Instantiate();
             yield return new WaitForSeconds(0.02f);
-            newObject.pathAnimation.SetCaracterState("aura");
+            newObject.pathAnimation.TryGetAnimation("passive");
             yield return new WaitForSeconds(0.2f);
             BattleSound.sound.PlayOneShot(fall);
             yield return new WaitForSeconds(0.3f);

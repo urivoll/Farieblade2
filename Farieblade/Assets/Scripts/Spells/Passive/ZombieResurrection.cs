@@ -46,10 +46,10 @@ public class ZombieResurrection : AbstractSpell
         parentUnit.tag = "Unit";
         parentUnit.hp = 1;
         parentUnit.HpDamage("hp");
-        parentUnit.pathAnimation.SetCaracterState("passive");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         parentUnit.transform.parent.gameObject.transform.Find("Canvas").gameObject.GetComponent<Animator>().SetTrigger("start");
         yield return new WaitForSeconds(1.83f);
-        parentUnit.pathAnimation.SetCaracterState("idle");
+        parentUnit.pathAnimation.TryGetAnimation("idle");
         parentUnit.transform.Find("ZombieResurect").gameObject.SetActive(false);
         parentUnit.resurect = false;
         yield return new WaitForSeconds(0.5f);

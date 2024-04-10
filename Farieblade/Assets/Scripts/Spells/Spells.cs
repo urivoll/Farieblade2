@@ -39,7 +39,7 @@ public class CharacterAbilities2 : MonoBehaviour
         //Эффект
         if (currentSpell.state == "Effect")
         {
-            parentObject.pathAnimation.SetCaracterState(currentSpell.Animation);
+            parentObject.pathAnimation.TryGetAnimation(currentSpell.Animation);
             yield return new WaitForSeconds(currentSpell.timeBeforeShoot);
             if(currentSpell.soundMid != null) BattleSound.sound.PlayOneShot(currentSpell.soundMid);
             yield return new WaitForSeconds(0.1f);
@@ -54,7 +54,7 @@ public class CharacterAbilities2 : MonoBehaviour
         //Снаряд
         else if (currentSpell.state == "Ball")
         {
-            parentObject.pathAnimation.SetCaracterState(currentSpell.Animation);
+            parentObject.pathAnimation.TryGetAnimation(currentSpell.Animation);
             yield return new WaitForSeconds(currentSpell.timeBeforeShoot);
 
             int count = 0;
@@ -97,7 +97,7 @@ public class CharacterAbilities2 : MonoBehaviour
         {
             if (effectBefore != null) effectBefore.SetActive(true);
 
-            parentObject.pathAnimation.SetCaracterState(currentSpell.Animation);
+            parentObject.pathAnimation.TryGetAnimation(currentSpell.Animation);
             yield return new WaitForSeconds(currentSpell.timeBeforeShoot);
             currentSpell.BeforeHit();
             int count = 0;
@@ -122,7 +122,7 @@ public class CharacterAbilities2 : MonoBehaviour
         //Без цели
         else if (currentSpell.state == "nonTarget")
         {
-            parentObject.pathAnimation.SetCaracterState(currentSpell.Animation);
+            parentObject.pathAnimation.TryGetAnimation(currentSpell.Animation);
             StartCoroutine(currentSpell.HitEffect(inpData[0].hitEffectSend));
             while (!Turns.hitDone) yield return null;
             PlayDoneSound(currentSpell);
@@ -131,7 +131,7 @@ public class CharacterAbilities2 : MonoBehaviour
     public void SetState(int i)
     {
         modeIndex = i;
-        if (parentObject.pathAnimation._mode != null) parentObject.pathAnimation.SetCaracterState("mode");
+        parentObject.pathAnimation.TryGetAnimation("mode");
         if (modeList[i].GetComponent<AbstractSpell>().soundMid != null) BattleSound.sound.PlayOneShot(modeList[i].GetComponent<AbstractSpell>().soundMid);
         Instantiate(modeList[i], parentObject.pathDebuffs);
     }

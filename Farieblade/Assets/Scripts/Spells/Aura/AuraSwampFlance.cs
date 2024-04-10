@@ -6,7 +6,7 @@ public class AuraSwampFlance : Aura
     [SerializeField] private AudioClip clip;
     public override IEnumerator GetAura(Dictionary<string, int> inpData)
     {
-        parentUnit.pathAnimation.SetCaracterState("aura");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.2f);
         BattleSound.sound.PlayOneShot(clip);
         yield return new WaitForSeconds(0.1f);

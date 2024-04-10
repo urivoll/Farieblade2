@@ -29,7 +29,7 @@ public class MoonMagePass : AbstractSpell
     {
         int rand = Random.Range(0, 3);
         if (rand != 2) BattleVoice.voiceSource.PlayOneShot(voiceAfter[rand]);
-        parentUnit.pathAnimation.SetCaracterState("passive");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.6f);
         StartIni.soundVoice.StrikeVoices(fromUnit.Model.indexVoice);
         BattleSound.sound.PlayOneShot(soundMid);

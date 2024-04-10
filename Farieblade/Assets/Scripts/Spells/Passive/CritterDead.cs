@@ -28,7 +28,7 @@ public class CritterDead : AbstractSpell
     {
         if(parentUnit.pathCircle.newObject != null)
         {
-            parentUnit.pathAnimation.SetCaracterState("passive");
+            parentUnit.pathAnimation.TryGetAnimation("passive");
             BattleSound.sound.PlayOneShot(swish);
             yield return new WaitForSeconds(0.3f);
             if (inpData["catch"] == 0)

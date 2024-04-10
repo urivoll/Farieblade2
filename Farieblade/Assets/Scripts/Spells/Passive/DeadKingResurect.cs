@@ -34,7 +34,7 @@ public class DeadKingResurect : AbstractSpell
     {
         int rand = Random.Range(0, 3);
         if (rand != 2) BattleSound.sound.PlayOneShot(voiceAfter[rand]);
-        parentUnit.pathAnimation.SetCaracterState("passive");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         BattleSound.sound.PlayOneShot(soulSound);
         BattleSound.sound.PlayOneShot(swish);
         yield return new WaitForSeconds(0.3f);

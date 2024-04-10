@@ -27,7 +27,7 @@ public class CerberusDamage : AbstractSpell
     public override IEnumerator AfterStep(Dictionary<string, int> inpData)
     {
         BattleSound.sound.PlayOneShot(soundMid);
-        parentUnit.pathAnimation.SetCaracterState("passive");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.3f);
         parentUnit.damage = inpData["damagePlus"];
         Instantiate(Effect2, parentUnit.pathBulletTarget.position, Quaternion.identity);

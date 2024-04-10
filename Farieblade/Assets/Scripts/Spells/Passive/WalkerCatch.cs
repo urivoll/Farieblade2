@@ -31,7 +31,7 @@ public class WalkerCatch : AbstractSpell
                 inpData[i]["place"] == parentUnit.Place &&
                 inpData[i]["debuffId"] == id)
             {
-                parentUnit.pathAnimation.SetCaracterState("spell");
+                parentUnit.pathAnimation.TryGetAnimation("spell");
                 from.gameObject.GetComponent<Shooter>().newBullet.gameObject.AddComponent<WalkerDebuff>();
                 from.gameObject.GetComponent<Shooter>().newBullet.damage = inpData[i]["damage"];
             }

@@ -48,7 +48,7 @@ public class RiderPassive : AbstractSpell
     }
     public override IEnumerator AfterStep(Dictionary<string, int> inpData)
     {
-        parentUnit.pathAnimation.SetCaracterState("spell");
+        parentUnit.pathAnimation.TryGetAnimation("spell");
         yield return new WaitForSeconds(0.2f);
         BattleSound.sound.PlayOneShot(swish);
         yield return new WaitForSeconds(0.1f);

@@ -8,7 +8,7 @@ public class AuraLightWizard : Aura
     [SerializeField] private GameObject effect;
     public override IEnumerator GetAura(Dictionary<string, int> inpData)
     {
-        parentUnit.pathAnimation.SetCaracterState("aura");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         BattleSound.sound.PlayOneShot(clip);
         yield return new WaitForSeconds(0.3f);
         BattleSound.sound.PlayOneShot(clip2);

@@ -43,7 +43,7 @@ public class RockDefend : AbstractSpell
     {
         yield return new WaitForSeconds(0.01f);
         if(parentUnit.hp > 0)
-            parentUnit.pathAnimation.SetCaracterState("passive");
+            parentUnit.pathAnimation.TryGetAnimation("passive");
     }
     public override void EndDebuff()
     {

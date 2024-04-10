@@ -9,7 +9,7 @@ public class AuraElectric : Aura
     [SerializeField] private AudioClip swish2;
     public override IEnumerator GetAura(Dictionary<string, int> inpData)
     {
-        parentUnit.pathAnimation.SetCaracterState("aura");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         yield return new WaitForSeconds(0.2f);
         BattleSound.sound.PlayOneShot(swish);
         yield return new WaitForSeconds(0.1f);

@@ -69,7 +69,7 @@ public class DuelistPassive : AbstractSpell
     public override IEnumerator AfterStep(Dictionary<string, int> inpData)
     {
 
-        parentUnit.pathAnimation.SetCaracterState("passive");
+        parentUnit.pathAnimation.TryGetAnimation("passive");
         BattleSound.sound.PlayOneShot(SwishBefore);
         parentUnit.transform.Find("AttackSwish").gameObject.SetActive(true);
         yield return new WaitForSeconds(0.3f);
@@ -84,7 +84,7 @@ public class DuelistPassive : AbstractSpell
     private void Block()
     {
         if (parentUnit.hp > 0)
-            parentUnit.pathAnimation.SetCaracterState("mode");
+            parentUnit.pathAnimation.TryGetAnimation("mode");
     }
     public override void EndDebuff()
     {
