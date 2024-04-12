@@ -70,14 +70,6 @@ public class EndFight : MonoBehaviour
             _lostTable.SetActive(true);
             BattleSound.sound.PlayOneShot(_clipLose);
         }
-        Turns.numberTurn = 1;
-        Turns.listUnitAll.Clear();
-        //Turns.eventEndCard.Clear();
-        Turns.listUnitLeft.Clear();
-        Turns.listUnitRight.Clear();
-        Turns.listUnitEnemy.Clear();
-        Turns.listUnitOur.Clear();
-        Turns.listFinishRight.Clear();
         Turns.finishEndEvent = false;
         if(LoadingManager.LoadingScreenAfterSprite != null)
         {

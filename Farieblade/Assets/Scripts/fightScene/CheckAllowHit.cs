@@ -1,10 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 public class CheckAllowHit : MonoBehaviour
 {
     private int sideOur;
     private int sideEnemy;
     private bool spell;
     private int state;
+    private CharacterPlacement _characterPlacement;
+
+    [Inject]
+    private void Construct(CharacterPlacement characterPlacement)
+    {
+        _characterPlacement = characterPlacement;
+    }
     public void CheckUnit(int state, bool spell, bool notMe = false)
     {
         this.state = state;
@@ -17,41 +26,41 @@ public class CheckAllowHit : MonoBehaviour
         if (state == 0)
         {
             //Проверка верхнего ближника
-            if (Turns.turnUnit.pathCircle == Turns.circlesMap[sideOur, 0])
+            if (Turns.turnUnit.pathCircle == _characterPlacement.CirclesMap[sideOur, 0])
             {
                 int count = 0;
-                if (Turns.circlesMap[sideEnemy, 0].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 0].newObject != null)
                 {
                     MayHit(0);
                     count++;
                 }
-                if (Turns.circlesMap[sideEnemy, 2].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 2].newObject != null)
                 {
                     MayHit(2);
                     count++;
                 }
                 if (count == 0)
                 {
-                    if (Turns.circlesMap[sideEnemy, 4].newObject != null)
+                    if (_characterPlacement.CirclesMap[sideEnemy, 4].newObject != null)
                     {
                         MayHit(4);
                     }
                     else
                     {
                         count = 0;
-                        if (Turns.circlesMap[sideEnemy, 1].newObject != null)
+                        if (_characterPlacement.CirclesMap[sideEnemy, 1].newObject != null)
                         {
                             MayHit(1);
                             count++;
                         }
-                        if (Turns.circlesMap[sideEnemy, 3].newObject != null)
+                        if (_characterPlacement.CirclesMap[sideEnemy, 3].newObject != null)
                         {
                             MayHit(3);
                             count++;
                         }
                         if (count == 0)
                         {
-                            if (Turns.circlesMap[sideEnemy, 5].newObject != null)
+                            if (_characterPlacement.CirclesMap[sideEnemy, 5].newObject != null)
                             {
                                 MayHit(5);
                             }
@@ -60,41 +69,41 @@ public class CheckAllowHit : MonoBehaviour
                 }
             }
             //Проверка нижнего ближника правого
-            if (Turns.turnUnit.pathCircle == Turns.circlesMap[sideOur, 4])
+            if (Turns.turnUnit.pathCircle == _characterPlacement.CirclesMap[sideOur, 4])
             {
                 int count = 0;
-                if (Turns.circlesMap[sideEnemy, 4].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 4].newObject != null)
                 {
                     MayHit(4);
                     count++;
                 }
-                if (Turns.circlesMap[sideEnemy, 2].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 2].newObject != null)
                 {
                     MayHit(2);
                     count++;
                 }
                 if (count == 0)
                 {
-                    if (Turns.circlesMap[sideEnemy, 0].newObject != null)
+                    if (_characterPlacement.CirclesMap[sideEnemy, 0].newObject != null)
                     {
                         MayHit(0);
                     }
                     else
                     {
                         count = 0;
-                        if (Turns.circlesMap[sideEnemy, 5].newObject != null)
+                        if (_characterPlacement.CirclesMap[sideEnemy, 5].newObject != null)
                         {
                             MayHit(5);
                             count++;
                         }
-                        if (Turns.circlesMap[sideEnemy, 3].newObject != null)
+                        if (_characterPlacement.CirclesMap[sideEnemy, 3].newObject != null)
                         {
                             MayHit(3);
                             count++;
                         }
                         if (count == 0)
                         {
-                            if (Turns.circlesMap[sideEnemy, 1].newObject != null)
+                            if (_characterPlacement.CirclesMap[sideEnemy, 1].newObject != null)
                             {
                                 MayHit(1);
                             }
@@ -103,35 +112,35 @@ public class CheckAllowHit : MonoBehaviour
                 }
             }
             //Проверка среднего ближника правого
-            if (Turns.turnUnit.pathCircle == Turns.circlesMap[sideOur, 2])
+            if (Turns.turnUnit.pathCircle == _characterPlacement.CirclesMap[sideOur, 2])
             {
                 int count = 0;
-                if (Turns.circlesMap[sideEnemy, 0].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 0].newObject != null)
                 {
                     MayHit(0);
                     count++;
                 }
-                if (Turns.circlesMap[sideEnemy, 2].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 2].newObject != null)
                 {
                     MayHit(2);
                     count++;
                 }
-                if (Turns.circlesMap[sideEnemy, 4].newObject != null)
+                if (_characterPlacement.CirclesMap[sideEnemy, 4].newObject != null)
                 {
                     MayHit(4);
                     count++;
                 }
                 if (count == 0)
                 {
-                    if (Turns.circlesMap[sideEnemy, 1].newObject != null)
+                    if (_characterPlacement.CirclesMap[sideEnemy, 1].newObject != null)
                     {
                         MayHit(1);
                     }
-                    if (Turns.circlesMap[sideEnemy, 3].newObject != null)
+                    if (_characterPlacement.CirclesMap[sideEnemy, 3].newObject != null)
                     {
                         MayHit(3);
                     }
-                    if (Turns.circlesMap[sideEnemy, 5].newObject != null)
+                    if (_characterPlacement.CirclesMap[sideEnemy, 5].newObject != null)
                     {
                         MayHit(5);
                     }
@@ -141,15 +150,15 @@ public class CheckAllowHit : MonoBehaviour
         //ДАЛЬНИК
         else if (state == 1)
         {
-            for (int i = 0; i < 6; i++) if (Turns.circlesMap[sideEnemy, i].newObject != null) MayHit(i);
+            for (int i = 0; i < 6; i++) if (_characterPlacement.CirclesMap[sideEnemy, i].newObject != null) MayHit(i);
         }
         //БАФФ
         else if (state == 2)
         {
             for (int i = 0; i < 6; i++)
             {
-                if (Turns.circlesMap[sideOur, i].newObject == null) continue;
-                if (notMe && Turns.circlesMap[sideOur, i] != Turns.turnUnit) MayHit(i);
+                if (_characterPlacement.CirclesMap[sideOur, i].newObject == null) continue;
+                if (notMe && _characterPlacement.CirclesMap[sideOur, i] != Turns.turnUnit) MayHit(i);
             }
         }
     }
@@ -158,32 +167,32 @@ public class CheckAllowHit : MonoBehaviour
     {
         if (Turns.turnUnit.Side == BattleNetwork.sideOnBattle && PlayerData.ai != 2)
         {
-            if (spell == false && state != 2) Turns.circlesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleEnemy");
+            if (spell == false && state != 2) _characterPlacement.CirclesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleEnemy");
             else
             {
-                if(state != 2) Turns.circlesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleSpell");
-                else if(Turns.circlesMap[sideOur, index].newObject != Turns.turnUnit) Turns.circlesMap[sideOur, index].PathAnimation.SetCaracterState("circleSpell");
+                if(state != 2) _characterPlacement.CirclesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleSpell");
+                else if(_characterPlacement.CirclesMap[sideOur, index].newObject != Turns.turnUnit) _characterPlacement.CirclesMap[sideOur, index].PathAnimation.SetCaracterState("circleSpell");
             }
         }
         if (state != 2)
         {
-            Turns.circlesMap[sideEnemy, index].newObject.allowHit = true;
-            Turns.listAllowHit.Add(Turns.circlesMap[sideEnemy, index].newObject);
+            _characterPlacement.CirclesMap[sideEnemy, index].newObject.allowHit = true;
+            Turns.listAllowHit.Add(_characterPlacement.CirclesMap[sideEnemy, index].newObject);
         }
         else
         {
-            Turns.circlesMap[sideOur, index].newObject.allowHit = true;
-            Turns.listAllowHit.Add(Turns.circlesMap[sideOur, index].newObject);
+            _characterPlacement.CirclesMap[sideOur, index].newObject.allowHit = true;
+            Turns.listAllowHit.Add(_characterPlacement.CirclesMap[sideOur, index].newObject);
         }
     }
     //Возврат анимации всех кругов в idle
     public void TurnOver()
     {
-        for (int i = 0; i < Turns.listUnitAll.Count; i++)
+        for (int i = 0; i < _characterPlacement.UnitAll.Count; i++)
         {
-            if (!Turns.listUnitAll[i].allowHit) continue;
-            Turns.listUnitAll[i].pathCircle.PathAnimation.SetCaracterState("idle");
-            Turns.listUnitAll[i].allowHit = false;
+            if (!_characterPlacement.UnitAll[i].allowHit) continue;
+            _characterPlacement.UnitAll[i].pathCircle.PathAnimation.SetCaracterState("idle");
+            _characterPlacement.UnitAll[i].allowHit = false;
         }
     }
     public void TurnUnitEffect()
@@ -193,11 +202,11 @@ public class CheckAllowHit : MonoBehaviour
     }
     public void Clear()
     {
-        for (int i = 0; i < Turns.listUnitAll.Count; i++)
+        for (int i = 0; i < _characterPlacement.UnitAll.Count; i++)
         {
-            if (Turns.listUnitAll[i] == Turns.turnUnit) continue;
-            Turns.listUnitAll[i].pathCircle.PathAnimation.SetCaracterState("idle");
-            Turns.listUnitAll[i].allowHit = false;
+            if (_characterPlacement.UnitAll[i] == Turns.turnUnit) continue;
+            _characterPlacement.UnitAll[i].pathCircle.PathAnimation.SetCaracterState("idle");
+            _characterPlacement.UnitAll[i].allowHit = false;
         }
     }
 }

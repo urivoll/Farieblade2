@@ -3,17 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 public class BattleAI : MonoBehaviour
 {
+    private CharacterPlacement _characterPlacement;
+    private DefendReference _defendReference;
     private int magic;
-    List<UnitProperties> allow = new();
+    private List<UnitProperties> allow = new();
+
+    [Inject]
+    private void Construct(CharacterPlacement characterPlacement, DefendReference defendReference)
+    {
+        _characterPlacement = characterPlacement;
+        _defendReference = defendReference;
+    }
+
     public void AI0()
     {
         if (!AI()) return;
         if (Turns.listAllowHit.Count == 0 || Turns.turnUnit.pathParent.state == 3 || Turns.turnUnit.pathParent.state == 4)
         {
-            GetComponent<Turns>().Defend();
+            //_defendReference.Defend();
             return;
         }
         //œÓËÒÍ ÔÓ ‚‡Ì¯ÓÚÛ
@@ -48,7 +59,7 @@ public class BattleAI : MonoBehaviour
             }
         }
         if (!have) Turns.unitChoose = SeekMaxMinDamageHpUnit(Turns.listAllowHit, "max", "damage");
-        StartIni.battleNetwork.AttackQuery(-666, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, Turns.unitChoose.Side, Turns.unitChoose.Place);
+        //StartIni.battleNetwork.AttackQuery(-666, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, Turns.unitChoose.Side, Turns.unitChoose.Place);
     }
 
     public bool AI()
@@ -78,17 +89,17 @@ public class BattleAI : MonoBehaviour
         //Poison Flance
         else if (Turns.turnUnit.pathParent.ID == 33)
         {
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                List<GameObject> effects = Turns.listUnitEnemy[i].idDebuff;
+                List<GameObject> effects = _characterPlacement.UnitEnemy[i].idDebuff;
                 for (int i2 = 0; i2 < effects.Count; i2++)
                 {
                     AbstractSpell Buff = effects[i2].GetComponent<AbstractSpell>();
                     if (Buff.id == 31 || 
                         Buff.id == 16 ||
-                        spells[2].GetComponent<VenomFlancePassive>().Value * 2 >= Turns.listUnitEnemy[i].hp)
+                        spells[2].GetComponent<VenomFlancePassive>().Value * 2 >= _characterPlacement.UnitEnemy[i].hp)
                     {
-                        UseSpell(Turns.listUnitEnemy[0], 1);
+                        UseSpell(_characterPlacement.UnitEnemy[0], 1);
                         return false;
                     }
                 }
@@ -114,19 +125,19 @@ public class BattleAI : MonoBehaviour
                 UseSpell(maxCountUnit, 0);
                 return false;
             }
-            UseSpell(Turns.listUnitEnemy[0], 1);
+            UseSpell(_characterPlacement.UnitEnemy[0], 1);
             return false;
         }
         //¡ÓÎÓÚÌ˚È ÙÎÂÌˆ
         else if (Turns.turnUnit.pathParent.ID == 34)
         {
             bool need = false;
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].pathParent.damageType == 0 ||
-                    Turns.listUnitEnemy[i].pathParent.damageType == 6 ||
-                    Turns.listUnitEnemy[i].pathParent.damageType == 1 ||
-                    Turns.listUnitEnemy[i].pathParent.damageType == 3)
+                if (_characterPlacement.UnitEnemy[i].pathParent.damageType == 0 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.damageType == 6 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.damageType == 1 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.damageType == 3)
                 {
                     need = true;
                     break;
@@ -134,11 +145,11 @@ public class BattleAI : MonoBehaviour
             }
             if (need)
             {
-                for (int i = 0; i < Turns.listUnitOur.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
                 {
-                    if (!Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 22))
+                    if (!_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 22))
                     {
-                        UseSpell(Turns.listUnitOur[i], 0);
+                        UseSpell(_characterPlacement.UnitOur[i], 0);
                         return false;
                     }
                 }
@@ -148,9 +159,9 @@ public class BattleAI : MonoBehaviour
         //Dwarf!
         else if (Turns.turnUnit.pathParent.ID == 20)
         {
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                List<GameObject> Effects = Turns.listUnitOur[i].idDebuff;
+                List<GameObject> Effects = _characterPlacement.UnitOur[i].idDebuff;
                 int count = 0;
                 for (int i2 = 0; i2 < Effects.Count; i2++)
                 {
@@ -170,7 +181,7 @@ public class BattleAI : MonoBehaviour
                             Debuff.id == 21 ||
                             count >= 3)
                         {
-                            UseSpell(Turns.listUnitOur[i], 2);
+                            UseSpell(_characterPlacement.UnitOur[i], 2);
                             return false;
                         }
                     }
@@ -179,11 +190,11 @@ public class BattleAI : MonoBehaviour
             int rand = Random.Range(0, 101);
             if (rand >= 80)
             {
-                for (int i = 0; i < Turns.listUnitOur.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
                 {
-                    if (Turns.listUnitOur[i] != Turns.turnUnit)
+                    if (_characterPlacement.UnitOur[i] != Turns.turnUnit)
                     {
-                        UseSpell(Turns.listUnitOur[i], 1);
+                        UseSpell(_characterPlacement.UnitOur[i], 1);
                         return false;
                     }
                 }
@@ -192,12 +203,12 @@ public class BattleAI : MonoBehaviour
             {
                 int maxDamage = 0;
                 UnitProperties maxDamageUnit = null;
-                for (int i = 0; i < Turns.listUnitOur.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
                 {
-                    if (Turns.listUnitOur[i].damage > maxDamage)
+                    if (_characterPlacement.UnitOur[i].damage > maxDamage)
                     {
-                        maxDamage = Turns.listUnitOur[i].damage * Turns.listUnitOur[i].times;
-                        maxDamageUnit = Turns.listUnitOur[i];
+                        maxDamage = _characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].times;
+                        maxDamageUnit = _characterPlacement.UnitOur[i];
                     }
                 }
                 if (maxDamage == 0) return true;
@@ -214,9 +225,9 @@ public class BattleAI : MonoBehaviour
             int rand = Random.Range(0, 101);
             if (rand >= 40)
             {
-                for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
                 {
-                    List<GameObject> Effects = Turns.listUnitEnemy[i].idDebuff;
+                    List<GameObject> Effects = _characterPlacement.UnitEnemy[i].idDebuff;
                     int count = 0;
                     for (int i2 = 0; i2 < Effects.Count; i2++)
                     {
@@ -233,7 +244,7 @@ public class BattleAI : MonoBehaviour
                                 Debuff.id == 36 ||
                                 count >= 3)
                             {
-                                UseSpell(Turns.listUnitEnemy[i], 1);
+                                UseSpell(_characterPlacement.UnitEnemy[i], 1);
                                 return false;
                             }
                         }
@@ -241,10 +252,10 @@ public class BattleAI : MonoBehaviour
                 }
             }
             bool have = false;
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].pathParent.state == 2 ||
-                    Turns.listUnitEnemy[i].pathParent.state == 1)
+                if (_characterPlacement.UnitEnemy[i].pathParent.state == 2 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.state == 1)
                 {
                     have = true;
                     break;
@@ -254,35 +265,35 @@ public class BattleAI : MonoBehaviour
 
             int minDamage = 10000;
             UnitProperties minDamageUnit = null;
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (!Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 34) &&
-                    Turns.listUnitOur[i].damage < minDamage)
+                if (!_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 34) &&
+                    _characterPlacement.UnitOur[i].damage < minDamage)
                 {
-                    minDamage = Turns.listUnitOur[i].damage;
-                    minDamageUnit = Turns.listUnitOur[i];
+                    minDamage = _characterPlacement.UnitOur[i].damage;
+                    minDamageUnit = _characterPlacement.UnitOur[i];
                 }
             }
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if ((Turns.listUnitEnemy[i].pathParent.state == 1 ||
-                    Turns.listUnitEnemy[i].pathParent.state == 2) &&
-                    Turns.listUnitEnemy[i].damage > minDamageUnit.damage)
+                if ((_characterPlacement.UnitEnemy[i].pathParent.state == 1 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.state == 2) &&
+                    _characterPlacement.UnitEnemy[i].damage > minDamageUnit.damage)
                 {
                     UseSpell(minDamageUnit, 0);
                     return false;
                 }
             }
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                List<GameObject> effects = Turns.listUnitEnemy[i].idDebuff;
+                List<GameObject> effects = _characterPlacement.UnitEnemy[i].idDebuff;
                 for (int i2 = 0; i2 < effects.Count; i2++)
                 {
                     AbstractSpell debuff = effects[i2].GetComponent<AbstractSpell>();
                     if (debuff.Type == "Buff")
                     {
                         {
-                            UseSpell(Turns.listUnitEnemy[i], 1);
+                            UseSpell(_characterPlacement.UnitEnemy[i], 1);
                             return false;
                         }
                     }
@@ -293,14 +304,14 @@ public class BattleAI : MonoBehaviour
         //Duelist
         else if (Turns.turnUnit.pathParent.ID == 30)
         {
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].pathEnergy.energy >= Turns.listUnitEnemy[i].pathParent.Energy—onsumption)
+                if (_characterPlacement.UnitEnemy[i].pathEnergy.energy >= _characterPlacement.UnitEnemy[i].pathParent.Energy—onsumption)
                 {
-                    if (Turns.listUnitEnemy[i].pathParent.state == 1 ||
-                        Turns.listUnitEnemy[i].pathParent.state == 2)
+                    if (_characterPlacement.UnitEnemy[i].pathParent.state == 1 ||
+                        _characterPlacement.UnitEnemy[i].pathParent.state == 2)
                     {
-                        UseSpell(Turns.listUnitEnemy[i], 1);
+                        UseSpell(_characterPlacement.UnitEnemy[i], 1);
                         return false;
                     }
                 }
@@ -322,14 +333,14 @@ public class BattleAI : MonoBehaviour
             int maxDamage = 0;
             UnitProperties maxDamageUnit = null;
             bool have = false;
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                List<GameObject> effects = Turns.listUnitEnemy[i].idDebuff;
-                if (Turns.listUnitEnemy[i].damage > maxDamage &&
+                List<GameObject> effects = _characterPlacement.UnitEnemy[i].idDebuff;
+                if (_characterPlacement.UnitEnemy[i].damage > maxDamage &&
                     !effects.Any(item => item.GetComponent<AbstractSpell>().id == 18))
                 {
-                    maxDamage = Turns.listUnitEnemy[i].damage * Turns.listUnitEnemy[i].pathParent.times;
-                    maxDamageUnit = Turns.listUnitEnemy[i];
+                    maxDamage = _characterPlacement.UnitEnemy[i].damage * _characterPlacement.UnitEnemy[i].pathParent.times;
+                    maxDamageUnit = _characterPlacement.UnitEnemy[i];
                 }
                 for (int i2 = 0; i2 < effects.Count; i2++)
                 {
@@ -340,7 +351,7 @@ public class BattleAI : MonoBehaviour
             }
             if (have == false)
             {
-                UseSpell(Turns.listUnitEnemy[0], 0);
+                UseSpell(_characterPlacement.UnitEnemy[0], 0);
                 return false;
             }
             UseSpell(maxDamageUnit, 1);
@@ -349,14 +360,14 @@ public class BattleAI : MonoBehaviour
         //LizardWarrior
         else if (Turns.turnUnit.pathParent.ID == 17)
         {
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].pathParent.state == 1 ||
-                    Turns.listUnitEnemy[i].pathParent.state == 2 ||
-                    Turns.listUnitEnemy[i].pathParent.state == 3 ||
-                    Turns.listUnitEnemy[i].pathParent.state == 4)
+                if (_characterPlacement.UnitEnemy[i].pathParent.state == 1 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.state == 2 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.state == 3 ||
+                    _characterPlacement.UnitEnemy[i].pathParent.state == 4)
                 {
-                    UseSpell(Turns.listUnitEnemy[i], 0);
+                    UseSpell(_characterPlacement.UnitEnemy[i], 0);
                     return false;
                 }
             }
@@ -367,13 +378,13 @@ public class BattleAI : MonoBehaviour
         {
             int maxDamage = 0;
             UnitProperties maxDamageUnit = null;
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                List<GameObject> effects = Turns.listUnitOur[i].idDebuff;
-                if (!effects.Any(item => item.GetComponent<AbstractSpell>().id == 29) && Turns.listUnitOur[i].damage * Turns.listUnitOur[i].times > maxDamage)
+                List<GameObject> effects = _characterPlacement.UnitOur[i].idDebuff;
+                if (!effects.Any(item => item.GetComponent<AbstractSpell>().id == 29) && _characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].times > maxDamage)
                 {
-                    maxDamage = Turns.listUnitOur[i].damage * Turns.listUnitOur[i].times;
-                    maxDamageUnit = Turns.listUnitOur[i];
+                    maxDamage = _characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].times;
+                    maxDamageUnit = _characterPlacement.UnitOur[i];
                 }
             }
             if (maxDamageUnit != null)
@@ -386,19 +397,19 @@ public class BattleAI : MonoBehaviour
         //God
         else if (Turns.turnUnit.pathParent.ID == 14)
         {
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (Turns.listUnitOur[i].hpProsent <= 65 &&
-                    !Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 36))
+                if (_characterPlacement.UnitOur[i].hpProsent <= 65 &&
+                    !_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 36))
                 {
-                    UseSpell(Turns.listUnitOur[i], 0);
+                    UseSpell(_characterPlacement.UnitOur[i], 0);
                     return false;
                 }
             }
             bool have = false;
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (Turns.listUnitOur[i].pathParent.ID == 44)
+                if (_characterPlacement.UnitOur[i].pathParent.ID == 44)
                 {
                     have = true;
                     break;
@@ -408,13 +419,13 @@ public class BattleAI : MonoBehaviour
             {
                 int maxDamage = 0;
                 UnitProperties maxDamageUnit = null;
-                for (int i = 0; i < Turns.listUnitOur.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
                 {
-                    List<GameObject> effects = Turns.listUnitOur[i].idDebuff;
-                    if (Turns.listUnitOur[i].pathParent.ID != 44 && !effects.Any(item => item.GetComponent<AbstractSpell>().id == 37) && Turns.listUnitOur[i].damage > maxDamage)
+                    List<GameObject> effects = _characterPlacement.UnitOur[i].idDebuff;
+                    if (_characterPlacement.UnitOur[i].pathParent.ID != 44 && !effects.Any(item => item.GetComponent<AbstractSpell>().id == 37) && _characterPlacement.UnitOur[i].damage > maxDamage)
                     {
-                        maxDamage = Turns.listUnitOur[i].damage;
-                        maxDamageUnit = Turns.listUnitOur[i];
+                        maxDamage = _characterPlacement.UnitOur[i].damage;
+                        maxDamageUnit = _characterPlacement.UnitOur[i];
                     }
                 }
                 if (maxDamageUnit != null)
@@ -423,12 +434,12 @@ public class BattleAI : MonoBehaviour
                     return false;
                 }
             }
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (Turns.listUnitOur[i].hpProsent <= 90 &&
-                    !Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 36))
+                if (_characterPlacement.UnitOur[i].hpProsent <= 90 &&
+                    !_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 36))
                 {
-                    UseSpell(Turns.listUnitOur[i], 0);
+                    UseSpell(_characterPlacement.UnitOur[i], 0);
                     return false;
                 }
             }
@@ -437,28 +448,28 @@ public class BattleAI : MonoBehaviour
         //Fermor
         else if (Turns.turnUnit.pathParent.ID == 10)
         {
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {       //¬‡ÏÔËËÍ
-                if (((Turns.listUnitEnemy[i].hpProsent <= 70 && (Turns.listUnitEnemy[i].pathParent.ID == 35 || Turns.listUnitEnemy[i].pathParent.ID == 8)) ||
+                if (((_characterPlacement.UnitEnemy[i].hpProsent <= 70 && (_characterPlacement.UnitEnemy[i].pathParent.ID == 35 || _characterPlacement.UnitEnemy[i].pathParent.ID == 8)) ||
                     //ÀÂ‰ˇÌÓÈ ıËÎÎ
-                    (!Turns.listUnitEnemy[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 36) && Turns.listUnitEnemy[i].hpProsent <= 90) ||
+                    (!_characterPlacement.UnitEnemy[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 36) && _characterPlacement.UnitEnemy[i].hpProsent <= 90) ||
                     //ÍËÚÚÂ
-                    (Turns.listUnitEnemy[i].pathEnergy.energy >= 3 && Turns.listUnitEnemy[i].pathParent.ID == 37)) &&
-                    !Turns.listUnitEnemy[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 39))
+                    (_characterPlacement.UnitEnemy[i].pathEnergy.energy >= 3 && _characterPlacement.UnitEnemy[i].pathParent.ID == 37)) &&
+                    !_characterPlacement.UnitEnemy[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 39))
                 {
-                    UseSpell(Turns.listUnitEnemy[i], 1);
+                    UseSpell(_characterPlacement.UnitEnemy[i], 1);
                     return false;
                 }
             }
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].pathParent.vulnerability == 5)
+                if (_characterPlacement.UnitEnemy[i].pathParent.vulnerability == 5)
                 {
-                    UseSpell(Turns.listUnitEnemy[i], 0);
+                    UseSpell(_characterPlacement.UnitEnemy[i], 0);
                     return false;
                 }
             }
-            UseSpell(Turns.listUnitEnemy[Random.Range(0, Turns.listUnitEnemy.Count)], 0);
+            UseSpell(_characterPlacement.UnitEnemy[Random.Range(0, _characterPlacement.UnitEnemy.Count)], 0);
             return false;
 
         }
@@ -467,13 +478,13 @@ public class BattleAI : MonoBehaviour
         {
             int maxDamage = 0;
             UnitProperties maxDamageUnit = null;
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].damage > maxDamage &&
-                    !Turns.listUnitEnemy[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 4))
+                if (_characterPlacement.UnitEnemy[i].damage > maxDamage &&
+                    !_characterPlacement.UnitEnemy[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 4))
                 {
-                    maxDamage = Turns.listUnitEnemy[i].damage;
-                    maxDamageUnit = Turns.listUnitEnemy[i];
+                    maxDamage = _characterPlacement.UnitEnemy[i].damage;
+                    maxDamageUnit = _characterPlacement.UnitEnemy[i];
                 }
             }
             if (maxDamageUnit != null)
@@ -486,34 +497,34 @@ public class BattleAI : MonoBehaviour
         //Soul Seeker
         else if (Turns.turnUnit.pathParent.ID == 16)
         {
-            UseSpell(SeekMaxMinDamageHpUnit(Turns.listUnitEnemy, "max", "damage"), 0);
+            UseSpell(SeekMaxMinDamageHpUnit(_characterPlacement.UnitEnemy, "max", "damage"), 0);
             StartCoroutine(Async(40));
             return false;
         }
         //Necromancer
         else if (Turns.turnUnit.pathParent.ID == 5)
         {
-            for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (Turns.listUnitEnemy[i].pathEnergy.energy >= Turns.listUnitEnemy[i].pathParent.Energy—onsumption &&
-                   Turns.listUnitEnemy[i].pathSpells.SpellList.Any(item => item.GetComponent<AbstractSpell>().Type == "Debuff"))
+                if (_characterPlacement.UnitEnemy[i].pathEnergy.energy >= _characterPlacement.UnitEnemy[i].pathParent.Energy—onsumption &&
+                   _characterPlacement.UnitEnemy[i].pathSpells.SpellList.Any(item => item.GetComponent<AbstractSpell>().Type == "Debuff"))
                 {
-                    for (int i2 = 0; i2 < Turns.listUnitOur.Count; i2++)
+                    for (int i2 = 0; i2 < _characterPlacement.UnitOur.Count; i2++)
                     {
-                        if (!Turns.listUnitOur[i2].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 31))
+                        if (!_characterPlacement.UnitOur[i2].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 31))
                         {
-                            UseSpell(Turns.listUnitOur[i2], 1);
+                            UseSpell(_characterPlacement.UnitOur[i2], 1);
                             return false;
                         }
                     }
 
                 }
             }
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (!Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 40))
+                if (!_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 40))
                 {
-                    UseSpell(Turns.listUnitOur[Random.Range(0, Turns.listUnitOur.Count)], 0);
+                    UseSpell(_characterPlacement.UnitOur[Random.Range(0, _characterPlacement.UnitOur.Count)], 0);
                     return false;
                 }
             }
@@ -522,20 +533,20 @@ public class BattleAI : MonoBehaviour
         //Falnce Shaman
         else if (Turns.turnUnit.pathParent.ID == 36)
         {
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if ((Turns.listUnitOur[i].pathParent.state == 0 || Turns.listUnitOur[i].pathParent.Type == 3) &&
-                    !Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 15))
+                if ((_characterPlacement.UnitOur[i].pathParent.state == 0 || _characterPlacement.UnitOur[i].pathParent.Type == 3) &&
+                    !_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 15))
                 {
-                    UseSpell(Turns.listUnitOur[i], 0);
+                    UseSpell(_characterPlacement.UnitOur[i], 0);
                     return false;
                 }
             }
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (!Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 15))
+                if (!_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 15))
                 {
-                    UseSpell(Turns.listUnitOur[i], 0);
+                    UseSpell(_characterPlacement.UnitOur[i], 0);
                     return false;
                 }
             }
@@ -548,13 +559,13 @@ public class BattleAI : MonoBehaviour
             {
                 int maxDamage = -1;
                 UnitProperties maxDamageUnit = null;
-                for (int i = 0; i < Turns.listUnitOur.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
                 {
-                    if (Turns.listUnitOur[i].damage * Turns.listUnitOur[i].pathParent.times > maxDamage &&
-                        Turns.listUnitOur[i] != Turns.turnUnit)
+                    if (_characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].pathParent.times > maxDamage &&
+                        _characterPlacement.UnitOur[i] != Turns.turnUnit)
                     {
-                        maxDamage = Turns.listUnitOur[i].damage * Turns.listUnitOur[i].pathParent.times;
-                        maxDamageUnit = Turns.listUnitOur[i];
+                        maxDamage = _characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].pathParent.times;
+                        maxDamageUnit = _characterPlacement.UnitOur[i];
                     }
                 }
                 if (maxDamageUnit != null)
@@ -565,13 +576,13 @@ public class BattleAI : MonoBehaviour
             }
             int minDamage = 10000;
             UnitProperties minDamageUnit = null;
-            for (int i = 0; i < Turns.listUnitOur.Count; i++)
+            for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if (Turns.listUnitOur[i].damage * Turns.listUnitOur[i].pathParent.times < minDamage &&
-                    !Turns.listUnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 35))
+                if (_characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].pathParent.times < minDamage &&
+                    !_characterPlacement.UnitOur[i].idDebuff.Any(item => item.GetComponent<AbstractSpell>().id == 35))
                 {
-                    minDamage = Turns.listUnitOur[i].damage * Turns.listUnitOur[i].pathParent.times;
-                    minDamageUnit = Turns.listUnitOur[i];
+                    minDamage = _characterPlacement.UnitOur[i].damage * _characterPlacement.UnitOur[i].pathParent.times;
+                    minDamageUnit = _characterPlacement.UnitOur[i];
                 }
             }
             if (minDamageUnit != null)
@@ -608,7 +619,7 @@ public class BattleAI : MonoBehaviour
             magic = magics[RandomMagic];
             AbstractSpell currentSpell = spells[magics[RandomMagic]].GetComponent<AbstractSpell>();
             allow = new();
-            allow.AddRange(Turns.listUnitAll);
+            allow.AddRange(_characterPlacement.UnitAll);
             return SpellRegular(currentSpell);
         }
         else return true;
@@ -690,7 +701,7 @@ public class BattleAI : MonoBehaviour
     private void UseSpell(UnitProperties unitTarget, int spellIndex)
     {
         Turns.unitChoose = unitTarget;
-        StartIni.battleNetwork.AttackQuery(spellIndex, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, unitTarget.Side, unitTarget.Place);
+        //StartIni.battleNetwork.AttackQuery(spellIndex, Turns.turnUnit.pathSpells.modeIndex, BattleNetwork.ident, unitTarget.Side, unitTarget.Place);
     }
     private IEnumerator Async(int id)
     {
@@ -757,19 +768,19 @@ public class BattleAI : MonoBehaviour
         {
             if (Turns.turnUnit.pathEnergy.energy >= 3)
             {
-                Turns.unitChoose = SeekMaxMinDamageHpUnit(Turns.listUnitEnemy, "max", "damage");
+                Turns.unitChoose = SeekMaxMinDamageHpUnit(_characterPlacement.UnitEnemy, "max", "damage");
                 //StartCoroutine(Turns.turnUnit.PathSpells.UseActiveAsync(2));
                 //Turns.turnUnit.PathEnergy.SetEnergy(3, '-');
             }
             else
             {
                 bool have = false;
-                for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+                for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
                 {
-                    if (Turns.listUnitEnemy[i].pathParent.vulnerability != 7 &&
-                        SeekUnitDamageType(Turns.listUnitEnemy, Turns.listUnitEnemy[i].pathParent.vulnerability) == true)
+                    if (_characterPlacement.UnitEnemy[i].pathParent.vulnerability != 7 &&
+                        SeekUnitDamageType(_characterPlacement.UnitEnemy, _characterPlacement.UnitEnemy[i].pathParent.vulnerability) == true)
                     {
-                        Turns.unitChoose = Turns.listUnitEnemy[i];
+                        Turns.unitChoose = _characterPlacement.UnitEnemy[i];
                         have = true;
                         break;
                     }
@@ -785,12 +796,12 @@ public class BattleAI : MonoBehaviour
                 }
                 else
                 {
-                    for (int i = 0; i < Turns.listUnitEnemy.Count; i++)
+                    for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
                     {
-                        if (Turns.listUnitEnemy[i].pathParent.resist != 7 &&
-                            SeekUnitDamageType(Turns.listUnitEnemy, Turns.listUnitEnemy[i].pathParent.resist) == true)
+                        if (_characterPlacement.UnitEnemy[i].pathParent.resist != 7 &&
+                            SeekUnitDamageType(_characterPlacement.UnitEnemy, _characterPlacement.UnitEnemy[i].pathParent.resist) == true)
                         {
-                            Turns.unitChoose = Turns.listUnitEnemy[i];
+                            Turns.unitChoose = _characterPlacement.UnitEnemy[i];
                             have = true;
                             break;
                         }
@@ -806,7 +817,7 @@ public class BattleAI : MonoBehaviour
                     }
                     else
                     {
-                        Turns.unitChoose = Turns.listUnitEnemy[Random.Range(0, Turns.listUnitEnemy.Count)];
+                        Turns.unitChoose = _characterPlacement.UnitEnemy[Random.Range(0, _characterPlacement.UnitEnemy.Count)];
                         //Turns.turnUnit.AttackedUnit(Turns.UnitChoose);
                     }
                 }

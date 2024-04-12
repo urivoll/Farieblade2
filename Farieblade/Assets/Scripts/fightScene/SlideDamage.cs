@@ -18,7 +18,6 @@ public class SlideDamage : MonoBehaviour
     [SerializeField] private Sprite light2;
     private void Start()
     {
-        Invoke("DestroyObj", 1.3f);
         if (PlayerData.traning == 0) Destroy(gameObject);
     }
     public void UpdateSlideDamage(float inpDamage, int type2 = -1)
@@ -81,5 +80,4 @@ public class SlideDamage : MonoBehaviour
         animator.SetTrigger("Alarm");
 
     }
-    private void DestroyObj() => Destroy(gameObject);
 }

@@ -6,11 +6,6 @@ public class EnergyUnit : MonoBehaviour
     public int energy = 0;
     public int how;
     public char sign;
-    private void Awake()
-    {
-        Buffer();
-        Turns.newTurn += Buffer;
-    }
     public void SetEnergy(int energy)
     {
         if (this.energy > energy)
@@ -31,17 +26,5 @@ public class EnergyUnit : MonoBehaviour
             energyArray[i].SetActive(false);
         for (int i = 0; i < this.energy; i++)
             energyArray[i].SetActive(true);
-    }
-    private void Buffer()
-    {
-        if (transform.parent.transform.parent.transform.parent.gameObject.GetComponent<Unit>().state == 4 ||
-            transform.parent.transform.parent.transform.parent.gameObject.GetComponent<Unit>().state == 3)
-        {
-            SetEnergy(energy + 1);
-        }
-    }
-    private void OnDestroy()
-    {
-        Turns.newTurn -= Buffer;
     }
 }

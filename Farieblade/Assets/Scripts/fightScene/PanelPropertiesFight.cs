@@ -85,9 +85,9 @@ public class PanelPropertiesFight : MonoBehaviour
         imageFraction.sprite = Fraction[obj.fraction];
         imagePortrait.sprite = BG[obj.fraction];
         textFraction.text = Fractions[obj.fraction].intArray[PlayerData.language];
-        if (obj.transform.Find("Fight/Model").gameObject.GetComponent<CharacterAbilities2>() != null)
+        if (obj.transform.Find("Fight/Model").gameObject.GetComponent<Spells>() != null)
         {
-            CharacterAbilities2 spells = obj.transform.Find("Fight/Model").gameObject.GetComponent<CharacterAbilities2>();
+            Spells spells = obj.transform.Find("Fight/Model").gameObject.GetComponent<Spells>();
             for (int i = 0; i < spells.SpellList.Count; i++)
             {
                 spellListLocal[i].SetActive(true);

@@ -24,7 +24,7 @@ public class UnitProperties : MonoBehaviour
     //œ”“»
     [HideInInspector] public Unit pathParent;
     [HideInInspector] public EnergyUnit pathEnergy;
-    [HideInInspector] public CharacterAbilities2 pathSpells;
+    [HideInInspector] public Spells pathSpells;
     [HideInInspector] public CircleProperties pathCircle;
     [HideInInspector] public Transform pathDebuffs;
     [HideInInspector] public Transform pathBulletTarget;
@@ -48,16 +48,12 @@ public class UnitProperties : MonoBehaviour
     public AudioClip[] soundVoiceStrike;
     [HideInInspector] public List<GameObject> idDebuff = new();
     private EffectManager _effectManager;
-    private Shooter _shooter;
-    private Melee _melee;
-    private GameObject slideDamagePrefub;
+    private Weapon _weapon;
     private GameObject slideDamage2;
     private Animator animatorCanvas;
     public Aura aura;
-
     public int indexVoice;
-    public bool moved = false;
-    public UnitProperties pushUnit;
+
     public void Init(int side, int place)
     {
         _side = side;
@@ -68,17 +64,15 @@ public class UnitProperties : MonoBehaviour
         //»Õ»÷»¿À»«¿÷»ﬂ œ”“≈…
         pathBulletTarget = transform.Find("BulletTarget");
         pathDebuffs = transform.parent.Find("Canvas/Debuffs");
-        pathSpells = GetComponent<CharacterAbilities2>();
+        pathSpells = GetComponent<Spells>();
         pathParent = GetComponentInParent<Unit>();
         pathEnergy = transform.parent.GetComponentInChildren<EnergyUnit>();
         pathCanvas = transform.parent.transform.Find("Canvas").gameObject.GetComponent<UnitCanvas>();
         //ÓÒÚ‡Î¸ÌÓÂ
-
     }
     public void Instantiate()
     {
         animatorCanvas = transform.parent.gameObject.transform.Find("Canvas").gameObject.GetComponent<Animator>();
-        slideDamagePrefub = Camera.main.GetComponent<Turns>().slideDamagePrefub;
         _effectManager = Camera.main.GetComponent<EffectManager>();
         //— »Õ€
         pathAnimation = GetComponent<UnitAnimation>();
@@ -91,8 +85,7 @@ public class UnitProperties : MonoBehaviour
         state = pathParent.state;
         times = pathParent.times;
 
-        if (state == 1) _shooter = GetComponent<Shooter>();
-        else if (state == 0 || state == 2) _melee = GetComponent<Melee>();
+        _weapon = GetComponent<Weapon>();
         HpDamage("none");
     }
 
@@ -106,9 +99,7 @@ public class UnitProperties : MonoBehaviour
         hp -= Convert.ToInt32(inpDamage);
         HpDamage("hp");
 
-        if (inpDamage > 0)
-            slideDamage2 = Instantiate(slideDamagePrefub, new Vector2(gameObject.transform.position[0], gameObject.transform.position[1] + 3), Quaternion.identity);
-        if (slideDamage2 != null) slideDamage2.GetComponent<SlideDamage>().UpdateSlideDamage(inpDamage, inpDamageType);
+
         TryToDeath();
     }
     public void TakeDamage(UnitProperties who, MakeMove inpData)
@@ -121,65 +112,40 @@ public class UnitProperties : MonoBehaviour
         Turns.takeDamage?.Invoke(this);
         hp = Convert.ToInt32(inpData.attackSend["hp"]);
         HpDamage("hp");
-        if (inpDamage > 0)
-            slideDamage2 = Instantiate(slideDamagePrefub, new Vector2(gameObject.transform.position[0], gameObject.transform.position[1] + 3), Quaternion.identity);
-        if (slideDamage2 != null) slideDamage2.GetComponent<SlideDamage>().UpdateSlideDamage(inpDamage, inpDamageType);
+
         TryToDeath();
     }
-
+    public void AttackedUnit(List<MakeMove> attack)
+    {
+        pathAnimation.TryGetAnimation("attack");
+        StartCoroutine(_weapon.Attack(this, attack));
+    }
     public void HpDamage(string hpDmg)
     {
-        if(hpDmg == "hp" || hpDmg == "hpdmg") hpProsent = hp * 100 / hpBase;
+        if(hpDmg == "hp" || hpDmg == "hpdmg") 
+            hpProsent = hp * 100 / hpBase;
         pathCanvas.UnitPropTextRenderer(hp, damage, hpProsent, state, this, hpDmg);
     }
 
     //œÓ‚ÂÍ‡ Ì‡ ÒÎ‡·ÓÒÚË Ë ÂÁËÒÚ
     private void ResVul()
     {
-        if (inpDamageType == pathParent.vulnerability && inpDamage > 0)
+        if (inpDamage <= 0) return;
+        if (inpDamageType == pathParent.vulnerability)
         {
             BattleSound.sound.PlayOneShot(BattleSound.soundClip[0]);
             StartCoroutine(_effectManager.ShowEffect("vul", gameObject));
         }
-        else if (inpDamageType == pathParent.resist && inpDamage > 0)
+        else if (inpDamageType == pathParent.resist)
         {
             BattleSound.sound.PlayOneShot(BattleSound.soundClip[1]);
             StartCoroutine(_effectManager.ShowEffect("resist", gameObject));
         }
     }
-    //¿Ú‡Í‡
-    public void AttackedUnit(UnitProperties unitTarget, List<MakeMove> attack)
-    {
-        pathAnimation.TryGetAnimation("attack");
-        if (state == 1) StartCoroutine(_shooter.Shoot(unitTarget, this, attack));
-        else
-        {
-            if(Turns.turnUnit.Place != unitTarget.Place)
-            {
-                moved = true;
-                Transform newPosition;
-                if(unitTarget.Place % 2 != 0) newPosition = Turns.circlesMap[Turns.enemySide, unitTarget.Place - 1].transform;
-                else
-                {
-                    if(Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].newObject != null)
-                    {
-                        pushUnit = Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].newObject;
-                        if (pushUnit.Side == 1) pushUnit.transform.localPosition += new Vector3(2f, 0, 0);
-                        else pushUnit.transform.localPosition -= new Vector3(2f, 0, 0);
-                        newPosition = pushUnit.pathCircle.transform;
-                        pathParent.transform.SetParent(pushUnit.GetComponent<UnitProperties>().pathCircle.transform);
-                        pathParent.transform.localScale = new Vector2(1, 1);
-                    }
-                    else newPosition = Turns.circlesMap[Turns.turnUnit.Side, unitTarget.Place].transform;
-                }
-                gameObject.transform.position = newPosition.position;
-            }
-            StartCoroutine(_melee.Punch(unitTarget, this, attack));
-        }
-    }
+
     public void Miss()
     {
-        GameObject slideDamage2 = Instantiate(slideDamagePrefub, new Vector2(gameObject.transform.position[0], gameObject.transform.position[1] + 3), Quaternion.identity);
+        //GameObject slideDamage2 = Instantiate(slideDamagePrefub, new Vector2(gameObject.transform.position[0], gameObject.transform.position[1] + 3), Quaternion.identity);
         slideDamage2.GetComponent<SlideDamage>().UpdateSlideDamage(-1, -2);
     }
 
@@ -217,9 +183,9 @@ public class UnitProperties : MonoBehaviour
         if (resurect) return;
         if (this == Turns.turnUnit) Turns.turnUnit = null;
         if (this == Turns.unitChoose) Turns.unitChoose = null;
-        Turns.listUnitAll.Remove(this);
+/*        Turns.listUnitAll.Remove(this);
         if (Side == 0) Turns.listUnitLeft.Remove(this);
-        else if (Side == 1) Turns.listUnitRight.Remove(this);
+        else if (Side == 1) Turns.listUnitRight.Remove(this);*/
         pathCircle.newObject = null;
         Destroy(pathParent.transform.Find("Fight/Canvas").gameObject, 0.8f);
         Destroy(pathParent.gameObject, 1.5f);

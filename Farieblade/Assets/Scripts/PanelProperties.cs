@@ -175,8 +175,8 @@ public class PanelProperties : MonoBehaviour
     }
     private void ShowSpells(Unit obj)
     {
-        if (obj.transform.Find("Fight/Model").gameObject.GetComponent<CharacterAbilities2>() == null) return;
-        CharacterAbilities2 spells = obj.transform.Find("Fight/Model").gameObject.GetComponent<CharacterAbilities2>();
+        if (obj.transform.Find("Fight/Model").gameObject.GetComponent<Spells>() == null) return;
+        Spells spells = obj.transform.Find("Fight/Model").gameObject.GetComponent<Spells>();
         for (int i = 0; i < spells.SpellList.Count; i++)
         {
             spellListLocal[i].SetActive(true);
