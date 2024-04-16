@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TargetSelector))]
+[RequireComponent(typeof(CharacterInfoPanelOpener))]
 public class UnitProperties : MonoBehaviour
 {
     // ŒŒ–ƒ»Õ¿“€ Õ¿  ¿–“≈
@@ -84,7 +86,6 @@ public class UnitProperties : MonoBehaviour
         damage = pathParent.damage;
         state = pathParent.state;
         times = pathParent.times;
-
         _weapon = GetComponent<Weapon>();
         HpDamage("none");
     }
@@ -98,8 +99,6 @@ public class UnitProperties : MonoBehaviour
         Turns.takeDamage?.Invoke(this);
         hp -= Convert.ToInt32(inpDamage);
         HpDamage("hp");
-
-
         TryToDeath();
     }
     public void TakeDamage(UnitProperties who, MakeMove inpData)
@@ -112,7 +111,6 @@ public class UnitProperties : MonoBehaviour
         Turns.takeDamage?.Invoke(this);
         hp = Convert.ToInt32(inpData.attackSend["hp"]);
         HpDamage("hp");
-
         TryToDeath();
     }
     public void AttackedUnit(List<MakeMove> attack)

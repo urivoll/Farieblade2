@@ -8,15 +8,13 @@ using Random = UnityEngine.Random;
 public class BattleAI : MonoBehaviour
 {
     private CharacterPlacement _characterPlacement;
-    private DefendReference _defendReference;
     private int magic;
     private List<UnitProperties> allow = new();
 
     [Inject]
-    private void Construct(CharacterPlacement characterPlacement, DefendReference defendReference)
+    private void Construct(CharacterPlacement characterPlacement)
     {
         _characterPlacement = characterPlacement;
-        _defendReference = defendReference;
     }
 
     public void AI0()

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a64d6ec34527464ba4e1d10ba62d247, type: 3}
+  m_Name: CerberusPassive
+  m_EditorClassIdentifier: 
+  _name:
+  - Hell howl
+  - "\u0410\u0434\u0441\u043A\u0438\u0439 \u0432\u043E\u0439"
+  _type: {fileID: 11400000, guid: 6d1812a91982f144ca04bbb900de941e, type: 2}
+  _description:
+  - 'After receiving damage, Tsumil increases/decreases his attack depending on the
+    damage received.\r\nAttack is 50% more damage received: +5% Attack.\r\nAttack
+    is 100% greater than damage received: +10% Attack.\r\nAttack more than damage
+    received by 200%: +15% Attack.\r\nAttack greater than damage received from 300%
+    or more: +20% Attack.'
+  - "\u041F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u0438\u0435
+    \u0443\u0440\u043E\u043D\u0430, \u0426\u0443\u043C\u0438\u043B \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u0435\u0442/\u0443\u043C\u0435\u043D\u044C\u0448\u0430\u0435\u0442
+    \u0441\u0432\u043E\u044E \u0430\u0442\u0430\u043A\u0443 \u0432 \u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u0438
+    \u043E\u0442 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043E\u0433\u043E \u0443\u0440\u043E\u043D\u0430.\\r\\n\u0410\u0442\u0430\u043A\u0430
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u043E\u0433\u043E
+    \u0443\u0440\u043E\u043D\u0430 \u043D\u0430 50%: +5% \u0410\u0442\u0430\u043A\u0438.\\r\\n\u0410\u0442\u0430\u043A\u0430
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u043E\u0433\u043E
+    \u0443\u0440\u043E\u043D\u0430 \u043D\u0430 100%: +10% \u0410\u0442\u0430\u043A\u0438.\\r\\n\u0410\u0442\u0430\u043A\u0430
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u043E\u0433\u043E
+    \u0443\u0440\u043E\u043D\u0430 \u043D\u0430 200%: +15% \u0410\u0442\u0430\u043A\u0438.\\r\\n\u0410\u0442\u0430\u043A\u0430
+    \u0431\u043E\u043B\u044C\u0448\u0435 \u043F\u043E\u043B\u0443\u0447\u0435\u043D\u043D\u043E\u0433\u043E
+    \u0443\u0440\u043E\u043D\u0430 \u043E\u0442 300% \u0438 \u0431\u043E\u043B\u0435\u0435: 
+    +20% \u0410\u0442\u0430\u043A\u0438."
+  _sprite: {fileID: 21300000, guid: f75b1f5a59cfb1348984112c4290ed6f, type: 3}

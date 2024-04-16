@@ -9,11 +9,11 @@ public class TargetSelector : MonoBehaviour, IPointerClickHandler
     [Inject]
     private void Construct(BattleNetwork battleNetwork)
     {
+        print("df");
         _battleNetwork = battleNetwork;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.pointerClick.GetComponent<UnitProperties>() == null) return;
         UnitProperties unitProperties = eventData.pointerClick.GetComponent<UnitProperties>();
         if (unitProperties.pathCircle.newObject == null ||
             !unitProperties.allowHit ||
@@ -26,6 +26,7 @@ public class TargetSelector : MonoBehaviour, IPointerClickHandler
         attackFormSubmitter.Ident = BattleNetwork.ident;
         attackFormSubmitter.Side = unitProperties.Side;
         attackFormSubmitter.Place = unitProperties.Place;
+        if(_battleNetwork != null)
         _battleNetwork.AttackQuery(attackFormSubmitter);
         SideUnitUi.spell = -555;
     }

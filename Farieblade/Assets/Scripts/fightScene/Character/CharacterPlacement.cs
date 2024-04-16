@@ -1,12 +1,10 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterPlacement
+public class CharacterPlacement : MonoBehaviour
 {
     public CircleProperties[,] CirclesMap => _circlesMap;
     public CircleProperties[] CircleAll => _circleAll;
-
     public List<UnitProperties> UnitAll => _unitAll;
     public List<UnitProperties> UnitLeft => _unitLeft;
     public List<UnitProperties> UnitRight => _unitRight;
@@ -16,9 +14,6 @@ public class CharacterPlacement
     public List<UnitProperties> UnitOur => _unitOur;
     public int EnemySide => _enemySide;
 
-    private CircleProperties[,] _circlesMap = new CircleProperties[2, 6];
-    private CircleProperties[] _circleAll;
-
     private List<UnitProperties> _unitAll = new();
     private List<UnitProperties> _unitLeft = new();
     private List<UnitProperties> _unitRight = new();
@@ -26,15 +21,18 @@ public class CharacterPlacement
     private List<UnitProperties> _unitEndRight = new();
     private List<UnitProperties> _unitEnemy;
     private List<UnitProperties> _unitOur;
-    [SerializeField] private CircleProperties[] circleLeftPrefub;
-    [SerializeField] private CircleProperties[] circleRightPrefub;
+    private CircleProperties[,] _circlesMap = new CircleProperties[2, 6];
+
+    [SerializeField] private CircleProperties[] _circleAll;
+    [SerializeField] private CircleProperties[] _circleLeftPrefub;
+    [SerializeField] private CircleProperties[] _circleRightPrefub;
     private int _enemySide;
     public void Definition()
     {
         for (int i = 0; i < 6; i++)
         {
-            _circlesMap[0, i] = circleLeftPrefub[i];
-            _circlesMap[1, i] = circleRightPrefub[i];
+            _circlesMap[0, i] = _circleLeftPrefub[i];
+            _circlesMap[1, i] = _circleRightPrefub[i];
         }
     }
     public void DefinitionSides(UnitProperties turnUnit)
@@ -42,7 +40,7 @@ public class CharacterPlacement
         _enemySide = (turnUnit.Side == 1) ? 0 : 1;
         _unitEnemy = (turnUnit.Side == 1) ? _unitLeft : _unitRight;
         _unitOur = (turnUnit.Side == 1) ? _unitRight : _unitLeft;
-        StartIni.turnEffect[turnUnit.Side - 1].SetActive(true);
+        StartIni.turnEffect[turnUnit.Side].SetActive(true);
     }
     public void InitializationCircles()
     {
@@ -74,5 +72,13 @@ public class CharacterPlacement
             //numberTurn += 1;
             //_numberTurn.text = Convert.ToString(numberTurn);
         }
+    }
+    public void Init(int sideOnMap, UnitProperties newObject)
+    {
+        if (sideOnMap == 1)
+            _unitRight.Add(newObject);
+        else
+            _unitLeft.Add(newObject);
+        _unitAll.Add(newObject);
     }
 }

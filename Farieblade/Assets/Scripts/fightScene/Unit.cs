@@ -47,7 +47,7 @@ public class Unit : MonoBehaviour
         card = transform.Find("Card").gameObject;
         if (onMultiplayer == false)
         {
-            if (GameObject.Find("draft") != null)
+            if (GameObject.Find("Draft") != null)
             {
                 gameObject.transform.Find("Fight").gameObject.SetActive(true);
                 gameObject.transform.Find("Card").gameObject.SetActive(false);
@@ -72,7 +72,7 @@ public class Unit : MonoBehaviour
     }
     public void ShowUnitProperties()
     {
-        if (GameObject.Find("draft") == null) _panel.GetComponent<PanelProperties>().SetValue(this);
+        if (GameObject.Find("Draft") == null) _panel.GetComponent<PanelProperties>().SetValue(this);
         else _panel.GetComponent<PanelPropertiesFight>().SetValue(this);
     }
     public void SetValues()

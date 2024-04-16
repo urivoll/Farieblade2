@@ -62,8 +62,10 @@ public class BattleNetwork : MonoBehaviour
         if(!local)
         hubConnection.On("LevelHandler", (string stringResult) => gameReuslt?.Invoke(stringResult));
         yield return hubConnection.StartAsync().AsCoroutine();
-        if (Energy.mode == 1) yield return hubConnection.SendAsync("StartHandler", FirstStart.newProdID, gameIndex, sideOnBattle, ident).AsCoroutine();
-        else if (Energy.mode == 2) yield return hubConnection.SendAsync("StartWithBot", FirstStart.newProdID, gameIndex, sideOnBattle, ident).AsCoroutine();
+        if (Energy.mode == 1) 
+            yield return hubConnection.SendAsync("StartHandler", FirstStart.newProdID, gameIndex, sideOnBattle, ident).AsCoroutine();
+        else if (Energy.mode == 2) 
+            yield return hubConnection.SendAsync("StartWithBot", FirstStart.newProdID, gameIndex, sideOnBattle, ident).AsCoroutine();
         else
         {
             sideOnBattle = 0;

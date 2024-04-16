@@ -40,8 +40,8 @@ public class GreoCriticalDamage : AbstractSpell
                 inpData[i]["place"] == parentUnit.Place &&
                 inpData[i]["debuffId"] == id)
             {
-                Bullet bullet = from.GetComponent<Shooter>().newBullet;
-                bullet.end = bullet.transform.Find("Exp").gameObject;
+                //Bullet bullet = from.GetComponent<Shooter>().newBullet;
+                //bullet.end = bullet.transform.Find("Exp").gameObject;
             }
         }
     }

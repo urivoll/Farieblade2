@@ -30,12 +30,14 @@ public class Turns : MonoBehaviour
     [SerializeField] private SideUnitUi sideUnitUI;
     public static bool aiMay = false;
     private AfterStep attackData;
+    [SerializeField] private MapLocation _mapLocation;
 
     public int numberTurn = 1;
     
     [SerializeField] private TextMeshProUGUI _numberTurn;
     public Action TurnOver;
     private CharacterPlacement _characterPlacement;
+    [SerializeField] private CheckAllowHit _checkAllowHit;
 
     [Inject]
     private void Construct(CharacterPlacement characterPlacement)
@@ -46,6 +48,7 @@ public class Turns : MonoBehaviour
     {
         if (PlayerData.defaultCards == null) 
             PlayerData.defaultCards = defaulUnits;
+        _characterPlacement.Definition();
     }
     private IEnumerator GetAura()
     {
@@ -69,7 +72,7 @@ public class Turns : MonoBehaviour
         Coroutine cor;
         while (BattleNetwork.connected == false)
             yield return null;
-        GetComponent<MapLocation>().SetBackground();
+        _mapLocation.SetBackground();
         _characterPlacement.InitializationCircles();
         cor = StartCoroutine(GetAura());
         yield return cor;
@@ -109,7 +112,7 @@ public class Turns : MonoBehaviour
             }
             if (turnUnit != null && !turnUnit.paralize && turnUnit.pathParent.fraction != 9)
             {
-                GetComponent<CheckAllowHit>().TurnUnitEffect();
+                _checkAllowHit.TurnUnitEffect();
                 if (turnUnit.Side == BattleNetwork.sideOnBattle)
                 {
                     sideUnitUI.SetSpells();

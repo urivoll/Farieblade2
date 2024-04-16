@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 public class StartIni : MonoBehaviour
 {
     public static Action setViewTrops;
@@ -59,8 +60,13 @@ public class StartIni : MonoBehaviour
     [SerializeField] private GameObject timeOutObj;
     [SerializeField] private TextMeshProUGUI textWaitForPlayer;
     [SerializeField] private string[] textWait;
+    private Turns _turns;
 
-
+    [Inject]
+    private void Construct(Turns turns)
+    {
+        _turns = turns;
+    }
     private void Start()
     {
         fillSpeed = 1f / fillTime;
@@ -70,13 +76,13 @@ public class StartIni : MonoBehaviour
             BattleNetwork.doingQueue.Clear();
             BattleNetwork.attackResultQueue.Clear();
         }
-        StartCoroutine(TimeOutTimer());
-        StartCoroutine(GetComponent<BattleNetwork>().Game(0));
+/*        StartCoroutine(TimeOutTimer());
+        StartCoroutine(GetComponent<BattleNetwork>().Game(0));*/
 
-/*        Energy.mode = 1;
+        Energy.mode = 1;
             StartCoroutine(GetComponent<BattleNetwork>().Game(1));
             LoadingManager.LoadingScreenAfter = -1;
-            Start2();*/
+            Start2();
     }
     private IEnumerator TimeOutTimer()
     {
@@ -108,7 +114,7 @@ public class StartIni : MonoBehaviour
         stopCoroutine = true;
         DefinitionMode();
         StartUI();
-        StartCoroutine(GetComponent<Turns>().Start2());
+        StartCoroutine(_turns.Start2());
     }
     private void DefenitionStart()
     {

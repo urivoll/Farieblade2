@@ -103,7 +103,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7664895f98a9cce4798f7d96d1a195ab, type: 3}
   m_PackedSpriteNamesToIndex:
   - shadeCard
-  - army of light
+  - Amorlinians
   - support
   - Flance Trible
   - tank
@@ -120,7 +120,7 @@ SpriteAtlas:
   - MeleeSlot
   - card1
   - dd
-  - Consolidated Forsaken Monks
+  - Khorelians
   - Lands of Zotak
   - UnitSlot
   - Lost Souls
@@ -130,7 +130,7 @@ SpriteAtlas:
   - Beam of secrets
   - giant
   - card4
-  - Curse of the world
+  - Crimson
   - card3
   - GradeSilver
   - arrow

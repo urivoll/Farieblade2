@@ -98,8 +98,10 @@ public class PanelPropertiesFight : MonoBehaviour
                     slot.FrameAura.SetActive(true);
                     slot.picAura.sprite = image;
                 }
-                else if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Effect" || spells.SpellList[i].GetComponent<AbstractSpell>().state == "Ball" ||
-                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "Melee" || spells.SpellList[i].GetComponent<AbstractSpell>().state == "nonTarget")
+                else if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Effect" || 
+                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "Ball" ||
+                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "Melee" || 
+                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "nonTarget")
                 {
                     slot.FrameActive.SetActive(true);
                     slot.picActive.sprite = image;
@@ -117,8 +119,8 @@ public class PanelPropertiesFight : MonoBehaviour
             _avatarObject = Instantiate(obj.modelPanel, gameObject.transform.Find("Panel/Portrait/Avatar").gameObject.transform);
             _avatarObject.transform.Find("Shade3").GetComponent<SpriteRenderer>().sortingLayerName = "TopUI";
             _avatarObject.transform.Find("Shade3").GetComponent<SpriteRenderer>().sortingOrder = 3;
-            _avatarObject.GetComponent<ModelPanel>().GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingLayerName = "TopUI";
-            _avatarObject.GetComponent<ModelPanel>().GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingOrder = 3;
+            _avatarObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingLayerName = "TopUI";
+            _avatarObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingOrder = 3;
         }
         _avatarObject.SetActive(true);
 

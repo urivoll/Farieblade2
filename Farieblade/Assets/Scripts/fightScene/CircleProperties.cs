@@ -6,15 +6,17 @@ public class CircleProperties : MonoBehaviour
     public int intState;
     [HideInInspector] public CircleAnimation PathAnimation;
     [HideInInspector] public int unitID = -666;
-    public int sideOnMap;
-    public int placeOnMap;
     [HideInInspector] public UnitProperties newObject = null;
     [HideInInspector] public int levelObject = 0;
     [HideInInspector] public int gradeObject = 0;
     [HideInInspector] public int objectGoldReward = 0;
     [HideInInspector] public float objectReward = 0;
+
+    [SerializeField] private int _side;
+    [SerializeField] private int _place;
     [SerializeField] private float[] vector;
     [SerializeField] private float[] vector2;
+
     private CharacterPlacement _characterPlacement;
 
     [Inject]
@@ -31,9 +33,9 @@ public class CircleProperties : MonoBehaviour
 
     public void SetUnitProperties()
     {
-        unitID = MultiplayerDraft.units[sideOnMap, placeOnMap];
-        levelObject = MultiplayerDraft.unitsLevel[sideOnMap, placeOnMap];
-        gradeObject = MultiplayerDraft.unitsGrade[sideOnMap, placeOnMap];
+        unitID = MultiplayerDraft.units[_side, _place];
+        levelObject = MultiplayerDraft.unitsLevel[_side, _place];
+        gradeObject = MultiplayerDraft.unitsGrade[_side, _place];
         if (unitID == -666) return;
         CreateUnit(PlayerData.defaultCards[unitID]);
         newObject.pathParent.level = levelObject;
@@ -43,20 +45,17 @@ public class CircleProperties : MonoBehaviour
         objectReward = newObject.pathParent.expReward;
         objectGoldReward = newObject.pathParent.goldReward;
     }
-    public UnitProperties CreateUnit(GameObject createUnit2)
+    public UnitProperties CreateUnit(GameObject createUnit)
     {
         GameObject tempNewObject;
-        tempNewObject = Instantiate(createUnit2, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        tempNewObject = Instantiate(createUnit, gameObject.transform.position, Quaternion.identity, gameObject.transform);
         newObject = tempNewObject.GetComponentInChildren<UnitProperties>();
-        if (sideOnMap == 1)
-        {
-            _characterPlacement.UnitRight.Add(newObject);
-        }
-        else _characterPlacement.UnitLeft.Add(newObject);
-        _characterPlacement.UnitAll.Add(newObject);
+        if(_characterPlacement != null)
+        _characterPlacement.Init(_side, newObject);
+
         newObject.pathCircle = this;
-        newObject.Init(sideOnMap, placeOnMap);
-        if (sideOnMap == 0) intState = -1; else intState = 1;
+        newObject.Init(_side, _place);
+        if (_side == 0) intState = -1; else intState = 1;
         newObject.transform.localScale = new Vector2(0.55f * intState, 0.55f);
         int tempSorting = GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingOrder;
         newObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingOrder = tempSorting;
