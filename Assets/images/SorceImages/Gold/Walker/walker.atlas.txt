@@ -1,0 +1,90 @@
+
+walker.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 2, 155
+  size: 344, 244
+  orig: 344, 244
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 635, 299
+  size: 200, 171
+  orig: 200, 171
+  offset: 0, 0
+  index: -1
+leftHair
+  rotate: false
+  xy: 509, 186
+  size: 124, 313
+  orig: 124, 313
+  offset: 0, 0
+  index: -1
+leftHand
+  rotate: true
+  xy: 366, 2
+  size: 180, 309
+  orig: 180, 309
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 808, 415
+  size: 84, 287
+  orig: 84, 287
+  offset: 0, 0
+  index: -1
+lightning1
+  rotate: false
+  xy: 936, 33
+  size: 119, 170
+  orig: 119, 170
+  offset: 0, 0
+  index: -1
+lightning2
+  rotate: false
+  xy: 677, 40
+  size: 139, 163
+  orig: 139, 163
+  offset: 0, 0
+  index: -1
+lightning3
+  rotate: false
+  xy: 956, 243
+  size: 119, 170
+  orig: 119, 170
+  offset: 0, 0
+  index: -1
+lightning4
+  rotate: false
+  xy: 818, 28
+  size: 116, 175
+  orig: 116, 175
+  offset: 0, 0
+  index: -1
+rightHair
+  rotate: false
+  xy: 248, 184
+  size: 259, 315
+  orig: 259, 315
+  offset: 0, 0
+  index: -1
+rightHand
+  rotate: true
+  xy: 2, 23
+  size: 130, 362
+  orig: 130, 362
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: true
+  xy: 635, 205
+  size: 92, 319
+  orig: 92, 319
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+God.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 804, 257
+  size: 188, 253
+  orig: 188, 253
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 804, 8
+  size: 203, 247
+  orig: 203, 247
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 355, 22
+  size: 94, 167
+  orig: 94, 167
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 994, 320
+  size: 187, 190
+  orig: 187, 190
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 655, 180
+  size: 147, 330
+  orig: 147, 330
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 372, 128
+  size: 281, 382
+  orig: 281, 382
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 655, 27
+  size: 126, 151
+  orig: 126, 151
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 132, 2
+  size: 114, 221
+  orig: 114, 221
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 132, 118
+  size: 238, 392
+  orig: 238, 392
+  offset: 0, 0
+  index: -1
+stick
+  rotate: false
+  xy: 2, 18
+  size: 128, 492
+  orig: 128, 492
+  offset: 0, 0
+  index: -1

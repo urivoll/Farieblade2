@@ -1,0 +1,55 @@
+
+Dremeus.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 119, 138
+  size: 302, 357
+  orig: 302, 357
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 585, 325
+  size: 170, 313
+  orig: 170, 313
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 307, 73
+  size: 63, 173
+  orig: 63, 173
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 585, 21
+  size: 217, 302
+  orig: 217, 302
+  offset: 0, 0
+  index: -1
+leg
+  rotate: false
+  xy: 2, 22
+  size: 115, 473
+  orig: 115, 473
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 119, 2
+  size: 186, 134
+  orig: 186, 134
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 423, 149
+  size: 160, 346
+  orig: 160, 346
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,97 @@
+
+geoLich.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/chest
+  rotate: false
+  xy: 363, 61
+  size: 244, 441
+  orig: 244, 441
+  offset: 0, 0
+  index: -1
+images/cloak
+  rotate: true
+  xy: 982, 180
+  size: 322, 644
+  orig: 322, 644
+  offset: 0, 0
+  index: -1
+images/eyes
+  rotate: false
+  xy: 2, 2
+  size: 65, 40
+  orig: 65, 40
+  offset: 0, 0
+  index: -1
+images/head
+  rotate: false
+  xy: 1143, 20
+  size: 111, 158
+  orig: 111, 158
+  offset: 0, 0
+  index: -1
+images/lats
+  rotate: false
+  xy: 1628, 308
+  size: 278, 194
+  orig: 278, 194
+  offset: 0, 0
+  index: -1
+images/leftArm
+  rotate: true
+  xy: 830, 12
+  size: 113, 198
+  orig: 113, 198
+  offset: 0, 0
+  index: -1
+images/leftForearm
+  rotate: true
+  xy: 1256, 79
+  size: 99, 250
+  orig: 99, 250
+  offset: 0, 0
+  index: -1
+images/leftLeg
+  rotate: false
+  xy: 2, 44
+  size: 170, 458
+  orig: 170, 458
+  offset: 0, 0
+  index: -1
+images/light1
+  rotate: false
+  xy: 1628, 67
+  size: 232, 239
+  orig: 232, 239
+  offset: 0, 0
+  index: -1
+images/light2
+  rotate: false
+  xy: 609, 127
+  size: 371, 375
+  orig: 371, 375
+  offset: 0, 0
+  index: -1
+images/rightArm
+  rotate: false
+  xy: 1030, 3
+  size: 111, 175
+  orig: 111, 175
+  offset: 0, 0
+  index: -1
+images/rightForearm
+  rotate: true
+  xy: 609, 9
+  size: 116, 219
+  orig: 116, 219
+  offset: 0, 0
+  index: -1
+images/rightLeg
+  rotate: false
+  xy: 174, 51
+  size: 187, 451
+  orig: 187, 451
+  offset: 0, 0
+  index: -1

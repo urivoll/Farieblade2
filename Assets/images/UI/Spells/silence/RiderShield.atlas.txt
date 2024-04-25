@@ -1,0 +1,27 @@
+
+RiderShield.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Right
+  rotate: true
+  xy: 2, 2
+  size: 72, 190
+  orig: 72, 190
+  offset: 0, 0
+  index: -1
+left
+  rotate: true
+  xy: 2, 2
+  size: 72, 190
+  orig: 72, 190
+  offset: 0, 0
+  index: -1
+Слой 7
+  rotate: false
+  xy: 2, 76
+  size: 307, 347
+  orig: 307, 347
+  offset: 0, 0
+  index: -1

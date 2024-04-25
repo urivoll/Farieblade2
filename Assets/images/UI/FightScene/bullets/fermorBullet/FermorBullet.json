@@ -1,0 +1,84 @@
+{
+"skeleton": { "hash": "bNfxa1EvrN4CICiFQw1RE/pBsMA", "spine": "3.8.0", "x": -143.77, "y": -137.79, "width": 285.58, "height": 285.68 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "magic", "bone": "root", "attachment": "magic" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"magic": {
+				"magic": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ -2.09, -137.79, -143.77, 8.98, 0.12, 147.89, 141.8, 1.12 ],
+					"hull": 4
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {},
+	"death": {
+		"slots": {
+			"magic": {
+				"color": [
+					{ "color": "ffffff00" },
+					{ "time": 0.1333, "color": "ffffffff" },
+					{ "time": 0.2667, "color": "00000000" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"scale": [
+					{},
+					{ "time": 0.1333, "x": 2.092, "y": 2.092 },
+					{ "time": 0.2667 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"deform": {
+			"default": {
+				"magic": {
+					"magic": [
+						{
+							"offset": 2,
+							"vertices": [ -26.81006 ]
+						},
+						{
+							"time": 0.0333,
+							"offset": 2,
+							"vertices": [ -64.75003, 0, 0, 0, 207.19995, 1.84995 ]
+						},
+						{
+							"time": 0.0667,
+							"vertices": [ 2.775, 37.925, -144.42416, 0, 0, -34.22498, 481.92484, 1.84995 ]
+						},
+						{
+							"time": 0.1,
+							"vertices": [ 2.775, 37.925, -120.29514, 0, 0, -34.22498, 736.6197, 1.84995 ]
+						},
+						{
+							"time": 0.1333,
+							"vertices": [ 2.775, 37.925, -120.29514, 0, 0, -34.22498, 980.5908, 1.84995 ],
+							"curve": "stepped"
+						},
+						{
+							"time": 1.6667,
+							"vertices": [ 2.775, 37.925, -120.29514, 0, 0, -34.22498, 980.5908, 1.84995 ]
+						}
+					]
+				}
+			}
+		}
+	}
+}
+}

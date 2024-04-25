@@ -1,0 +1,76 @@
+
+circle3.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+circleBG
+  rotate: false
+  xy: 2, 106
+  size: 334, 339
+  orig: 334, 339
+  offset: 0, 0
+  index: -1
+circleBGBlue
+  rotate: false
+  xy: 338, 106
+  size: 334, 339
+  orig: 334, 339
+  offset: 0, 0
+  index: -1
+circleBGOrange
+  rotate: false
+  xy: 674, 106
+  size: 334, 339
+  orig: 334, 339
+  offset: 0, 0
+  index: -1
+circleBGPink
+  rotate: false
+  xy: 1010, 106
+  size: 334, 339
+  orig: 334, 339
+  offset: 0, 0
+  index: -1
+circleBase
+  rotate: false
+  xy: 1568, 224
+  size: 220, 221
+  orig: 220, 221
+  offset: 0, 0
+  index: -1
+circleBaseBlue
+  rotate: false
+  xy: 1790, 224
+  size: 220, 221
+  orig: 220, 221
+  offset: 0, 0
+  index: -1
+circleBaseOrange
+  rotate: false
+  xy: 1346, 224
+  size: 220, 221
+  orig: 220, 221
+  offset: 0, 0
+  index: -1
+circleBasePink
+  rotate: true
+  xy: 1346, 2
+  size: 220, 221
+  orig: 220, 221
+  offset: 0, 0
+  index: -1
+circleBlack
+  rotate: false
+  xy: 1569, 19
+  size: 203, 203
+  orig: 203, 203
+  offset: 0, 0
+  index: -1
+circleWhite
+  rotate: false
+  xy: 1774, 34
+  size: 189, 188
+  orig: 189, 188
+  offset: 0, 0
+  index: -1

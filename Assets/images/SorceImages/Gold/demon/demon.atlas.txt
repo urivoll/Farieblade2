@@ -1,0 +1,62 @@
+
+demon.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: true
+  xy: 1309, 193
+  size: 297, 510
+  orig: 297, 510
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 753, 11
+  size: 159, 243
+  orig: 159, 243
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 297, 75
+  size: 268, 415
+  orig: 268, 415
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 567, 90
+  size: 184, 400
+  orig: 184, 400
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 753, 172
+  size: 318, 554
+  orig: 318, 554
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 998, 15
+  size: 155, 273
+  orig: 155, 273
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 1273, 40
+  size: 130, 306
+  orig: 130, 306
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 2
+  size: 293, 488
+  orig: 293, 488
+  offset: 0, 0
+  index: -1

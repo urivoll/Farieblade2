@@ -1,0 +1,153 @@
+
+cocaroach.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 870, 96
+  size: 416, 444
+  orig: 416, 444
+  offset: 0, 0
+  index: -1
+chestSmooth
+  rotate: false
+  xy: 649, 542
+  size: 427, 480
+  orig: 427, 480
+  offset: 0, 0
+  index: -1
+closedEyes
+  rotate: false
+  xy: 1305, 18
+  size: 167, 79
+  orig: 167, 79
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 1386, 624
+  size: 193, 145
+  orig: 193, 145
+  offset: 0, 0
+  index: -1
+headSmooth
+  rotate: true
+  xy: 1297, 819
+  size: 203, 180
+  orig: 203, 180
+  offset: 0, 0
+  index: -1
+leftBackLeg
+  rotate: true
+  xy: 1179, 2
+  size: 92, 124
+  orig: 92, 124
+  offset: 0, 0
+  index: -1
+leftHair
+  rotate: false
+  xy: 1288, 191
+  size: 160, 174
+  orig: 160, 174
+  offset: 0, 0
+  index: -1
+leftHairSmooth
+  rotate: false
+  xy: 629, 72
+  size: 186, 257
+  orig: 186, 257
+  offset: 0, 0
+  index: -1
+leftHand
+  rotate: true
+  xy: 1436, 502
+  size: 120, 119
+  orig: 120, 119
+  offset: 0, 0
+  index: -1
+leftHandSmooth
+  rotate: false
+  xy: 1288, 367
+  size: 146, 202
+  orig: 146, 202
+  offset: 0, 0
+  index: -1
+leftTopLeg
+  rotate: true
+  xy: 1195, 571
+  size: 217, 189
+  orig: 217, 189
+  offset: 0, 0
+  index: -1
+leftTopLegSmooth
+  rotate: false
+  xy: 261, 57
+  size: 243, 272
+  orig: 243, 272
+  offset: 0, 0
+  index: -1
+move
+  rotate: true
+  xy: 2, 331
+  size: 691, 645
+  orig: 691, 645
+  offset: 0, 0
+  index: -1
+rightBackLeg
+  rotate: false
+  xy: 649, 333
+  size: 219, 207
+  orig: 219, 207
+  offset: 0, 0
+  index: -1
+rightHair
+  rotate: true
+  xy: 1078, 790
+  size: 232, 217
+  orig: 232, 217
+  offset: 0, 0
+  index: -1
+rightHairSmooth
+  rotate: false
+  xy: 2, 26
+  size: 257, 303
+  orig: 257, 303
+  offset: 0, 0
+  index: -1
+rightHand
+  rotate: true
+  xy: 1288, 99
+  size: 90, 137
+  orig: 90, 137
+  offset: 0, 0
+  index: -1
+rightHandSmooth
+  rotate: false
+  xy: 1078, 567
+  size: 115, 221
+  orig: 115, 221
+  offset: 0, 0
+  index: -1
+rightTopLeg
+  rotate: false
+  xy: 1479, 834
+  size: 96, 188
+  orig: 96, 188
+  offset: 0, 0
+  index: -1
+rightTopLegSmooth
+  rotate: false
+  xy: 506, 57
+  size: 121, 272
+  orig: 121, 272
+  offset: 0, 0
+  index: -1
+shade
+  rotate: false
+  xy: 629, 14
+  size: 548, 56
+  orig: 548, 56
+  offset: 0, 0
+  index: -1

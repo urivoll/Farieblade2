@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18054a356eb8ff949a056a68d0a4981c, type: 3}
+  m_Name: Animation
+  m_EditorClassIdentifier: 
+  _attack: {fileID: 11400000, guid: 0cb68b0509beb5f4582143d3e721bb80, type: 2}
+  _idle: {fileID: 11400000, guid: 35201b0733e45254d95c008ee42060e2, type: 2}
+  _hit: {fileID: 11400000, guid: 7519fc7b545fdff459e5f49e8bc6bd1e, type: 2}
+  _death: {fileID: 11400000, guid: b15309e92711eb84aa9b210e1488e896, type: 2}
+  _spell: {fileID: 11400000, guid: a3e9e2ce1dda17b43bacdbd8cb6abd3b, type: 2}
+  _spell2: {fileID: 11400000, guid: 625dfe50cea7de845b92d897a55c0a80, type: 2}
+  _mode: {fileID: 11400000, guid: 0cb68b0509beb5f4582143d3e721bb80, type: 2}
+  _passive: {fileID: 11400000, guid: 0cb68b0509beb5f4582143d3e721bb80, type: 2}

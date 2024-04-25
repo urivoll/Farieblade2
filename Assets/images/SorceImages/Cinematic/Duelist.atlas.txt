@@ -1,0 +1,139 @@
+
+Duelist.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 278, 47
+  size: 312, 388
+  orig: 312, 388
+  offset: 0, 0
+  index: -1
+chest2
+  rotate: true
+  xy: 2, 437
+  size: 580, 464
+  orig: 580, 464
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 942, 503
+  size: 153, 128
+  orig: 153, 128
+  offset: 0, 0
+  index: -1
+head2
+  rotate: true
+  xy: 1074, 386
+  size: 309, 290
+  orig: 309, 290
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 592, 2
+  size: 83, 92
+  orig: 83, 92
+  offset: 0, 0
+  index: -1
+leftArm2
+  rotate: true
+  xy: 1241, 772
+  size: 245, 235
+  orig: 245, 235
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 820, 494
+  size: 120, 162
+  orig: 120, 162
+  offset: 0, 0
+  index: -1
+leftForearm2
+  rotate: false
+  xy: 854, 172
+  size: 218, 320
+  orig: 218, 320
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: true
+  xy: 468, 439
+  size: 197, 350
+  orig: 197, 350
+  offset: 0, 0
+  index: -1
+leftLeg2
+  rotate: false
+  xy: 592, 96
+  size: 260, 341
+  orig: 260, 341
+  offset: 0, 0
+  index: -1
+leftWeapom
+  rotate: true
+  xy: 782, 658
+  size: 359, 237
+  orig: 359, 237
+  offset: 0, 0
+  index: -1
+rightWeapom
+  rotate: true
+  xy: 782, 658
+  size: 359, 237
+  orig: 359, 237
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 854, 25
+  size: 126, 145
+  orig: 126, 145
+  offset: 0, 0
+  index: -1
+rightArm2
+  rotate: true
+  xy: 1098, 139
+  size: 245, 235
+  orig: 245, 235
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 677, 14
+  size: 80, 165
+  orig: 80, 165
+  offset: 0, 0
+  index: -1
+rightForearm2
+  rotate: false
+  xy: 1021, 697
+  size: 218, 320
+  orig: 218, 320
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 33
+  size: 274, 402
+  orig: 274, 402
+  offset: 0, 0
+  index: -1
+rightLeg2
+  rotate: false
+  xy: 468, 638
+  size: 312, 379
+  orig: 312, 379
+  offset: 0, 0
+  index: -1
+Слой 1
+  rotate: true
+  xy: 982, 37
+  size: 133, 114
+  orig: 133, 114
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+Fat man.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arrow
+  rotate: true
+  xy: 627, 466
+  size: 552, 164
+  orig: 552, 164
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 2, 370
+  size: 623, 648
+  orig: 623, 648
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 793, 377
+  size: 252, 211
+  orig: 252, 211
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 1024, 756
+  size: 241, 262
+  orig: 241, 262
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 285, 36
+  size: 270, 332
+  orig: 270, 332
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 557, 51
+  size: 245, 317
+  orig: 245, 317
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 1047, 499
+  size: 242, 255
+  orig: 242, 255
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 804, 62
+  size: 282, 313
+  orig: 282, 313
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 2, 2
+  size: 281, 366
+  orig: 281, 366
+  offset: 0, 0
+  index: -1
+Слой 1
+  rotate: true
+  xy: 793, 590
+  size: 428, 229
+  orig: 428, 229
+  offset: 0, 0
+  index: -1

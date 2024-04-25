@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de02b6613c5c0e4e95578f54dc0c1b9, type: 3}
+  m_Name: Gold
+  m_EditorClassIdentifier: 
+  _name:
+  - Gold
+  - "\u0417\u043E\u043B\u043E\u0442\u043E"
+  _icon: {fileID: 21300000, guid: 3b621ec5cba364a4cb042d8352bd5359, type: 3}
+  _id: 2
+  _frame: {fileID: 21300000, guid: ba81020caeea1be4880040393092205f, type: 3}
+  _deck: {fileID: 21300000, guid: 57349e6b02ffd6b4b941abad774b7bef, type: 3}

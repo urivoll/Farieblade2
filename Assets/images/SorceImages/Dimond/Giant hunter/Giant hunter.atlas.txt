@@ -1,0 +1,104 @@
+
+Giant hunter.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 2, 106
+  size: 312, 404
+  orig: 312, 404
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: true
+  xy: 254, 29
+  size: 75, 45
+  orig: 75, 45
+  offset: 0, 0
+  index: -1
+eyesCenter
+  rotate: true
+  xy: 301, 58
+  size: 46, 29
+  orig: 46, 29
+  offset: 0, 0
+  index: -1
+hair
+  rotate: true
+  xy: 1073, 5
+  size: 153, 111
+  orig: 153, 111
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 592, 2
+  size: 187, 147
+  orig: 187, 147
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 2, 12
+  size: 83, 92
+  orig: 83, 92
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: true
+  xy: 909, 29
+  size: 120, 162
+  orig: 120, 162
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 1070, 160
+  size: 318, 350
+  orig: 318, 350
+  offset: 0, 0
+  index: -1
+leftWeapom
+  rotate: true
+  xy: 592, 151
+  size: 359, 237
+  orig: 359, 237
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 781, 4
+  size: 126, 145
+  orig: 126, 145
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 87, 24
+  size: 80, 165
+  orig: 80, 165
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 316, 108
+  size: 274, 402
+  orig: 274, 402
+  offset: 0, 0
+  index: -1
+rightWeapom
+  rotate: true
+  xy: 831, 151
+  size: 359, 237
+  orig: 359, 237
+  offset: 0, 0
+  index: -1
+teeth
+  rotate: true
+  xy: 301, 12
+  size: 44, 28
+  orig: 44, 28
+  offset: 0, 0
+  index: -1

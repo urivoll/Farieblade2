@@ -1,0 +1,34 @@
+
+StoneSkin.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Слой 3
+  rotate: false
+  xy: 2, 2
+  size: 785, 240
+  orig: 785, 240
+  offset: 0, 0
+  index: -1
+Слой 4
+  rotate: true
+  xy: 794, 71
+  size: 778, 194
+  orig: 778, 194
+  offset: 0, 0
+  index: -1
+Слой 5
+  rotate: false
+  xy: 2, 509
+  size: 790, 340
+  orig: 790, 340
+  offset: 0, 0
+  index: -1
+Слой 6
+  rotate: false
+  xy: 2, 244
+  size: 780, 263
+  orig: 780, 263
+  offset: 0, 0
+  index: -1

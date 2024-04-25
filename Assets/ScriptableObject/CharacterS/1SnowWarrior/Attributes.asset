@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948ab89100fb1084b83a0c1cf275e0dd, type: 3}
+  m_Name: Attributes
+  m_EditorClassIdentifier: 
+  _hp: 35
+  _damage: 12
+  _accuarcy: 75
+  _initiative: 25
+  _hitCount: 1
+  _spellCoast: 2
+  _type: {fileID: 11400000, guid: e36828b3e6028b541b8fc7d098fe8e12, type: 2}
+  _role: {fileID: 11400000, guid: eed626967866099419cbcb203112fe51, type: 2}
+  _grade: {fileID: 11400000, guid: 794387d5c0a492546bb743d6adc9869d, type: 2}
+  _fraction: {fileID: 11400000, guid: 8d0157ee98123424488b528c348e53e6, type: 2}
+  _vulnerability: {fileID: 11400000, guid: bf4b36e9872219f4e9ed4b52d45658b5, type: 2}
+  _resist: {fileID: 11400000, guid: 4aced438be906584abcdae4068864084, type: 2}
+  _damageType: {fileID: 11400000, guid: ab9ab05e155dc224ea8a50d888961b49, type: 2}

@@ -1,0 +1,223 @@
+
+Dead king.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 747, 770
+  size: 283, 458
+  orig: 283, 458
+  offset: 0, 0
+  index: -1
+chestSmmoth
+  rotate: false
+  xy: 585, 1578
+  size: 321, 466
+  orig: 321, 466
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: true
+  xy: 2, 65
+  size: 368, 673
+  orig: 368, 673
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: true
+  xy: 270, 453
+  size: 64, 22
+  orig: 64, 22
+  offset: 0, 0
+  index: -1
+eyesLight
+  rotate: false
+  xy: 294, 466
+  size: 86, 51
+  orig: 86, 51
+  offset: 0, 0
+  index: -1
+fire1
+  rotate: false
+  xy: 585, 1230
+  size: 136, 346
+  orig: 136, 346
+  offset: 0, 0
+  index: -1
+fire3
+  rotate: false
+  xy: 861, 1230
+  size: 105, 346
+  orig: 105, 346
+  offset: 0, 0
+  index: -1
+fire4
+  rotate: false
+  xy: 677, 75
+  size: 118, 358
+  orig: 118, 358
+  offset: 0, 0
+  index: -1
+fire5
+  rotate: false
+  xy: 968, 1256
+  size: 105, 346
+  orig: 105, 346
+  offset: 0, 0
+  index: -1
+fire6
+  rotate: false
+  xy: 797, 75
+  size: 118, 358
+  orig: 118, 358
+  offset: 0, 0
+  index: -1
+fire7
+  rotate: false
+  xy: 723, 1230
+  size: 136, 346
+  orig: 136, 346
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 1032, 1062
+  size: 192, 166
+  orig: 192, 166
+  offset: 0, 0
+  index: -1
+headSmooth
+  rotate: true
+  xy: 429, 474
+  size: 227, 181
+  orig: 227, 181
+  offset: 0, 0
+  index: -1
+lats
+  rotate: true
+  xy: 612, 435
+  size: 297, 214
+  orig: 297, 214
+  offset: 0, 0
+  index: -1
+latsSmooth
+  rotate: false
+  xy: 828, 547
+  size: 335, 221
+  orig: 335, 221
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 828, 446
+  size: 99, 156
+  orig: 99, 156
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 1113, 340
+  size: 137, 205
+  orig: 137, 205
+  offset: 0, 0
+  index: -1
+leftForearmSmooth
+  rotate: false
+  xy: 1076, 11
+  size: 178, 211
+  orig: 178, 211
+  offset: 0, 0
+  index: -1
+leftLats
+  rotate: true
+  xy: 105, 438
+  size: 79, 163
+  orig: 79, 163
+  offset: 0, 0
+  index: -1
+leftLatsSmooth
+  rotate: false
+  xy: 1165, 696
+  size: 118, 175
+  orig: 118, 175
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 908, 1604
+  size: 200, 440
+  orig: 200, 440
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 229, 703
+  size: 333, 504
+  orig: 333, 504
+  offset: 0, 0
+  index: -1
+move
+  rotate: false
+  xy: 2, 1209
+  size: 581, 835
+  orig: 581, 835
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: false
+  xy: 1032, 873
+  size: 142, 187
+  orig: 142, 187
+  offset: 0, 0
+  index: -1
+rightArmSmooth
+  rotate: true
+  xy: 229, 519
+  size: 182, 198
+  orig: 182, 198
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 917, 10
+  size: 157, 212
+  orig: 157, 212
+  offset: 0, 0
+  index: -1
+rightForearmSmooth
+  rotate: false
+  xy: 917, 224
+  size: 194, 220
+  orig: 194, 220
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 564, 734
+  size: 181, 473
+  orig: 181, 473
+  offset: 0, 0
+  index: -1
+sword
+  rotate: true
+  xy: 2, 2
+  size: 61, 760
+  orig: 61, 760
+  offset: 0, 0
+  index: -1
+swordSmooth
+  rotate: false
+  xy: 2, 435
+  size: 101, 772
+  orig: 101, 772
+  offset: 0, 0
+  index: -1
+Слой 1
+  rotate: false
+  xy: 105, 519
+  size: 122, 688
+  orig: 122, 688
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+necromancer.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 809, 306
+  size: 377, 488
+  orig: 377, 488
+  offset: 0, 0
+  index: -1
+cloak
+  rotate: true
+  xy: 2, 212
+  size: 748, 805
+  orig: 748, 805
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 1188, 451
+  size: 259, 343
+  orig: 259, 343
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: false
+  xy: 1664, 216
+  size: 200, 209
+  orig: 200, 209
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 809, 88
+  size: 280, 216
+  orig: 280, 216
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 1546, 427
+  size: 421, 533
+  orig: 421, 533
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 1664, 68
+  size: 146, 237
+  orig: 146, 237
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: true
+  xy: 1399, 196
+  size: 229, 263
+  orig: 229, 263
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 1188, 2
+  size: 209, 447
+  orig: 209, 447
+  offset: 0, 0
+  index: -1
+weapon
+  rotate: true
+  xy: 809, 796
+  size: 164, 735
+  orig: 164, 735
+  offset: 0, 0
+  index: -1

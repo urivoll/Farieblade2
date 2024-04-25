@@ -1,0 +1,332 @@
+{
+"skeleton": { "hash": "AVQLLQrWGrM2ZUZ8wzBT04kbwc4", "spine": "3.8.0", "x": -267.2, "y": -135.2, "width": 534.4, "height": 271.2 },
+"bones": [
+	{ "name": "root", "scaleX": 1.6, "scaleY": 0.8 },
+	{ "name": "bone", "parent": "root", "length": 100, "rotation": 0.22, "x": 0.04 },
+	{ "name": "bone2", "parent": "root", "length": 100, "rotation": 89.35, "x": 0.03, "y": 0.02 },
+	{ "name": "bone3", "parent": "root", "length": 91.08, "rotation": 179.11, "x": -0.02, "y": 0.06 }
+],
+"slots": [
+	{ "name": "circleBG", "bone": "root", "attachment": "circleBGOrange" },
+	{ "name": "circleBase", "bone": "root", "attachment": "circleBaseOrange" },
+	{ "name": "circleWhite", "bone": "root", "attachment": "circleWhite" },
+	{ "name": "circleBlack", "bone": "root", "attachment": "circleBlack" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"circleBase": {
+				"circleBase": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, -109.27, -111.21, 1, 1, 2, -111.76, 108.77, 1, 1, 2, 109.22, 111.27, 1, 1, 2, 111.71, -108.71, 1 ],
+					"hull": 4
+				},
+				"circleBaseBlue": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 2, -109.27, -111.21, 1, 1, 2, -111.76, 108.77, 1, 1, 2, 109.22, 111.27, 1, 1, 2, 111.71, -108.71, 1 ],
+					"hull": 4
+				},
+				"circleBaseOrange": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 110, -110, -110, -110, -110, 111, 110, 111 ],
+					"hull": 4
+				},
+				"circleBasePink": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 110, -110.5, -110, -110.5, -110, 110.5, 110, 110.5 ],
+					"hull": 4
+				}
+			},
+			"circleBlack": {
+				"circleBlack": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 101.5, -101.5, -101.5, -101.5, -101.5, 101.5, 101.5, 101.5 ],
+					"hull": 4
+				}
+			},
+			"circleBG": {
+				"circleBG": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 1, 166.32, -170.13, 1, 1, 1, -167.68, -168.87, 1, 1, 1, -166.4, 170.13, 1, 1, 1, 167.6, 168.87, 1 ],
+					"hull": 4
+				},
+				"circleBGBlue": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 1, 166.32, -170.13, 1, 1, 1, -167.68, -168.87, 1, 1, 1, -166.4, 170.13, 1, 1, 1, 167.6, 168.87, 1 ],
+					"hull": 4
+				},
+				"circleBGOrange": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 167, -169, -167, -169, -167, 170, 167, 170 ],
+					"hull": 4
+				},
+				"circleBGPink": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 167, -169.5, -167, -169.5, -167, 169.5, 167, 169.5 ],
+					"hull": 4
+				}
+			},
+			"circleWhite": {
+				"circleWhite": {
+					"type": "mesh",
+					"uvs": [ 1, 1, 0, 1, 0, 0, 1, 0 ],
+					"triangles": [ 1, 2, 3, 1, 3, 0 ],
+					"vertices": [ 1, 3, -95.97, 92.58, 1, 1, 3, 93.01, 95.51, 1, 1, 3, 95.92, -92.47, 1, 1, 3, -93.06, -95.4, 1 ],
+					"hull": 4
+				}
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {},
+	"circleEnemy": {
+		"slots": {
+			"circleBlack": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"circleBase": {
+				"attachment": [
+					{ "name": "circleBase" }
+				]
+			},
+			"circleBG": {
+				"attachment": [
+					{ "name": "circleBG" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{}
+				]
+			},
+			"bone": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": 89.94 },
+					{ "time": 1.6667, "angle": 179.88 },
+					{ "time": 2.5, "angle": -89.53 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6667, "angle": 90.54, "curve": 0.25, "c3": 0.75 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": -89.56 },
+					{ "time": 1.6667, "angle": -179.11 },
+					{ "time": 2.5, "angle": 90.89 },
+					{ "time": 3.3333, "angle": 0.89 }
+				]
+			}
+		}
+	},
+	"circleEnemyTurn": {
+		"slots": {
+			"circleBlack": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"circleBase": {
+				"attachment": [
+					{ "name": "circleBaseOrange" }
+				]
+			},
+			"circleBG": {
+				"attachment": [
+					{ "name": "circleBGOrange" }
+				]
+			}
+		},
+		"bones": {
+			"bone2": {
+				"rotate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6667, "angle": 90.54, "curve": 0.25, "c3": 0.75 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": -89.56 },
+					{ "time": 1.6667, "angle": -179.11 },
+					{ "time": 2.5, "angle": 90.89 },
+					{ "time": 3.3333, "angle": 0.89 }
+				]
+			},
+			"bone": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": 89.94 },
+					{ "time": 1.6667, "angle": 179.88 },
+					{ "time": 2.5, "angle": -89.53 },
+					{ "time": 3.3333 }
+				]
+			},
+			"root": {
+				"rotate": [
+					{}
+				]
+			}
+		}
+	},
+	"circleOur": {
+		"slots": {
+			"circleBlack": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"circleBase": {
+				"attachment": [
+					{ "name": "circleBaseBlue" }
+				]
+			},
+			"circleBG": {
+				"attachment": [
+					{ "name": "circleBGBlue" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{}
+				]
+			},
+			"bone": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": 89.94 },
+					{ "time": 1.6667, "angle": 179.88 },
+					{ "time": 2.5, "angle": -89.53 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6667, "angle": 90.54, "curve": 0.25, "c3": 0.75 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": -89.56 },
+					{ "time": 1.6667, "angle": -179.11 },
+					{ "time": 2.5, "angle": 90.89 },
+					{ "time": 3.3333, "angle": 0.89 }
+				]
+			}
+		}
+	},
+	"circleSpell": {
+		"slots": {
+			"circleBlack": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"circleBase": {
+				"attachment": [
+					{ "name": "circleBasePink" }
+				]
+			},
+			"circleBG": {
+				"attachment": [
+					{ "name": "circleBGPink" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"rotate": [
+					{}
+				]
+			},
+			"bone": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": 89.94 },
+					{ "time": 1.6667, "angle": 179.88 },
+					{ "time": 2.5, "angle": -89.53 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone2": {
+				"rotate": [
+					{ "curve": 0.25, "c3": 0.75 },
+					{ "time": 1.6667, "angle": 90.54, "curve": 0.25, "c3": 0.75 },
+					{ "time": 3.3333 }
+				]
+			},
+			"bone3": {
+				"rotate": [
+					{},
+					{ "time": 0.8333, "angle": -89.56 },
+					{ "time": 1.6667, "angle": -179.11 },
+					{ "time": 2.5, "angle": 90.89 },
+					{ "time": 3.3333, "angle": 0.89 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"slots": {
+			"circleWhite": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"circleBlack": {
+				"color": [
+					{ "color": "ffffff32", "curve": "stepped" },
+					{ "time": 1.6667, "color": "ffffff32" }
+				]
+			},
+			"circleBase": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"circleBG": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		}
+	}
+}
+}

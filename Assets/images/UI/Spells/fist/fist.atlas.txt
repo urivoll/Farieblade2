@@ -1,0 +1,41 @@
+
+fist.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+base
+  rotate: false
+  xy: 2, 11
+  size: 285, 241
+  orig: 285, 241
+  offset: 0, 0
+  index: -1
+little
+  rotate: true
+  xy: 453, 85
+  size: 167, 91
+  orig: 167, 91
+  offset: 0, 0
+  index: -1
+middle
+  rotate: true
+  xy: 381, 50
+  size: 202, 70
+  orig: 202, 70
+  offset: 0, 0
+  index: -1
+noname
+  rotate: true
+  xy: 289, 40
+  size: 212, 90
+  orig: 212, 90
+  offset: 0, 0
+  index: -1
+target
+  rotate: false
+  xy: 381, 2
+  size: 168, 46
+  orig: 168, 46
+  offset: 0, 0
+  index: -1

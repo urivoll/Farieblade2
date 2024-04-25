@@ -1,0 +1,69 @@
+
+healer.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chest
+  rotate: false
+  xy: 2, 17
+  size: 205, 473
+  orig: 205, 473
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 646, 331
+  size: 144, 159
+  orig: 144, 159
+  offset: 0, 0
+  index: -1
+leftArm
+  rotate: true
+  xy: 209, 2
+  size: 72, 158
+  orig: 72, 158
+  offset: 0, 0
+  index: -1
+leftForearm
+  rotate: false
+  xy: 438, 279
+  size: 102, 211
+  orig: 102, 211
+  offset: 0, 0
+  index: -1
+leftLeg
+  rotate: false
+  xy: 299, 77
+  size: 137, 413
+  orig: 137, 413
+  offset: 0, 0
+  index: -1
+magic
+  rotate: true
+  xy: 438, 94
+  size: 183, 207
+  orig: 183, 207
+  offset: 0, 0
+  index: -1
+rightArm
+  rotate: true
+  xy: 369, 3
+  size: 72, 158
+  orig: 72, 158
+  offset: 0, 0
+  index: -1
+rightForearm
+  rotate: false
+  xy: 542, 279
+  size: 102, 211
+  orig: 102, 211
+  offset: 0, 0
+  index: -1
+rightLeg
+  rotate: false
+  xy: 209, 76
+  size: 88, 414
+  orig: 88, 414
+  offset: 0, 0
+  index: -1

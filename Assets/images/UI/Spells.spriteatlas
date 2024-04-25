@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Spells
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 758c4d916599e0e40a3ed27a1a1c23f6, type: 3}
+    - {fileID: 2800000, guid: 05a7007461a6d5c4ca7d093323a1c914, type: 3}
+    - {fileID: 2800000, guid: fc498e2570a9f32458f17bc2b9e673b5, type: 3}
+    - {fileID: 2800000, guid: 9c05b7a318d7d3f46912bb02eed989cc, type: 3}
+    - {fileID: 2800000, guid: 791b0b4fef266c641823c053eeeda86d, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 758c4d916599e0e40a3ed27a1a1c23f6, type: 3}
+  - {fileID: 21300000, guid: 9c05b7a318d7d3f46912bb02eed989cc, type: 3}
+  - {fileID: 21300000, guid: 05a7007461a6d5c4ca7d093323a1c914, type: 3}
+  - {fileID: 21300000, guid: fc498e2570a9f32458f17bc2b9e673b5, type: 3}
+  - {fileID: 21300000, guid: 791b0b4fef266c641823c053eeeda86d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Accuarcy
+  - Shyness
+  - Defend
+  - Giant killer
+  - Splitting protection
+  m_RenderDataMap: {}
+  m_Tag: Spells
+  m_IsVariant: 0
