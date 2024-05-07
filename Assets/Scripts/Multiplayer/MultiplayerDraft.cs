@@ -341,7 +341,7 @@ public class MultiplayerDraft : MonoBehaviour
             newUnit.level = level;
             newUnit.grade = grade;
             newUnit.SetValues();
-            newUnit.transform.Find("Card").GetComponent<CardVeiw>().SetCardValues();
+            newUnit.transform.Find("Card").GetComponent<CardVeiw>().Init();
 
             totalPower[side] += Convert.ToInt32(newUnit.Power);
             if (newUnit.Type == 3)

@@ -2091,7 +2091,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   LvlupEffect: {fileID: 7863237597647549064}
   anIs: {fileID: 6224377144999073679}
-  ExpEleksir: {fileID: 2709909965936788803}
   squad:
   - intArray:
     - Dark awakening

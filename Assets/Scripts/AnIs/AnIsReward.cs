@@ -118,7 +118,7 @@ public class AnIsReward : MonoBehaviour
                         if (i2.GetComponent<Unit>().onAnIs == Campany.anIsLocation[i])
                         {
                             i2.GetComponent<Unit>().onAnIs = -666;
-                            i2.transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+                            i2.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
                         }
                     }
                     Campany.anIsLocation[i] = -666;

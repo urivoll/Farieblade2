@@ -27,8 +27,6 @@ public class Melee : Weapon
             if (inpData[count].attackSend["catch"] == 1)
             {
                 BattleSound.sound.PlayOneShot(BattleSound.weaponClip[weaponIndex]);
-                if (from.pathParent.Type == 3) 
-                    StartIni.animatorShakeStatic.SetTrigger("shakeShort");
                 unitForHit.HpCharacter.TakeDamage(from, inpData[count]);
                 if (effect != null) 
                     Instantiate(effect, unitForHit.PathBulletTarget.position, Quaternion.identity);

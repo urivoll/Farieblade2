@@ -5,11 +5,13 @@ using Zenject;
 
 public abstract class Weapon : MonoBehaviour
 {
-    public int damage => _damage; 
-    public int times => _times;
-    public int state => _state;
-    public int accuracy => _accuracy;
+    public int DamageType => _damageType;
+    public int Damage => _damage; 
+    public int Times => _times;
+    public int State => _state;
+    public int Accuracy => _accuracy;
 
+    protected int _damageType;
     protected float _timeBeforeHit;
     protected AudioClip _soundBeforeHit;
     protected CharacterPlacement _characterPlacement;

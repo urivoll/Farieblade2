@@ -37,8 +37,8 @@ public class Bullet : MonoBehaviour
             if (debuff != null)
             {
                 GameObject newObject = Instantiate(debuff, unitTarget.PathDebuffs);
-                if(unitFrom != null) newObject.GetComponent<AbstractSpell>().fromUnit = unitFrom.pathParent;
-                else newObject.GetComponent<AbstractSpell>().fromUnit = unitFrom.GetComponent<AbstractSpell>().fromUnit;
+                ///if(unitFrom != null) newObject.GetComponent<AbstractSpell>().fromUnit = unitFrom;
+                //else newObject.GetComponent<AbstractSpell>().fromUnit = unitFrom.GetComponent<AbstractSpell>().fromUnit;
             }
             notWork = true;
             stop = true;

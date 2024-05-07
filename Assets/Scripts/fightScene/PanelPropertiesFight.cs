@@ -67,9 +67,9 @@ public class PanelPropertiesFight : MonoBehaviour
         gameObject.SetActive(true);
 
         textHPBase.text = Convert.ToString(obj.HpCharacter.HpBase);
-        textDmg.text = Convert.ToString(obj.Weapon.damage);
+        textDmg.text = Convert.ToString(obj.Weapon.Damage);
         textName.text = obj.transform.Find("Card/shell/Name").gameObject.GetComponent<LanguageText>().text[PlayerData.language];
-        textAcc.text = Convert.ToString(obj.Weapon.accuracy);
+        textAcc.text = Convert.ToString(obj.Weapon.Accuracy);
         textInit.text = Convert.ToString(obj.initiative);
 
         textLevel.text = Convert.ToString(obj.Level);
@@ -131,8 +131,8 @@ public class PanelPropertiesFight : MonoBehaviour
                 _avatarObject.SetActive(true);*/
 
         textHPFight.text = Convert.ToString(obj.HpCharacter.Hp);
-        textDmgFight.text = Convert.ToString(obj.Weapon.damage);
-        textAccFight.text = Convert.ToString(obj.Weapon.accuracy);
+        textDmgFight.text = Convert.ToString(obj.Weapon.Damage);
+        textAccFight.text = Convert.ToString(obj.Weapon.Accuracy);
         textInitFight.text = Convert.ToString(obj.initiative);
 
 

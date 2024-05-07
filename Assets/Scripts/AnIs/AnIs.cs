@@ -111,7 +111,7 @@ public class AnIs : MonoBehaviour
                 if (dropHandler[i].newObject != null)
                 {
                     PlayerData.myCollection[dropHandler[i].newObject.GetComponent<Unit>().ID].GetComponent<Unit>().onAnIs = Campany.anIsCurrentPlace;
-                    PlayerData.myCollection[dropHandler[i].newObject.GetComponent<Unit>().ID].transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+                    PlayerData.myCollection[dropHandler[i].newObject.GetComponent<Unit>().ID].transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
                 }
             }
 

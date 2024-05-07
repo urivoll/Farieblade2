@@ -14,8 +14,8 @@ public class Shooter : Weapon
     public override IEnumerator Attack(UnitProperties from, List<MakeMove> inpData)
     {
         UnitProperties unitForHit = _characterPlacement.CirclesMap[inpData[0].attackSend["sideTarget"], inpData[0].attackSend["placeTarget"]].ChildCharacter;
-        int times = from.Weapon.times;
-        int damage = from.Weapon.damage;
+        int times = from.Weapon.Times;
+        int damage = from.Weapon.Damage;
         if (attackEffect != null) attackEffect.SetActive(true);
         if (_soundBeforeHit != null) BattleSound.sound.PlayOneShot(_soundBeforeHit);
         int count = 0;

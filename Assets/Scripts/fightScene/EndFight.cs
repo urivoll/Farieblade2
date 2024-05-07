@@ -93,7 +93,7 @@ public class EndFight : MonoBehaviour
         newObject.GetComponent<Unit>().level = BattleNetwork.winners[i, 1];
         newObject.GetComponent<Unit>().grade = BattleNetwork.winners[i, 3];
         newObject.GetComponent<Unit>().SetValues();
-        newObject.transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+        newObject.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
     }
 /*    private IEnumerator LevelUpEffect(GameObject prefub, Unit i, int count)
     {

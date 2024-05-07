@@ -29,7 +29,7 @@ public class Http : MonoBehaviour
         }
         form.AddField("id", FirstStart.newProdID);
         form.AddField("password", FirstStart.newPassword);
-        UnityWebRequest request = UnityWebRequest.Post($"http://46.8.21.206:8080/test/{where}.php", form);
+        UnityWebRequest request = UnityWebRequest.Post($"http://localhost/test/{where}.php", form);
         yield return request.SendWebRequest();
         //print("Куда: " + where);
         if (request.result != UnityWebRequest.Result.Success)

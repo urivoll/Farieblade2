@@ -37,17 +37,12 @@ public class FirstStart : MonoBehaviour
         }
         else LoadingManager.LoadingScreen.SetActive(true);
         //PlayerPrefs.DeleteKey("user_id");
-        /*        if (PlayerData.traning == -1)
-                    
-        */
-        /*        PlayerPrefs.SetInt("user_id", 52);
-                PlayerPrefs.SetString("user_password", "6300");*/
         if (PlayerPrefs.HasKey("user_id") == false)
         {
             PlayerPrefs.DeleteAll();
             WWWForm form = new();
             form.AddField("action", "insert");
-            UnityWebRequest request = UnityWebRequest.Post("http://46.8.21.206/test/account/createNewAcc.php", form);
+            UnityWebRequest request = UnityWebRequest.Post("http://localhost/test/account/createNewAcc.php", form);
             yield return request.SendWebRequest();
             if (request.result != UnityWebRequest.Result.Success)
             {
@@ -60,6 +55,7 @@ public class FirstStart : MonoBehaviour
             }
             else
             {
+                print(request.downloadHandler.text);
                 CreateNewAcc obj = JsonConvert.DeserializeObject<CreateNewAcc>(request.downloadHandler.text);
                 newProdID = obj.id;
                 newPassword = obj.password;

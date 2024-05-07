@@ -73,7 +73,7 @@ public class Unit : MonoBehaviour
     public void ShowUnitProperties()
     {
         if (GameObject.Find("Draft") == null) _panel.GetComponent<PanelProperties>().SetValue(this);
-        else _panel.GetComponent<PanelPropertiesFight>().SetValue(this);
+        ///else _panel.GetComponent<PanelPropertiesFight>().SetValue(this);
     }
     public void SetValues()
     {

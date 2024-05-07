@@ -5,12 +5,12 @@ public struct StartDataResponse
     public int day_of_year;
     public int week_number;
     public string nickName;
-    public int _1_1;
-    public int _2_1;
-    public int _1_2;
-    public int _2_2;
-    public int _1_3;
-    public int _2_3;
+    public int troop0;
+    public int troop1;
+    public int troop2;
+    public int troop3;
+    public int troop4;
+    public int troop5;
     public int campany;
     public int accountLevel;
     public int accountExp;

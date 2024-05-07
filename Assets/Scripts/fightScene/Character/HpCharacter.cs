@@ -8,6 +8,8 @@ public class HpCharacter
     public float HpProsent => _hpProsent;
     public float InpDamage => _inpDamage;
     public int InpDamageType => _inpDamageType;
+    public int Vulnerability => _vulnerability;
+    public int Resist => _resist;
 
     public bool heal = true;
     public bool resurect = false;
@@ -18,6 +20,8 @@ public class HpCharacter
     private int _hpBase;
     private float _hpProsent = 100;
     private UnitProperties _unitProperties;
+    private int _vulnerability;
+    private int _resist;
     [Inject] private CharacterPlacement _characterPlacement;
 
     public HpCharacter(UnitProperties unitProperties, CharacterAttributes attributes)
@@ -97,10 +101,10 @@ public class HpCharacter
             }
         }
         _hp = 0;
-        if (_unitProperties.pathParent.ID != 4 &&
-            _unitProperties.pathParent.ID != 13 &&
-            _unitProperties.pathParent.ID != 44 &&
-            _unitProperties.pathParent.fraction != 9)
+        if (_unitProperties.Id != 4 &&
+            _unitProperties.Id != 13 &&
+            _unitProperties.Id != 44 &&
+            _unitProperties.Id != 9)
             _unitProperties.SoundDie();
         _unitProperties.Animation.TryGetAnimation("death");
         if (resurect) return;

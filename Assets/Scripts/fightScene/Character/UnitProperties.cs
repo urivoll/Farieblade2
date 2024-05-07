@@ -15,6 +15,7 @@ public class UnitProperties : MonoBehaviour
     [HideInInspector] public int Grade;
     [HideInInspector] public int State;
     [HideInInspector] public int indexVoice;
+    [HideInInspector] public int Energy—onsumption;
     [HideInInspector] public HpCharacter HpCharacter;
     [HideInInspector] public EnergyUnit Energy;
     [HideInInspector] public Spells Spells;

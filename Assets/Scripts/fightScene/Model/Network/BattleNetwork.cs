@@ -42,7 +42,7 @@ public class BattleNetwork : MonoBehaviour
         endEvent += EndAnswer;
         gameReuslt += GameResult;
         if (state == 0)
-        hubConnection = new HubConnectionBuilder().WithUrl("http://46.8.21.206:5215/PickHub").Build();
+        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:5215/PickHub").Build();
         if (state == 1)
         {
             local = true;

@@ -22,7 +22,7 @@ public class MoveCards : MonoBehaviour
                 unitEnemy[i].GetComponent<Unit>().grade = Campany.enemyGrades;
                 unitEnemy[i].GetComponent<Unit>().level = Campany.enemyLevel[i];
                 unitEnemy[i].GetComponent<Unit>().SetValues();
-                unitEnemy[i].transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+                unitEnemy[i].transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
             }
         }
     }

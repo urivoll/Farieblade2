@@ -66,7 +66,7 @@ public class Deck : MonoBehaviour
         DefaultCardPrefub.GetComponent<Unit>().level = PlayerData.myCollection[DefaultCardPrefub.GetComponent<Unit>().ID].GetComponent<Unit>().level;
         DefaultCardPrefub.GetComponent<Unit>().grade = PlayerData.myCollection[DefaultCardPrefub.GetComponent<Unit>().ID].GetComponent<Unit>().grade;
         DefaultCardPrefub.GetComponent<Unit>().SetValues();
-        DefaultCardPrefub.transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+        DefaultCardPrefub.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
 
 
         Destroy(DefaultCardPrefub.transform.Find("Card").gameObject.GetComponent<UIDragHandler>());
@@ -109,7 +109,7 @@ public class Deck : MonoBehaviour
             InitUp.text = "+0";
             obj.GetComponent<Unit>().grade += 1;
             obj.GetComponent<Unit>().SetValues();
-            obj.transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+            obj.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
 
             Sound.sound.PlayOneShot(_upgradeSound);
             while (countinue == false) yield return null;
@@ -129,7 +129,7 @@ public class Deck : MonoBehaviour
 
             if (PlayerData.language == 0) textReturn.text = "To the collection!";
             else if (PlayerData.language == 1) textReturn.text = "ƒÓ·‡‚ËÚ¸ ‚ ÍÓÎÎÂÍˆË˛!";
-            DefaultCardPrefub.transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+            DefaultCardPrefub.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
         }
         //”ƒ¿À≈Õ»≈  ¿–“€!
         else if (upGrade == 2)
@@ -192,7 +192,7 @@ public class Deck : MonoBehaviour
             upGrade = 0;
             IdUnit.idLevel[obj3.unit] = 1;
             obj.GetComponent<Unit>().level = 1;
-            obj.transform.Find("Card").gameObject.GetComponent<CardVeiw>().SetCardValues();
+            obj.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
         }
         else if (obj3.grade != -666) upGrade = 1;
         else upGrade = 2;

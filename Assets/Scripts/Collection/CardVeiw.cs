@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,10 +30,12 @@ public class CardVeiw : MonoBehaviour
     [SerializeField] private GameObject anIs;
     [SerializeField] private StringArray[] squad;
     [SerializeField] private TextMeshProUGUI achive;
+    [SerializeField] private IDCaracter _caracter;
 
-    void Start() => SetCardValues();
-    public void SetCardValues()
+    void Start() => Init();
+    public void Init()
     {
+        //CharacterData character = _caracter.CharacterData[obj.Id];
         Unit _parent = gameObject.transform.parent.gameObject.GetComponent<Unit>();
         if (_parent.squad != -666) achive.text = squad[_parent.squad].intArray[PlayerData.language];
         _RangImage.sprite = spriteRang[_parent.rang];

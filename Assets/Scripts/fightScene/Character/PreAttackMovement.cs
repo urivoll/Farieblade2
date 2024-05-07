@@ -42,8 +42,8 @@ public class PreAttackMovement : MonoBehaviour
         if (_pushUnit.ParentCircle.Side == 1) _pushUnit.transform.localPosition += new Vector3(2f, 0, 0);
         else _pushUnit.transform.localPosition -= new Vector3(2f, 0, 0);
 
-        _turnUnit.pathParent.transform.SetParent(_pushUnit.GetComponent<UnitProperties>().ParentCircle.transform);
-        _turnUnit.pathParent.transform.localScale = new Vector2(1, 1);
+        _turnUnit.transform.SetParent(_pushUnit.GetComponent<UnitProperties>().ParentCircle.transform);
+        _turnUnit.transform.localScale = new Vector2(1, 1);
         return _pushUnit.ParentCircle.transform;
     }
 
@@ -57,8 +57,8 @@ public class PreAttackMovement : MonoBehaviour
             _pushUnit = null;
         }
         _turnUnit.transform.position = _turnUnit.ParentCircle.transform.position;
-        _turnUnit.pathParent.transform.SetParent(_turnUnit.ParentCircle.transform);
-        _turnUnit.pathParent.transform.localScale = new Vector2(1, 1);
+        _turnUnit.transform.SetParent(_turnUnit.ParentCircle.transform);
+        _turnUnit.transform.localScale = new Vector2(1, 1);
     }
 
     private void OnDestroy()

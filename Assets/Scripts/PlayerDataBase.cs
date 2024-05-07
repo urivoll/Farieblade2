@@ -14,12 +14,12 @@ public class PlayerDataBase : MonoBehaviour
 
         StartDataResponse response = JsonUtility.FromJson<StartDataResponse>(json);
         Campany.campanyProgress = response.campany;
-        PlayerData.troop[0] = response._1_1;
-        PlayerData.troop[1] = response._2_1;
-        PlayerData.troop[2] = response._1_2;
-        PlayerData.troop[3] = response._2_2;
-        PlayerData.troop[4] = response._1_3;
-        PlayerData.troop[5] = response._2_3;
+        PlayerData.troop[0] = response.troop0;
+        PlayerData.troop[1] = response.troop1;
+        PlayerData.troop[2] = response.troop2;
+        PlayerData.troop[3] = response.troop3;
+        PlayerData.troop[4] = response.troop4;
+        PlayerData.troop[5] = response.troop5;
         PlayerData.nick = response.nickName;
         PlayerData.accountLevel = response.accountLevel;
         PlayerData.accountExp = response.accountExp;

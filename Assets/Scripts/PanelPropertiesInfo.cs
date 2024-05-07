@@ -30,7 +30,7 @@ public class PanelPropertiesInfo : MonoBehaviour
         unit.level += 1;
         Destroy(GetComponent<PanelProperties>()._avatarObject);
         unit.SetValues();
-        unit.transform.Find("Card").GetComponent<CardVeiw>().SetCardValues();
+        unit.transform.Find("Card").GetComponent<CardVeiw>().Init();
         unit.ShowUnitProperties();
         Inventory.InventoryPlayer[4] -= 1;
         SetAmount();

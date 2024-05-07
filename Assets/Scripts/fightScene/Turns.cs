@@ -220,7 +220,7 @@ public class Turns : MonoBehaviour
     {
         if (turnUnit != null)
         {
-            turnUnit.pathParent.transform.Find("Fight/Canvas/turn").gameObject.GetComponent<BarAnimation>().SetCaracterState("death");
+            turnUnit.transform.Find("UI/Turn").gameObject.GetComponent<BarAnimation>().SetCaracterState("death");
         }
         StartIni.turnEffect[0].SetActive(false);
         StartIni.turnEffect[1].SetActive(false);

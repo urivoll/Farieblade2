@@ -46,11 +46,11 @@ public class SideUnitUi : MonoBehaviour
                 spellListUI[i].SetActive(true);
                 spellListUI[i].transform.Find("mask/image").gameObject.GetComponent<Image>().sprite = currentSpellList[i].transform.Find("Mask/Pic").gameObject.GetComponent<Image>().sprite;
             }
-            if (Turns.turnUnit.pathParent.Energy—onsumption > energy.energy) spellListMana[i].SetActive(true);
+            if (Turns.turnUnit.Energy—onsumption > energy.energy) spellListMana[i].SetActive(true);
         }
-        if (Turns.turnUnit.Weapon.damage <= 0)
+        if (Turns.turnUnit.Weapon.Damage <= 0)
         {
-            if (Turns.turnUnit.Energy.energy >= Turns.turnUnit.pathParent.Energy—onsumption &&
+            if (Turns.turnUnit.Energy.energy >= Turns.turnUnit.Energy—onsumption &&
                 !Turns.turnUnit.CharacterState.silence) ChangeState(0);
             else spell = -555;
             buttonHit.SetActive(false);
@@ -59,7 +59,7 @@ public class SideUnitUi : MonoBehaviour
         {
             ChangeState(-666);
             if (PlayerData.ai != 2) buttonHit.SetActive(true);
-            attackImg.sprite = attackSprite[Turns.turnUnit.Weapon.state];
+            attackImg.sprite = attackSprite[Turns.turnUnit.Weapon.State];
         }
         if (currentModeList.Count <= 0) return;
         int startModeIndex = Turns.turnUnit.Spells.modeIndex;
@@ -132,7 +132,7 @@ public class SideUnitUi : MonoBehaviour
     }
     public void SetDefaultHit()
     {
-        if (Turns.turnUnit.Weapon.state == 0) check.CheckUnit(0, false);
-        else if (Turns.turnUnit.Weapon.state == 1 || Turns.turnUnit.Weapon.state == 2) check.CheckUnit(1, false);
+        if (Turns.turnUnit.Weapon.State == 0) check.CheckUnit(0, false);
+        else if (Turns.turnUnit.Weapon.State == 1 || Turns.turnUnit.Weapon.State == 2) check.CheckUnit(1, false);
     }
 }
