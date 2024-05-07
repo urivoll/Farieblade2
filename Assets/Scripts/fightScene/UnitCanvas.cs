@@ -29,30 +29,27 @@ public class UnitCanvas : MonoBehaviour
     }*/
     public void UnitPropTextRenderer(float inpHp, float inpDamage, float hpProsent, int state, UnitProperties unit, string hpDmg)
     {
-        if (PlayerData.traning != 0)
+        if (hpDmg == "dmg")
+            _dmg.GetComponent<Animator>().SetTrigger("Alarm");
+        else if (hpDmg == "hp")
+            _hp.GetComponent<Animator>().SetTrigger("Alarm");
+        else if (hpDmg == "hpdmg")
         {
-            if (hpDmg == "dmg") 
-                _dmg.GetComponent<Animator>().SetTrigger("Alarm");
-            else if (hpDmg == "hp") 
-                _hp.GetComponent<Animator>().SetTrigger("Alarm");
-            else if (hpDmg == "hpdmg")
-            {
-                _dmg.GetComponent<Animator>().SetTrigger("Alarm");
-                _hp.GetComponent<Animator>().SetTrigger("Alarm");
-            }
-/*            if (hpDmg != "none")
-            {
-*//*                if (unit.damage < tempDamage)       
-                    _textDmg.color = new Color(255, 0, 0);
-                else if (unit.damage > tempDamage)  *//*
-                    //_textDmg.color = new Color(0, 255, 0);
-                else                               
-                    _textDmg.color = new Color(255, 255, 255);
-            }*/
-            _textHP.text = Convert.ToString(inpHp);
-            if (state != 4)
-                _textDmg.text = Convert.ToString(inpDamage);
+            _dmg.GetComponent<Animator>().SetTrigger("Alarm");
+            _hp.GetComponent<Animator>().SetTrigger("Alarm");
         }
+        /*            if (hpDmg != "none")
+                    {
+        *//*                if (unit.damage < tempDamage)       
+                            _textDmg.color = new Color(255, 0, 0);
+                        else if (unit.damage > tempDamage)  *//*
+                            //_textDmg.color = new Color(0, 255, 0);
+                        else                               
+                            _textDmg.color = new Color(255, 255, 255);
+                    }*/
+        _textHP.text = Convert.ToString(inpHp);
+        if (state != 4)
+            _textDmg.text = Convert.ToString(inpDamage);
         _hpBar.fillAmount = hpProsent /= 100;
         _hpBar.color = _gradient.Evaluate(hpProsent);
     }

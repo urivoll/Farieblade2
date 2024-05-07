@@ -6,7 +6,7 @@ public class SceneChange : MonoBehaviour
     public int Scene;
     public void SetSceneAr(int Scene)
     {
-        PlayerData.afterFight = Scene;
+        AfterFightPlacePicker.afterFight = Scene;
     }
     public void LoadScene(int sceneId)
     {

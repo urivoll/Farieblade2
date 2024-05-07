@@ -15,7 +15,7 @@ public class Settings : MonoBehaviour
         {
             PlayerPrefs.SetInt("language", num);
             PlayerData.language = PlayerPrefs.GetInt("language");
-            PlayerData.afterFight = 1;
+            AfterFightPlacePicker.afterFight = 1;
             SceneManager.LoadScene(0);
         }
     }

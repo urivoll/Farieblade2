@@ -45,7 +45,7 @@ public class UnitProperties : MonoBehaviour
         initiative = characterData.Attributes.Initiative;
         State = characterData.Attributes.State;
         _prefub = Instantiate(
-            characterData.Prefubs.CombatCharacterPrefab, 
+            characterData.Prefub, 
             ParentCircle.transform.position, 
             Quaternion.identity,
             transform);
@@ -53,28 +53,8 @@ public class UnitProperties : MonoBehaviour
         PathBulletTarget = transform.Find("BulletTarget");
         PathDebuffs = transform.parent.Find("UI/Debuffs");
         Spells.SpellList.AddRange(characterData.Spells);
-        //SetValues();
+        gameObject.name = characterData.Name[PlayerData.language];
     }
-
-    /*    public void SetValues()
-        {
-            int baseRang = 0;
-            float tempHp = hpBaseDefault;
-            float tempDamage = damageDefault;
-            tempHp += hpBaseDefault * (0.2f * level);
-            tempDamage += damageDefault * (0.1f * level);
-            hpBase = Convert.ToInt32(tempHp + (tempHp * (0.4f * grade)));
-            damage = Convert.ToInt32(tempDamage + (tempDamage * (0.4f * grade)));
-            accuracy = accuracyDefault + grade;
-            CountExp();
-            if (rang == 0) baseRang = 75;
-            else if (rang == 1) baseRang = 100;
-            else if (rang == 2) baseRang = 125;
-            else baseRang = 150;
-
-            Power = baseRang * ((level - 1 / 2 + 1) * (1 + ((grade + 1) * 0.5f)));
-            if (Type == 1) Power *= 2f;
-        }*/
 
     public IEnumerator Die()
     {

@@ -1,9 +1,7 @@
-using Spine.Unity;
 using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class PanelPropertiesFight : MonoBehaviour
@@ -59,7 +57,7 @@ public class PanelPropertiesFight : MonoBehaviour
     [SerializeField] private IDCaracter _caracter;
 
     [SerializeField] private GameObject[] spellListLocal;
-    public void SetValue(UnitProperties obj)
+    public void SetValue(int id, int level, int grade, int exp)
     {
         CharacterData character = _caracter.CharacterData[obj.Id];
         Turns.unitChoose = obj;
@@ -72,8 +70,8 @@ public class PanelPropertiesFight : MonoBehaviour
         textAcc.text = Convert.ToString(obj.Weapon.Accuracy);
         textInit.text = Convert.ToString(obj.initiative);
 
-        textLevel.text = Convert.ToString(obj.Level);
-        textGrade.text = Convert.ToString(obj.Grade);
+        textLevel.text = Convert.ToString(level);
+        textGrade.text = Convert.ToString(grade);
 
         textState.text = States[character.Attributes.State].intArray[PlayerData.language];
 

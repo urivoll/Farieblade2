@@ -12,9 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03acef5364bbcc7479e48c062c8e5b68, type: 3}
   m_Name: Flance
   m_EditorClassIdentifier: 
+  _environment: {fileID: 8300000, guid: 2144ffdfa2de3f14c86b24b80de7ace4, type: 3}
   _name:
   - Flance Tribles
   - "\u041F\u043B\u0435\u043C\u0435\u043D\u0430 \u0424\u043B\u0435\u043D\u0446\u043E\u0432"
+  _desctiption:
+  - The Flentz tribe is a faction inhabiting the northern part of Ebion. Flenians
+    are famous for their blacksmithing and alchemy.
+  - "\u041F\u043B\u0435\u043C\u044F \u0424\u043B\u0435\u043D\u0446\u043E\u0432 -
+    \u0444\u0440\u0430\u043A\u0446\u0438\u044F \u043D\u0430\u0441\u0435\u043B\u044F\u044E\u0449\u0430\u044F
+    \u0441\u0435\u0432\u0435\u0440\u043D\u0443\u044E \u0447\u0430\u0441\u0442\u044C
+    \u042D\u0431\u0438\u043E\u043D\u0430. \u0424\u043B\u0435\u043D\u0446\u044B \u0441\u043B\u0430\u0432\u044F\u0442\u0441\u044F
+    \u0441\u0432\u043E\u0438\u043C \u043A\u0443\u0437\u043D\u0435\u0447\u043D\u044B\u043C
+    \u0434\u0435\u043B\u043E\u043C \u0430 \u0442\u0430\u043A\u0436\u0435 \u0430\u043B\u0445\u0438\u043C\u0438\u0435\u0439."
   _icon: {fileID: 21300000, guid: df98dfc21d633254a8c1d6e0c8469bca, type: 3}
   _id: 7
   _combatBg: {fileID: 21300000, guid: c5a2b8529bcb9674cbfb8ba81667ca43, type: 3}

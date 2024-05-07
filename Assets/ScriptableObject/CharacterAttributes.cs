@@ -1,3 +1,5 @@
+using Spine;
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "SO/Character Attributes")]
@@ -5,11 +7,12 @@ public class CharacterAttributes : ScriptableObject
 {
     public int Hp => _hp;
     public int Damage => _damage;
-    public int Accuarcy => _accuarcy;
+    public int Accuracy => _accuracy;
     public int Initiative => _initiative;
     public int HitCount => _hitCount;
     public int SpellCoast => _spellCoast;
     public int State => _state;
+    public int Squad => _squad;
     public CharacterType Type => _type;
     public CharacterRole Role => _role;
     public GradeClasses Grade => _grade;
@@ -20,11 +23,12 @@ public class CharacterAttributes : ScriptableObject
 
     [SerializeField] private int _hp;
     [SerializeField] private int _damage;
-    [SerializeField] private int _accuarcy;
+    [SerializeField] private int _accuracy;
     [SerializeField] private int _initiative;
     [SerializeField] private int _hitCount;
     [SerializeField] private int _spellCoast;
     [SerializeField] private int _state;
+    [SerializeField] private int _squad;
     [SerializeField] private CharacterType _type;
     [SerializeField] private CharacterRole _role;
     [SerializeField] private GradeClasses _grade;
@@ -32,4 +36,20 @@ public class CharacterAttributes : ScriptableObject
     [SerializeField] private ElementalTypes _vulnerability;
     [SerializeField] private ElementalTypes _resist;
     [SerializeField] private ElementalTypes _damageType;
+    public int GetDamage(int level, int grade)
+    {
+        float tempDamage = _damage;
+        float damage;
+        tempDamage += _damage * (0.1f * level);
+        damage = tempDamage + (tempDamage * (0.4f * grade));
+        return (int)damage;
+    }
+    public int GetHp(int level, int grade)
+    {
+        float tempHp = _hp;
+        float hp;
+        tempHp += _hp * (0.2f * level);
+        hp = tempHp + (tempHp * (0.4f * grade));
+        return (int)hp;
+    }
 }

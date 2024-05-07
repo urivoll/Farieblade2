@@ -2053,44 +2053,18 @@ MonoBehaviour:
   _grade: {fileID: 2640607854399869794}
   _level: {fileID: 1747237445876417054}
   _name: {fileID: 4283495046402601890}
-  _icon: {fileID: 1522966613467717464}
+  achive: {fileID: 577721776285064695}
   _damageImg: {fileID: 2629129487325068479}
   _HPImg: {fileID: 5571271397410714825}
   _gradeImg: {fileID: 5483351487119215163}
   _closed: {fileID: 3263001731367504071}
-  _GradeImage: {fileID: 7148843505204337897}
-  spriteGrade:
-  - {fileID: 21300000, guid: 69119944dcb39a043af7f6fb343dc854, type: 3}
-  - {fileID: 21300000, guid: 6cc886fedc569464aad616d2e34c8745, type: 3}
-  - {fileID: 21300000, guid: 3b621ec5cba364a4cb042d8352bd5359, type: 3}
-  - {fileID: 21300000, guid: 86f6657aa743f5e46a9a7a58d60c1869, type: 3}
-  _RangImage: {fileID: 538913559360240649}
-  spriteRang:
-  - {fileID: 21300000, guid: 77c0c42ff1ee69c4b8997a97df52dd81, type: 3}
-  - {fileID: 21300000, guid: b51d528eb10ccd0429eccbb56b804baf, type: 3}
-  - {fileID: 21300000, guid: ba81020caeea1be4880040393092205f, type: 3}
-  - {fileID: 21300000, guid: b890c60efc2673749a326ca5e6583e7b, type: 3}
-  _StateImage: {fileID: 6343244364567858155}
-  _type:
-  - {fileID: 21300000, guid: f9a8ece6f8cad0a478992507700c01fd, type: 3}
-  - {fileID: 21300000, guid: f7e6f0339a8f7ff4b9d88c63d88771d8, type: 3}
-  - {fileID: 21300000, guid: 4c813872d4aa9ef4c9c4e9f95eca5f37, type: 3}
-  - {fileID: 21300000, guid: dc472cecfd5727845a580ba3f02c7390, type: 3}
-  _Fraction: {fileID: 3364768317924702008}
-  spriteFractions:
-  - {fileID: 21300000, guid: 2f2e72f111cc2ef408d0df58cc551669, type: 3}
-  - {fileID: 21300000, guid: 190e536dc4fe222478735de53c1731bb, type: 3}
-  - {fileID: 21300000, guid: ea06c78740be05b4eb2a9d303dc61ed1, type: 3}
-  - {fileID: 21300000, guid: 2d3e45f7b5502c645a07b3af6ee0c60d, type: 3}
-  - {fileID: 21300000, guid: 8df24cb3b3e5f644da500cabe8d4b454, type: 3}
-  - {fileID: 21300000, guid: 84014c2a12997704a86383affdd9b9b7, type: 3}
-  - {fileID: 21300000, guid: f6603a8cb2622ff4e91b447b6763b0ce, type: 3}
-  - {fileID: 21300000, guid: df98dfc21d633254a8c1d6e0c8469bca, type: 3}
-  - {fileID: 21300000, guid: fd33697b1c68d8046b70cc29475685f4, type: 3}
-  - {fileID: 21300000, guid: fd8c082111a7c5c4ead3ea891d45b24f, type: 3}
-  animator: {fileID: 0}
-  LvlupEffect: {fileID: 7863237597647549064}
   anIs: {fileID: 6224377144999073679}
+  _GradeImage: {fileID: 7148843505204337897}
+  _RangImage: {fileID: 538913559360240649}
+  _icon: {fileID: 1522966613467717464}
+  _StateImage: {fileID: 6343244364567858155}
+  _Fraction: {fileID: 3364768317924702008}
+  animator: {fileID: 0}
   squad:
   - intArray:
     - Dark awakening
@@ -2125,7 +2099,8 @@ MonoBehaviour:
   - intArray:
     - Velied gaze
     - "\u0421\u043A\u0440\u044B\u0442\u044B\u0435 \u043E\u0447\u0438"
-  achive: {fileID: 577721776285064695}
+  _character: {fileID: 0}
+  _squads: {fileID: 0}
 --- !u!114 &7814793755940864401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,7 +2145,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8481369685431516715}
+      - m_Target: {fileID: 449193738998621529}
         m_TargetAssemblyTypeName: Unit, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1

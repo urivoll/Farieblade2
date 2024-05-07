@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03acef5364bbcc7479e48c062c8e5b68, type: 3}
   m_Name: Khorelians
   m_EditorClassIdentifier: 
+  _environment: {fileID: 8300000, guid: b396464062763ed418885844d91cb1ca, type: 3}
   _name:
   - Khorelians
   - "\u0425\u043E\u0440\u0435\u043B\u044C\u0446\u044B"
+  _desctiption:
+  - Khorelians are exiled magicians who were once considered Amorlians. Before the
+    terrible war, the Khorels secretly studied forbidden arcane magic, but upon learning
+    about everything, the Supreme Council expelled the magicians to the north.
+  - "\u0425\u043E\u0440\u0435\u043B\u044C\u0446\u044B - \u0438\u0437\u0433\u043D\u0430\u043D\u043D\u044B\u0435
+    \u043C\u0430\u0433\u0438, \u043D\u0435\u043A\u043E\u0433\u0434\u0430 \u0441\u0447\u0438\u0442\u0430\u0432\u0448\u0438\u043C\u0438\u0441\u044F
+    \u0410\u043C\u043E\u0440\u043B\u0438\u0439\u0446\u0430\u043C\u0438. \u0414\u043E
+    \u0441\u0442\u0440\u0430\u0448\u043D\u043E\u0439 \u0432\u043E\u0439\u043D\u044B
+    \u0425\u043E\u0440\u0435\u043B\u044C\u0446\u044B \u0432 \u0442\u0430\u0439\u043D\u0435
+    \u0438\u0437\u0443\u0447\u0430\u043B\u0438 \u0437\u0430\u043F\u0440\u0435\u0449\u0435\u043D\u0443\u044E
+    \u0442\u0430\u0439\u043D\u0443\u044E \u043C\u0430\u0433\u0438\u044E, \u043E\u0434\u043D\u0430\u043A\u043E
+    \u0443\u0437\u043D\u0430\u0432 \u043E\u0431\u043E \u0432\u0441\u0435\u043C \u0432\u0435\u0440\u0445\u043E\u0432\u043D\u044B\u0439
+    \u0441\u043E\u0432\u0435\u0442 \u0438\u0437\u0433\u043D\u0430\u043B \u043C\u0430\u0433\u043E\u0432
+    \u043D\u0430 \u0441\u0435\u0432\u0435\u0440."
   _icon: {fileID: 21300000, guid: ea06c78740be05b4eb2a9d303dc61ed1, type: 3}
   _id: 2
   _combatBg: {fileID: 21300000, guid: 7e3fb2a6a03a05d4280b76d31f22419c, type: 3}

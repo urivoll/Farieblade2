@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03acef5364bbcc7479e48c062c8e5b68, type: 3}
   m_Name: Summon
   m_EditorClassIdentifier: 
+  _environment: {fileID: 0}
   _name:
   - Summoned
   - "\u041F\u0440\u0438\u0437\u0432\u0430\u043D\u043D\u044B\u0439"
+  _desctiption:
+  - 
+  - 
   _icon: {fileID: 21300000, guid: fd8c082111a7c5c4ead3ea891d45b24f, type: 3}
   _id: 9
   _combatBg: {fileID: 21300000, guid: 0643142ce40da6d419dc6e190aa20ccb, type: 3}

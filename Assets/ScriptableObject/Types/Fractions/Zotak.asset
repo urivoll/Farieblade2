@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03acef5364bbcc7479e48c062c8e5b68, type: 3}
   m_Name: Zotak
   m_EditorClassIdentifier: 
+  _environment: {fileID: 8300000, guid: 8b543d18e9e14b54883c08223227f45f, type: 3}
   _name:
   - Lands of Zotak
   - "\u0417\u0435\u043C\u043B\u0438 \u0417\u043E\u0442\u0430\u043A"
+  _desctiption:
+  - The lands of Zotak are an association of people - lizards living on the neighboring
+    continent. The Zotak Land Wars are considered to be some of the strongest creatures
+    inhabiting Ebion.
+  - "\u0417\u0435\u043C\u043B\u0438 \u0417\u043E\u0442\u0430\u043A - \u043E\u0431\u044A\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0435
+    \u043B\u044E\u0434\u0435\u0439 - \u044F\u0449\u0435\u0440\u043E\u0432 \u0436\u0438\u0432\u0443\u0449\u0438\u0445
+    \u043D\u0430 \u0441\u043E\u0441\u0435\u0434\u043D\u0435\u043C \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0435.
+    \u0412\u043E\u0439\u043D\u044B \u0437\u0435\u043C\u0435\u043B\u044C \u0417\u043E\u0442\u0430\u043A\u0430
+    \u0441\u0447\u0438\u0442\u0430\u044E\u0442\u0441\u044F \u043E\u0434\u043D\u0438\u043C\u0438
+    \u0438\u0437 \u0441\u0438\u043B\u044C\u043D\u0435\u0439\u0448\u0438\u0445 \u0441\u0443\u0449\u0435\u0441\u0442\u0432
+    \u043D\u0430\u0441\u0435\u043B\u044F\u044E\u0449\u0438\u0445 \u042D\u0431\u0438\u043E\u043D."
   _icon: {fileID: 21300000, guid: 2d3e45f7b5502c645a07b3af6ee0c60d, type: 3}
   _id: 3
   _combatBg: {fileID: 21300000, guid: 1b26fad076988604b8dc45e462c783e3, type: 3}

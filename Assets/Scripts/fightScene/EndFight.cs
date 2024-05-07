@@ -13,7 +13,6 @@ public class EndFight : MonoBehaviour
     [SerializeField] private Image[] expBar;
     [SerializeField] private TextMeshProUGUI textGoldReward;
     [SerializeField] private TextMeshProUGUI textAFReward;
-    //[SerializeField] private TextMeshProUGUI _textEnd;
     [SerializeField] private GameObject AccLvlup;
     [SerializeField] private GameObject rewardAF;
     [SerializeField] private GameObject _endGameContent;
@@ -25,6 +24,7 @@ public class EndFight : MonoBehaviour
     [SerializeField] private AudioClip swish;
     [SerializeField] private AudioClip hit;
     [SerializeField] private AudioClip zoom;
+    [SerializeField] private GameObject[] cards;
     public bool unitPanel = false;
     void Start()
     {
@@ -85,15 +85,12 @@ public class EndFight : MonoBehaviour
     }
     private void CreateCard(int i)
     {
-        GameObject newObject = Instantiate(PlayerData.defaultCards[BattleNetwork.winners[i, 0]], _endGameContent.transform);
-        newObject.GetComponent<Animator>().SetTrigger("end");
-        newObject.GetComponent<Unit>().card.SetActive(true);
-        newObject.transform.Find("Fight").gameObject.SetActive(false);
-        Destroy(newObject.transform.Find("Card").gameObject.GetComponent<UIDragHandler>());
-        newObject.GetComponent<Unit>().level = BattleNetwork.winners[i, 1];
-        newObject.GetComponent<Unit>().grade = BattleNetwork.winners[i, 3];
-        newObject.GetComponent<Unit>().SetValues();
-        newObject.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
+        cards[i].SetActive(true);
+        cards[i].GetComponent<Animator>().SetTrigger("end");
+        cards[i].GetComponent<CardVeiw>().Init(
+            BattleNetwork.winners[i, 0], 
+            BattleNetwork.winners[i, 1], 
+            BattleNetwork.winners[i, 3]);
     }
 /*    private IEnumerator LevelUpEffect(GameObject prefub, Unit i, int count)
     {

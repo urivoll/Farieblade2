@@ -3,13 +3,21 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Character Data")]
 public class CharacterData : ScriptableObject
 {
-    public CharacterPrefabReferences Prefubs => _prefubs;
+    public AudioClip[] Presenter => _presenter;
+    public string[] Name => _name;
+    public string[] Description => _description;
+    public Sprite Portrait => _portrait;
+    public GameObject Prefub => _prefub;
     public CharacterAttributes Attributes => _attributes;
     public CharacterTransforms Transforms => Transforms;
     public AnimationAssets AnimationAssets => _animationAssets;
     public GameObject[] Spells => _spells;
 
-    [SerializeField] private CharacterPrefabReferences _prefubs;
+    [SerializeField] private AudioClip[] _presenter;
+    [SerializeField] private string[] _name;
+    [SerializeField] private string[] _description;
+    [SerializeField] private Sprite _portrait;
+    [SerializeField] private GameObject _prefub;
     [SerializeField] private CharacterAttributes _attributes;
     [SerializeField] private CharacterTransforms _transforms;
     [SerializeField] private AnimationAssets _animationAssets;

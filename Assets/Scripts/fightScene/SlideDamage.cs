@@ -16,10 +16,7 @@ public class SlideDamage : MonoBehaviour
     [SerializeField] private Sprite lvlup;
     [SerializeField] private Sprite death;
     [SerializeField] private Sprite light2;
-    private void Start()
-    {
-        if (PlayerData.traning == 0) Destroy(gameObject);
-    }
+
     public void UpdateSlideDamage(float inpDamage, int type2 = -1)
     {
         if (inpDamage == -1)

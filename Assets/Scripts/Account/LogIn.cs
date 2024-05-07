@@ -38,7 +38,7 @@ public class LogIn : MonoBehaviour
             else
             {
                 PlayerPrefs.DeleteAll();
-                PlayerData.afterFight = 1;
+                AfterFightPlacePicker.afterFight = 1;
                 PlayerPrefs.SetInt("user_id", Convert.ToInt32(request.downloadHandler.text));
                 PlayerPrefs.SetInt("user_password", Convert.ToInt32(inputPassword));
                 yield return new WaitForSeconds(0.3f);
