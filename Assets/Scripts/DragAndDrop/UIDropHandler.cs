@@ -14,10 +14,10 @@ public class UIDropHandler : MonoBehaviour, IDropHandler
         sorting = GetComponentInParent<Sorting>();
         myCollection = GetComponentInParent<MyCollection>();
     }
-    public void Arrangement()
+/*    public void Arrangement()
     {
         if (_class == 1 && PlayerData.troop[place] != -666) StartMoveUnit(PlayerData.myCollection[PlayerData.troop[place]]);
-    }
+    }*/
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag.name == "Card")

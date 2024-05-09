@@ -15,5 +15,5 @@ MonoBehaviour:
   _name:
   - Death
   - "\u0421\u043C\u0435\u0440\u0442\u044C"
-  _sprite: {fileID: 21300000, guid: 3e378d82759df8b4fa5d5dec3192dddc, type: 3}
+  _icon: {fileID: 21300000, guid: 3e378d82759df8b4fa5d5dec3192dddc, type: 3}
   _id: 2

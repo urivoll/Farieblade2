@@ -28,7 +28,7 @@ public class PanelPropertiesInfo : MonoBehaviour
         Effect.SetActive(true);
         unit.exp = 0;
         unit.level += 1;
-        Destroy(GetComponent<PanelProperties>()._avatarObject);
+        //Destroy(GetComponent<PanelProperties>()._avatarObject);
         unit.SetValues();
         ///unit.transform.Find("Card").GetComponent<CardVeiw>().Init();
         unit.ShowUnitProperties();

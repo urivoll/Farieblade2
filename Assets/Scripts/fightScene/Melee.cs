@@ -10,7 +10,7 @@ public class Melee : Weapon
     public override IEnumerator Attack(UnitProperties from, List<MakeMove> inpData)
     {
         UnitProperties unitForHit = _characterPlacement.CirclesMap[inpData[0].attackSend["sideTarget"], inpData[0].attackSend["placeTarget"]].ChildCharacter;
-        int times = from.Weapon._times;
+        int times = from.Weapon.Times;
 
         if (_soundBeforeHit != null) BattleSound.sound.PlayOneShot(_soundBeforeHit);
         int count = 0;

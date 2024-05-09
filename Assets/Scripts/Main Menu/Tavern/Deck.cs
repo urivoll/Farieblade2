@@ -63,8 +63,8 @@ public class Deck : MonoBehaviour
         DefaultCardPrefub = Instantiate(DefaultCard, box.transform.position, Quaternion.identity, parentTable.transform);
         DefaultCardPrefub.transform.SetSiblingIndex(3);
 
-        DefaultCardPrefub.GetComponent<Unit>().level = PlayerData.myCollection[DefaultCardPrefub.GetComponent<Unit>().ID].GetComponent<Unit>().level;
-        DefaultCardPrefub.GetComponent<Unit>().grade = PlayerData.myCollection[DefaultCardPrefub.GetComponent<Unit>().ID].GetComponent<Unit>().grade;
+        ///DefaultCardPrefub.GetComponent<Unit>().level = PlayerData.myCollection[DefaultCardPrefub.GetComponent<Unit>().ID].GetComponent<Unit>().level;
+        ///DefaultCardPrefub.GetComponent<Unit>().grade = PlayerData.myCollection[DefaultCardPrefub.GetComponent<Unit>().ID].GetComponent<Unit>().grade;
         DefaultCardPrefub.GetComponent<Unit>().SetValues();
         ///DefaultCardPrefub.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
 
@@ -182,7 +182,7 @@ public class Deck : MonoBehaviour
         BuyCardJson obj3 = JsonConvert.DeserializeObject<BuyCardJson>(json);
         frag = obj3.rang;
         ID = obj3.unit;
-        obj = PlayerData.myCollection[ID];
+        ///obj = PlayerData.myCollection[ID];
         _imageDeck.sprite = DeckType[obj3.rang];
         if (obj3.taskProgressWeekly != -666) TaskManager.taskProgressWeekly = obj3.taskProgressWeekly;
         if (obj3.TaskIdW4 != -666) TaskManager.Weekly[4] = obj3.TaskIdW4;

@@ -15,5 +15,5 @@ MonoBehaviour:
   _name:
   - Earth
   - "\u0417\u0435\u043C\u043B\u044F"
-  _sprite: {fileID: 21300000, guid: 141313871ce2bd04ab84b25aa542b6b7, type: 3}
+  _icon: {fileID: 21300000, guid: 141313871ce2bd04ab84b25aa542b6b7, type: 3}
   _id: 3

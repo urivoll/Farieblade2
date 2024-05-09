@@ -113,14 +113,14 @@ public class AnIsReward : MonoBehaviour
                     }
                     StickerManager.ChangeStick(location + 27, 0);
                     Campany.anIsTimeNeed[i] = 0;
-                    foreach (GameObject i2 in PlayerData.myCollection)
+/*                    foreach (GameObject i2 in PlayerData.myCollection)
                     {
                         if (i2.GetComponent<Unit>().onAnIs == Campany.anIsLocation[i])
                         {
                             i2.GetComponent<Unit>().onAnIs = -666;
                             ///i2.transform.Find("Card").gameObject.GetComponent<CardVeiw>().Init();
                         }
-                    }
+                    }*/
                     Campany.anIsLocation[i] = -666;
                     Campany.anIsProsent[i] = 0;
                     AnIsMap.circle[i].SetActive(false);

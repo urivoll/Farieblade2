@@ -9,6 +9,7 @@ public class GameplaySceneInstaller : MonoInstaller
     [SerializeField] private DefendReference _defendReference;
     [SerializeField] private CharacterPlacement _characterPlacement;
     [SerializeField] private BattleNetwork _battleNetwork;
+    [SerializeField] private AbstractPanelProperties _abstractPanelProperties;
     public override void InstallBindings()
     {
         Container.Bind<Turns>().FromInstance(_turns);
@@ -17,5 +18,6 @@ public class GameplaySceneInstaller : MonoInstaller
         Container.Bind<DefendReference>().FromInstance(_defendReference);
         Container.Bind<CharacterPlacement>().FromInstance(_characterPlacement);
         Container.Bind<BattleNetwork>().FromInstance(_battleNetwork).AsSingle();
+        Container.Bind<AbstractPanelProperties>().FromInstance(_abstractPanelProperties);
     }
 }

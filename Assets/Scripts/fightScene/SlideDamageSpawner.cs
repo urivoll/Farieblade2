@@ -12,7 +12,7 @@ public class SlideDamageSpawner : SlideTextPool
         {
             int[] color;
             TextMeshProUGUI text = slideTextPrefab.GetComponentInChildren<TextMeshProUGUI>();
-            slideTextPrefab.GetComponentInChildren<Image>().sprite = _elementalTypes[element].Sprite;
+            slideTextPrefab.GetComponentInChildren<Image>().sprite = _elementalTypes[element].Icon;
             if (element == 7)
             {
                 color = new int[] { 150, 150, 150 };

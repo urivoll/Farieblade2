@@ -16,7 +16,9 @@ MonoBehaviour:
   _name:
   - RIBBITROVER
   - "\u041A\u0412\u0410\u041A\u0423\u041D"
-  _description: []
+  _description:
+  - 
+  - 
   _portrait: {fileID: 21300000, guid: 4a383d148ade1b34bb029cfef75ee82c, type: 3}
   _prefub: {fileID: 4705572745250164701, guid: 955cc13104a75ba4abcb9438757690fa, type: 3}
   _attributes: {fileID: 11400000, guid: d8e2174b118b0c440a52d37d7e859da0, type: 2}

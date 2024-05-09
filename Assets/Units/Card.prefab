@@ -2048,10 +2048,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5163e3f583382341b26ba8611025938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: {fileID: 8203010274323697744}
-  _damage: {fileID: 3484409698263000317}
-  _grade: {fileID: 2640607854399869794}
-  _level: {fileID: 1747237445876417054}
+  _hpText: {fileID: 8203010274323697744}
+  _damageText: {fileID: 3484409698263000317}
+  _gradeText: {fileID: 2640607854399869794}
+  _levelText: {fileID: 1747237445876417054}
   _name: {fileID: 4283495046402601890}
   achive: {fileID: 577721776285064695}
   _damageImg: {fileID: 2629129487325068479}
@@ -2064,43 +2064,8 @@ MonoBehaviour:
   _icon: {fileID: 1522966613467717464}
   _StateImage: {fileID: 6343244364567858155}
   _Fraction: {fileID: 3364768317924702008}
-  animator: {fileID: 0}
-  squad:
-  - intArray:
-    - Dark awakening
-    - "\u0422\u0435\u043C\u043D\u043E\u0435 \u043F\u0440\u043E\u0431\u0443\u0436\u0434\u0435\u043D\u0438\u0435"
-  - intArray:
-    - Demon
-    - "\u0414\u0435\u043C\u043E\u043D"
-  - intArray:
-    - Abyss
-    - "\u0411\u0435\u0437\u0434\u043D\u0430"
-  - intArray:
-    - Blizzardwalker
-    - "\u0411\u0443\u0440\u0430\u043D\u043E\u0432\u0435\u0435\u0440"
-  - intArray:
-    - Order of the light
-    - "\u041E\u0440\u0434\u0435\u043D \u0441\u0432\u0435\u0442\u0430"
-  - intArray:
-    - Soul seeker
-    - "\u0418\u0441\u043A\u0430\u0442\u0435\u043B\u044C \u0434\u0443\u0448"
-  - intArray:
-    - Marshwalker
-    - "\u0411\u043E\u043B\u043E\u0442\u043D\u044B\u0439"
-  - intArray:
-    - Undergrounder
-    - "\u041F\u043E\u0434\u0437\u0435\u043C\u043D\u044B\u0439"
-  - intArray:
-    - Obsessed
-    - "\u041E\u0434\u0435\u0440\u0436\u0438\u043C\u0430\u044F"
-  - intArray:
-    - Beam of secrets
-    - "\u041B\u0443\u0447 \u0442\u0430\u0439\u043D"
-  - intArray:
-    - Velied gaze
-    - "\u0421\u043A\u0440\u044B\u0442\u044B\u0435 \u043E\u0447\u0438"
-  _character: {fileID: 0}
-  _squads: {fileID: 0}
+  _character: {fileID: 11400000, guid: 1206350a9c3e5754db52cccbbf1136f9, type: 2}
+  _squads: {fileID: 11400000, guid: e994b13a67226754fac77a7dd7b05357, type: 2}
 --- !u!114 &7814793755940864401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,8 +2111,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 449193738998621529}
-        m_TargetAssemblyTypeName: Unit, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: CardVeiw, Assembly-CSharp
+        m_MethodName: OpenPanelProperties
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

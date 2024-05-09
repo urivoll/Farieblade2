@@ -20,7 +20,7 @@ public class BattleAI : MonoBehaviour
     public void AI0()
     {
         if (!AI()) return;
-        if (Turns.listAllowHit.Count == 0 || Turns.turnUnit.State == 3 || Turns.turnUnit.State == 4)
+        if (Turns.listAllowHit.Count == 0 || Turns.turnUnit.Type == 3 || Turns.turnUnit.Type == 4)
         {
             //_defendReference.Defend();
             return;
@@ -252,8 +252,8 @@ public class BattleAI : MonoBehaviour
             bool have = false;
             for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (_characterPlacement.UnitEnemy[i].State == 2 ||
-                    _characterPlacement.UnitEnemy[i].State == 1)
+                if (_characterPlacement.UnitEnemy[i].Type == 2 ||
+                    _characterPlacement.UnitEnemy[i].Type == 1)
                 {
                     have = true;
                     break;
@@ -274,8 +274,8 @@ public class BattleAI : MonoBehaviour
             }
             for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if ((_characterPlacement.UnitEnemy[i].State == 1 ||
-                    _characterPlacement.UnitEnemy[i].State == 2) &&
+                if ((_characterPlacement.UnitEnemy[i].Type == 1 ||
+                    _characterPlacement.UnitEnemy[i].Type == 2) &&
                     _characterPlacement.UnitEnemy[i].Weapon.Damage > minDamageUnit.Weapon.Damage)
                 {
                     UseSpell(minDamageUnit, 0);
@@ -306,8 +306,8 @@ public class BattleAI : MonoBehaviour
             {
                 if (_characterPlacement.UnitEnemy[i].Energy.energy >= _characterPlacement.UnitEnemy[i].Energy—onsumption)
                 {
-                    if (_characterPlacement.UnitEnemy[i].State == 1 ||
-                        _characterPlacement.UnitEnemy[i].State == 2)
+                    if (_characterPlacement.UnitEnemy[i].Type == 1 ||
+                        _characterPlacement.UnitEnemy[i].Type == 2)
                     {
                         UseSpell(_characterPlacement.UnitEnemy[i], 1);
                         return false;
@@ -360,10 +360,10 @@ public class BattleAI : MonoBehaviour
         {
             for (int i = 0; i < _characterPlacement.UnitEnemy.Count; i++)
             {
-                if (_characterPlacement.UnitEnemy[i].State == 1 ||
-                    _characterPlacement.UnitEnemy[i].State == 2 ||
-                    _characterPlacement.UnitEnemy[i].State == 3 ||
-                    _characterPlacement.UnitEnemy[i].State == 4)
+                if (_characterPlacement.UnitEnemy[i].Type == 1 ||
+                    _characterPlacement.UnitEnemy[i].Type == 2 ||
+                    _characterPlacement.UnitEnemy[i].Type == 3 ||
+                    _characterPlacement.UnitEnemy[i].Type == 4)
                 {
                     UseSpell(_characterPlacement.UnitEnemy[i], 0);
                     return false;
@@ -533,7 +533,7 @@ public class BattleAI : MonoBehaviour
         {
             for (int i = 0; i < _characterPlacement.UnitOur.Count; i++)
             {
-                if ((_characterPlacement.UnitOur[i].State == 0) &&
+                if ((_characterPlacement.UnitOur[i].Type == 0) &&
                     !_characterPlacement.UnitOur[i].DebuffList.Any(item => item.GetComponent<AbstractSpell>().id == 15))
                 {
                     UseSpell(_characterPlacement.UnitOur[i], 0);

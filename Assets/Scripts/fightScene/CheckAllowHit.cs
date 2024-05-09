@@ -7,13 +7,8 @@ public class CheckAllowHit : MonoBehaviour
     private int sideEnemy;
     private bool spell;
     private int state;
-    private CharacterPlacement _characterPlacement;
+    [Inject] private CharacterPlacement _characterPlacement;
 
-    [Inject]
-    private void Construct(CharacterPlacement characterPlacement)
-    {
-        _characterPlacement = characterPlacement;
-    }
     public void CheckUnit(int state, bool spell, bool notMe = false)
     {
         this.state = state;

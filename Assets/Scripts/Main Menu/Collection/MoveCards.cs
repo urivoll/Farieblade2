@@ -11,7 +11,7 @@ public class MoveCards : MonoBehaviour
         {
             if (PlayerData.troop[i] != -666)
             {
-                unitOur[i] = Instantiate(PlayerData.myCollection[PlayerData.troop[i]], placeOur[i].transform);
+                //unitOur[i] = Instantiate(PlayerData.myCollection[PlayerData.troop[i]], placeOur[i].transform);
                 unitOur[i].SetActive(true);
                 Destroy(unitOur[i].transform.Find("Card").gameObject.GetComponent<UIDragHandler>());
             }

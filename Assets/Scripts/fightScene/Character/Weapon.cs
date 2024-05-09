@@ -10,36 +10,40 @@ public abstract class Weapon : MonoBehaviour
     public int Times => _times;
     public int State => _state;
     public int Accuracy => _accuracy;
+    public int DamageDefault => _damageDefault;
+    public int AccuracyDefault => _accuracyDefault;
 
     protected int _damageType;
     protected float _timeBeforeHit;
     protected AudioClip _soundBeforeHit;
-    protected CharacterPlacement _characterPlacement;
+    [Inject] protected CharacterPlacement _characterPlacement;
     protected float _behiendTimes;
     protected int _damage;
     protected int _accuracy;
     protected int _state;
-    public int _times;
+    protected int _times;
+
+    protected int _damageDefault;
+    protected int _accuracyDefault;
+
     private UnitProperties _unitProperties;
 
-    public void Instantiate()
+    public void Instantiate(int accuracy, int damage, int state, int times)
     {
-        /*        accuracy = pathParent.accuracy;
-                damage = pathParent.damage;
-                state = pathParent.state;
-                times = pathParent.times;*/
+        _accuracy = accuracy;
+        _accuracyDefault = accuracy;
+        _damage = damage;
+        _damageDefault = damage;
+        _state = state;
+        _times = times;
         _unitProperties = GetComponent<UnitProperties>();
     }
+
     public void AttackedUnit(List<MakeMove> attack)
     {
         _unitProperties.Animation.TryGetAnimation("attack");
         StartCoroutine(Attack(_unitProperties, attack));
     }
 
-    [Inject]
-    private void Construct(CharacterPlacement characterPlacement)
-    {
-        _characterPlacement = characterPlacement;
-    }
     public virtual IEnumerator Attack(UnitProperties from, List<MakeMove> inpData) { yield return null; }
 }

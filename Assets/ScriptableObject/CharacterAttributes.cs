@@ -5,33 +5,31 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO/Character Attributes")]
 public class CharacterAttributes : ScriptableObject
 {
-    public int Hp => _hp;
-    public int Damage => _damage;
+    public float Hp => _hp;
+    public float Damage => _damage;
     public int Accuracy => _accuracy;
     public int Initiative => _initiative;
     public int HitCount => _hitCount;
     public int SpellCoast => _spellCoast;
-    public int State => _state;
     public int Squad => _squad;
     public CharacterType Type => _type;
     public CharacterRole Role => _role;
-    public GradeClasses Grade => _grade;
+    public GradeClasses Rang => _rang;
     public FractionTypes Fraction => _fraction;
     public ElementalTypes Vulnerability => _vulnerability;
     public ElementalTypes Resist => _resist;
     public ElementalTypes DamageType => _damageType;
 
-    [SerializeField] private int _hp;
-    [SerializeField] private int _damage;
+    [SerializeField] private float _hp;
+    [SerializeField] private float _damage;
     [SerializeField] private int _accuracy;
     [SerializeField] private int _initiative;
     [SerializeField] private int _hitCount;
     [SerializeField] private int _spellCoast;
-    [SerializeField] private int _state;
     [SerializeField] private int _squad;
     [SerializeField] private CharacterType _type;
     [SerializeField] private CharacterRole _role;
-    [SerializeField] private GradeClasses _grade;
+    [SerializeField] private GradeClasses _rang;
     [SerializeField] private FractionTypes _fraction;
     [SerializeField] private ElementalTypes _vulnerability;
     [SerializeField] private ElementalTypes _resist;

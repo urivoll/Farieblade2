@@ -15,5 +15,5 @@ MonoBehaviour:
   _name:
   - Physical
   - "\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438\u0439"
-  _sprite: {fileID: 21300000, guid: 658d0e46c55755b4389bce7cfbc9cce5, type: 3}
+  _icon: {fileID: 21300000, guid: 658d0e46c55755b4389bce7cfbc9cce5, type: 3}
   _id: 4

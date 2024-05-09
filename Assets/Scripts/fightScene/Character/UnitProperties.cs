@@ -13,7 +13,7 @@ public class UnitProperties : MonoBehaviour
     [HideInInspector] public int initiative;
     [HideInInspector] public int Level;
     [HideInInspector] public int Grade;
-    [HideInInspector] public int State;
+    [HideInInspector] public int Type;
     [HideInInspector] public int indexVoice;
     [HideInInspector] public int Energy—onsumption;
     [HideInInspector] public HpCharacter HpCharacter;
@@ -37,19 +37,19 @@ public class UnitProperties : MonoBehaviour
         Spells = GetComponent<Spells>();
         Weapon = GetComponent<Weapon>();
         Energy = GetComponentInChildren<EnergyUnit>();
-        Animation = GetComponent<UnitAnimation>();
         CharacterState = new(this);
         CharacterData characterData = _idCharacter.CharacterData[id];
         HpCharacter = new(this, characterData.Attributes);
 
         initiative = characterData.Attributes.Initiative;
-        State = characterData.Attributes.State;
+        Type = characterData.Attributes.Type.Id;
         _prefub = Instantiate(
             characterData.Prefub, 
             ParentCircle.transform.position, 
             Quaternion.identity,
             transform);
         _prefub.GetComponent<VisualCharacter>().Init(side, sortingOrder);
+        Animation = _prefub.GetComponent<UnitAnimation>();
         PathBulletTarget = transform.Find("BulletTarget");
         PathDebuffs = transform.parent.Find("UI/Debuffs");
         Spells.SpellList.AddRange(characterData.Spells);

@@ -1807,11 +1807,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9ee33cf2185b541a1dfa64bc746538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Id: 0
   initiative: 0
   Level: 0
   Grade: 0
+  Type: 0
   indexVoice: 0
-  pathParent: {fileID: 0}
+  "Energy\u0421onsumption": 0
   Energy: {fileID: 0}
   Spells: {fileID: 0}
   ParentCircle: {fileID: 0}
@@ -2349,14 +2351,7 @@ MonoBehaviour:
   _hpBar: {fileID: 5940816021118657763}
   _hp: {fileID: 1588887714310335855}
   _dmg: {fileID: 5065061633417061675}
-  _GradeImage: {fileID: 0}
-  _bronzeGrade: {fileID: 21300000, guid: 69119944dcb39a043af7f6fb343dc854, type: 3}
-  _silverGrade: {fileID: 21300000, guid: 6cc886fedc569464aad616d2e34c8745, type: 3}
-  _goldGrade: {fileID: 21300000, guid: 3b621ec5cba364a4cb042d8352bd5359, type: 3}
-  _dimondGrade: {fileID: 21300000, guid: 86f6657aa743f5e46a9a7a58d60c1869, type: 3}
-  _gradeValue: {fileID: 0}
-  gradeObj: {fileID: 0}
-  energy: {fileID: 0}
+  energy: {fileID: 5390258405892454827}
   _gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}

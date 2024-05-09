@@ -1,12 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Zenject;
 
 public class CharacterInfoPanelOpener : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private Coroutine workCoroutine;
     private bool workProperties = false;
     private UnitProperties _unitProperties;
+    [Inject] private AbstractPanelProperties _panelProperties;
     private void Start()
     {
         _unitProperties = GetComponent<UnitProperties>();
@@ -36,8 +39,15 @@ public class CharacterInfoPanelOpener : MonoBehaviour, IPointerDownHandler, IPoi
         workProperties = false;
         StartIni.circleProperties.gameObject.SetActive(false);
         workCoroutine = null;
-        StartIni.unitProperties.SetActive(true);
-        StartIni.unitProperties.GetComponent<PanelPropertiesFight>().SetValue(_unitProperties);
+
+        Dictionary<string, int> data = new();
+        data["id"] = _unitProperties.Id;
+        data["level"] = _unitProperties.Level;
+        data["grade"] = _unitProperties.Grade;
+        data["damageFight"] = _unitProperties.Weapon.Damage;
+        data["hpFight"] = _unitProperties.HpCharacter.Hp;
+        _panelProperties.gameObject.SetActive(true);
+        _panelProperties.GetComponent<PanelPropertiesFight>().SetValue(data);
     }
     private void Update()
     {

@@ -13,7 +13,7 @@ public class ChangePortrait : MonoBehaviour
     {
         for (int i = 0; i < buttons.Length; i++)
         {
-            if (PlayerData.myCollection[i].GetComponent<Unit>().level != 0) buttons[i].interactable = true;
+            if (IdUnit.idLevel[i] != 0) buttons[i].interactable = true;
             else buttons[i].interactable = false;
         }
     }

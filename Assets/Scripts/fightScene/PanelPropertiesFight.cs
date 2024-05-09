@@ -1,139 +1,93 @@
+using Spine.Unity;
 using System;
+using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PanelPropertiesFight : MonoBehaviour
+public class PanelPropertiesFight : AbstractPanelProperties
 {
-    [SerializeField] private TextMeshProUGUI textHPBase;
     [SerializeField] private TextMeshProUGUI textHPFight;
-    [SerializeField] private TextMeshProUGUI textDmg;
     [SerializeField] private TextMeshProUGUI textDmgFight;
-    [SerializeField] private TextMeshProUGUI textName;
-    [SerializeField] private TextMeshProUGUI textAcc;
     [SerializeField] private TextMeshProUGUI textAccFight;
-    [SerializeField] private TextMeshProUGUI textInit;
     [SerializeField] private TextMeshProUGUI textInitFight;
-    [SerializeField] private TextMeshProUGUI textLevel;
-    [SerializeField] private TextMeshProUGUI textGrade;
-    [SerializeField] private TextMeshProUGUI textRang;
-    [SerializeField] private TextMeshProUGUI textFraction;
-    [SerializeField] private TextMeshProUGUI textState;
-    [SerializeField] private TextMeshProUGUI textResist;
-    [SerializeField] private TextMeshProUGUI textDamageType;
-    [SerializeField] private TextMeshProUGUI textVulnerability;
 
-    [SerializeField] private Image imagePortrait;
     [SerializeField] private Image imageFramePortrait;
-    [SerializeField] private Image imageFraction;
-    [SerializeField] private Image ImgDamageType;
-    [SerializeField] private Image ImgResist;
-    [SerializeField] private Image ImgVulnerability;
 
-    [SerializeField] private Sprite[] Fraction;
-    [SerializeField] private Sprite[] BG;
     [SerializeField] private StringArray[] Fractions;
     [SerializeField] private StringArray[] ElementString;
     [SerializeField] private StringArray[] RangString;
-    [SerializeField] private Sprite[] Element;
-    [SerializeField] private Sprite[] Rang;
-    [SerializeField] private StringArray[] States;
 
     [SerializeField] private EndFight _endFight;
-    [SerializeField] private GameObject Avat;
-    [HideInInspector] public GameObject _avatarObject = null;
+
     [SerializeField] private GameObject hpFightObj;
     [SerializeField] private GameObject dmgFightObj;
     [SerializeField] private GameObject accFightObj;
     [SerializeField] private GameObject initFightObj;
     [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private AudioClip _on;
-    [SerializeField] private AudioClip _off;
 
-    [SerializeField] private Image _GradeImage;
     [SerializeField] private Sprite[] spriteGrade;
     public static GameObject CurrentObj;
-    [SerializeField] private IDCaracter _caracter;
 
     [SerializeField] private GameObject[] spellListLocal;
-    public void SetValue(int id, int level, int grade, int exp)
+    public override void SetValue(Dictionary<string, int> data)
     {
-        CharacterData character = _caracter.CharacterData[obj.Id];
-        Turns.unitChoose = obj;
+        base.SetValue(data);
+
+        if (!data.ContainsKey("id") ||
+            !data.ContainsKey("level") ||
+            !data.ContainsKey("grade")) 
+            return;
+        //Turns.unitChoose = obj;
         _audioSource.PlayOneShot(_on);
         gameObject.SetActive(true);
 
-        textHPBase.text = Convert.ToString(obj.HpCharacter.HpBase);
-        textDmg.text = Convert.ToString(obj.Weapon.Damage);
-        textName.text = obj.transform.Find("Card/shell/Name").gameObject.GetComponent<LanguageText>().text[PlayerData.language];
-        textAcc.text = Convert.ToString(obj.Weapon.Accuracy);
-        textInit.text = Convert.ToString(obj.initiative);
+        imageBG.sprite = _character.Attributes.Fraction.CombatBg;
 
-        textLevel.text = Convert.ToString(level);
-        textGrade.text = Convert.ToString(grade);
-
-        textState.text = States[character.Attributes.State].intArray[PlayerData.language];
-
-        ImgDamageType.sprite = character.Attributes.DamageType.Sprite;
-        textDamageType.text = character.Attributes.DamageType.Name[PlayerData.language];
-
-        ImgResist.sprite = character.Attributes.Resist.Sprite;
-        textResist.text = character.Attributes.Resist.Name[PlayerData.language];
-
-        ImgVulnerability.sprite = character.Attributes.Vulnerability.Sprite;
-        textVulnerability.text = character.Attributes.Vulnerability.Name[PlayerData.language];
-
-        textRang.text = character.Attributes.Grade.Name[PlayerData.language];
-        _GradeImage.sprite = character.Attributes.Grade.Icon;
-
-        imageFraction.sprite = character.Attributes.Fraction.Icon;
-        imagePortrait.sprite = character.Attributes.Fraction.CombatBg;
-        textFraction.text = character.Attributes.Fraction.Name[PlayerData.language];
-
-        if (obj.GetComponent<Spells>() != null)
-        {
-            Spells spells = obj.GetComponent<Spells>();
-            for (int i = 0; i < spells.SpellList.Count; i++)
-            {
-                spellListLocal[i].SetActive(true);
-                Sprite image = spells.SpellList[i].transform.Find("Mask/Pic").gameObject.GetComponent<Image>().sprite;
-                SkillSlot slot = spellListLocal[i].GetComponent<SkillSlot>();
-                if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Aura")
+        /*        if (obj.GetComponent<Spells>() != null)
                 {
-                    slot.FrameAura.SetActive(true);
-                    slot.picAura.sprite = image;
-                }
-                else if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Effect" || 
-                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "Ball" ||
-                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "Melee" || 
-                    spells.SpellList[i].GetComponent<AbstractSpell>().state == "nonTarget")
-                {
-                    slot.FrameActive.SetActive(true);
-                    slot.picActive.sprite = image;
-                }
-                else if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Passive")
-                {
-                    slot.FramePassive.SetActive(true);
-                    slot.picPassive.sprite = image;
-                }
-            }
-        }
-        imageFramePortrait.sprite = character.Attributes.Grade.Frame;
-        /*        _avatarObject = Instantiate(obj.modelPanel, gameObject.transform.Find("Panel/Portrait/Avatar").gameObject.transform);
-                _avatarObject.transform.Find("Shade3").GetComponent<SpriteRenderer>().sortingLayerName = "TopUI";
-                _avatarObject.transform.Find("Shade3").GetComponent<SpriteRenderer>().sortingOrder = 3;
-                _avatarObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingLayerName = "TopUI";
-                _avatarObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingOrder = 3;
+                    Spells spells = obj.GetComponent<Spells>();
+                    for (int i = 0; i < spells.SpellList.Count; i++)
+                    {
+                        spellListLocal[i].SetActive(true);
+                        Sprite image = spells.SpellList[i].transform.Find("Mask/Pic").gameObject.GetComponent<Image>().sprite;
+                        SkillSlot slot = spellListLocal[i].GetComponent<SkillSlot>();
+                        if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Aura")
+                        {
+                            slot.FrameAura.SetActive(true);
+                            slot.picAura.sprite = image;
+                        }
+                        else if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Effect" || 
+                            spells.SpellList[i].GetComponent<AbstractSpell>().state == "Ball" ||
+                            spells.SpellList[i].GetComponent<AbstractSpell>().state == "Melee" || 
+                            spells.SpellList[i].GetComponent<AbstractSpell>().state == "nonTarget")
+                        {
+                            slot.FrameActive.SetActive(true);
+                            slot.picActive.sprite = image;
+                        }
+                        else if (spells.SpellList[i].GetComponent<AbstractSpell>().state == "Passive")
+                        {
+                            slot.FramePassive.SetActive(true);
+                            slot.picPassive.sprite = image;
+                        }
+                    }
+                }*/
+        imageFramePortrait.sprite = _character.Attributes.Rang.Frame;
 
-                _avatarObject.SetActive(true);*/
+        _avatarObject.transform.Find("Shade").GetComponent<SpriteRenderer>().sortingLayerName = "TopUI";
+        _avatarObject.transform.Find("Shade").GetComponent<SpriteRenderer>().sortingOrder = 3;
+        _avatarObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingLayerName = "TopUI";
+        _avatarObject.GetComponent<SkeletonPartsRenderer>().MeshRenderer.sortingOrder = 3;
 
-        textHPFight.text = Convert.ToString(obj.HpCharacter.Hp);
-        textDmgFight.text = Convert.ToString(obj.Weapon.Damage);
-        textAccFight.text = Convert.ToString(obj.Weapon.Accuracy);
-        textInitFight.text = Convert.ToString(obj.initiative);
-
-
+        _avatarObject.SetActive(true);
+        if (!data.ContainsKey("damageFight"))
+            textDmgFight.text = Convert.ToString(data["damageFight"]);
+        if (!data.ContainsKey("hpFight"))
+            textHPFight.text = Convert.ToString(data["hpFight"]);
+        if (!data.ContainsKey("accuracyFight"))
+            textAccFight.text = Convert.ToString(data["accuracyFight"]);
+        if (!data.ContainsKey("initiativeFight"))
+            textInitFight.text = Convert.ToString(data["initiativeFight"]);
     }
     public void ReturnAfterAnimation()
     {

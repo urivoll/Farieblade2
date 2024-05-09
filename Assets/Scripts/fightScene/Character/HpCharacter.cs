@@ -27,7 +27,7 @@ public class HpCharacter
     public HpCharacter(UnitProperties unitProperties, CharacterAttributes attributes)
     {
         _unitProperties = unitProperties;
-        _hpBase = attributes.Hp;
+        _hpBase = (int)attributes.Hp;
         _hp = HpBase;
         HpDamage("none");
     }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class PlayerData : MonoBehaviour
 {
@@ -27,10 +28,6 @@ public class PlayerData : MonoBehaviour
     public static int totalPower;
     public static int totalLevel;
     public static int totalGrade;
-    public static int maxLevel;
-    public static int maxGrade;
-    public static int minLevel;
-    public static int minGrade;
     public static int freeDf;
     public static int language;
     public static int league;
@@ -42,7 +39,7 @@ public class PlayerData : MonoBehaviour
     public static GameObject auth;
     public static GameObject[] unitFields;
     public static GameObject[] defaultCards;
-    public static GameObject[] myCollection;
+    //public static GameObject[] myCollection;
 
     public static TextMeshProUGUI textWarning;
     private static TextMeshProUGUI textGold;
@@ -69,6 +66,10 @@ public class PlayerData : MonoBehaviour
     [SerializeField] private Image barExpAcc;
     [SerializeField] private ExpNeeder _expNeeder;
 
+    [SerializeField] private GameObject _cardPrefub;
+    [SerializeField] private Transform _tableCollection;
+    [Inject] private DiContainer _diContainer;
+
     public void Init()
     {
         focus = false;
@@ -80,7 +81,6 @@ public class PlayerData : MonoBehaviour
         floatNote = FloatNotePrefub;
         textGold = textGoldPrefub;
         textAf = textAfPrefub;
-        myCollection = myUnits;
         defaultCards = DefaultCardsPrefub;
         accountPortraitIndex = accountPortraitPrefub;
         lostConnection = LostConnectionPrefub;
@@ -115,42 +115,39 @@ public class PlayerData : MonoBehaviour
         combatView = PlayerPrefs.GetInt("CombatViewPrefs", 1);
         ai = PlayerPrefs.GetInt("ai", 1);
         troopAmount = 0;
-        foreach (GameObject i in unitFields)
+/*        foreach (GameObject i in unitFields)
         {
             i.GetComponent<UIDropHandler>().Arrangement();
-        }
+        }*/
         GetComponent<AdventureMap>().SetMap();
-        for (int i = 0; i < myCollection.Length; i++)
+        GameObject card;
+        for (int i = 0; i < IdUnit.idLevel.Length; i++)
         {
-            myCollection[i].GetComponent<Unit>().level = IdUnit.idLevel[i];
-            myCollection[i].GetComponent<Unit>().grade = IdUnit.idGrade[i];
-            myCollection[i].GetComponent<Unit>().exp = IdUnit.idExp[i];
-            myCollection[i].GetComponent<Unit>().onAnIs = IdUnit.idOnAnIs[i];
+            if(_diContainer != null)
+            {
+                print(_cardPrefub);
+                print(_tableCollection);
+            }
+            else
+            {
+                print("Хуй");
+                return;
+            }
+            card = _diContainer.InstantiatePrefab(_cardPrefub, _tableCollection);
+            card.GetComponent<CardVeiw>().Init(i, IdUnit.idLevel[i], IdUnit.idGrade[i], IdUnit.idExp[i], IdUnit.idOnAnIs[i]);
         }
-        int tempMaxLevel = 0;
-        int tempMaxGrade = 0;
-        int tempMinLevel = 70;
-        int tempMinGrade = 70;
         totalPower = 0;
-        for (int i = 0; i< troop.Length; i++)
+/*        for (int i = 0; i< troop.Length; i++)
         {
             if (troop[i] != -666)
             {
-                if (myCollection[troop[i]].GetComponent<Unit>().level > tempMaxLevel) tempMaxLevel = myCollection[troop[i]].GetComponent<Unit>().level;
-                if (myCollection[troop[i]].GetComponent<Unit>().grade > tempMaxGrade) tempMaxGrade = myCollection[troop[i]].GetComponent<Unit>().grade;
-                if (myCollection[troop[i]].GetComponent<Unit>().level < tempMinLevel) tempMinLevel = myCollection[troop[i]].GetComponent<Unit>().level;
-                if (myCollection[troop[i]].GetComponent<Unit>().grade < tempMinGrade) tempMinGrade = myCollection[troop[i]].GetComponent<Unit>().grade;
                 troops.Add(troop[i]);
                 myCollection[troop[i]].GetComponent<Unit>().SetValues();
                 totalPower += Convert.ToInt32(myCollection[troop[i]].GetComponent<Unit>().Power);
                 totalLevel += myCollection[troop[i]].GetComponent<Unit>().level;
                 totalGrade += myCollection[troop[i]].GetComponent<Unit>().grade;
             }
-        }
-        maxLevel = tempMaxLevel;
-        maxGrade = tempMaxGrade;
-        minLevel = tempMinLevel;
-        minGrade = tempMinGrade;
+        }*/
     }
 
     //Настройка окна аккаунта

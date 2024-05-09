@@ -20,7 +20,7 @@ public class Energy : MonoBehaviour
         bool onAn = false;
         for (int i = 0; i < Squad.Count; i++)
         {
-            if (PlayerData.myCollection[Squad[i]].GetComponent<Unit>().onAnIs != -666) onAn = true;
+            if (IdUnit.idOnAnIs[i] != -666) onAn = true;
         }
         if (mode == 0 && PlayerData.troopAmount == 0)
         {

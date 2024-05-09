@@ -10,13 +10,6 @@ public class UnitCanvas : MonoBehaviour
     [SerializeField] private Image _hpBar;
     [SerializeField] private Animator _hp;
     [SerializeField] private Animator _dmg;
-    [SerializeField] private Image _GradeImage;
-    [SerializeField] private Sprite _bronzeGrade;
-    [SerializeField] private Sprite _silverGrade;
-    [SerializeField] private Sprite _goldGrade;
-    [SerializeField] private Sprite _dimondGrade;
-    [SerializeField] private TextMeshProUGUI _gradeValue;
-    [SerializeField] private GameObject gradeObj;
     [SerializeField] private EnergyUnit energy;
     [SerializeField] private Gradient _gradient;
     private Unit parent;
