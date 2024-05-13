@@ -20,16 +20,16 @@ public class UnitCanvas : MonoBehaviour
         parent = gameObject.transform.parent.transform.parent.gameObject.GetComponent<Unit>();
         tempDamage = parent.damage;
     }*/
-    public void UnitPropTextRenderer(float inpHp, float inpDamage, float hpProsent, int state, UnitProperties unit, string hpDmg)
+    public void UnitPropTextRenderer(float inpHp, float inpDamage, float hpProsent, string hpDmg)
     {
         if (hpDmg == "dmg")
-            _dmg.GetComponent<Animator>().SetTrigger("Alarm");
+            _dmg.SetTrigger("Alarm");
         else if (hpDmg == "hp")
-            _hp.GetComponent<Animator>().SetTrigger("Alarm");
+            _hp.SetTrigger("Alarm");
         else if (hpDmg == "hpdmg")
         {
-            _dmg.GetComponent<Animator>().SetTrigger("Alarm");
-            _hp.GetComponent<Animator>().SetTrigger("Alarm");
+            _dmg.SetTrigger("Alarm");
+            _hp.SetTrigger("Alarm");
         }
         /*            if (hpDmg != "none")
                     {
@@ -41,8 +41,6 @@ public class UnitCanvas : MonoBehaviour
                             _textDmg.color = new Color(255, 255, 255);
                     }*/
         _textHP.text = Convert.ToString(inpHp);
-        if (state != 4)
-            _textDmg.text = Convert.ToString(inpDamage);
         _hpBar.fillAmount = hpProsent /= 100;
         _hpBar.color = _gradient.Evaluate(hpProsent);
     }

@@ -7,15 +7,9 @@ using Zenject;
 using Random = UnityEngine.Random;
 public class BattleAI : MonoBehaviour
 {
-    private CharacterPlacement _characterPlacement;
+    [Inject] private CharacterPlacement _characterPlacement;
     private int magic;
     private List<UnitProperties> allow = new();
-
-    [Inject]
-    private void Construct(CharacterPlacement characterPlacement)
-    {
-        _characterPlacement = characterPlacement;
-    }
 
     public void AI0()
     {
@@ -64,7 +58,7 @@ public class BattleAI : MonoBehaviour
     {
         int energy = Turns.turnUnit.Energy.energy;
         if (!Turns.turnUnit.Spells || energy < Turns.turnUnit.EnergyÑonsumption ||
-            Turns.turnUnit.CharacterState.silence == true) return true;
+            Turns.turnUnit.CharacterState.Silence == true) return true;
 
         List<int> magics = new();
         List<GameObject> spells = new();
@@ -634,7 +628,7 @@ public class BattleAI : MonoBehaviour
                 (currentSpell.ToEnemy == false && allow[rand2].ParentCircle.Side == Turns.turnUnit.ParentCircle.Side))
                 &&
                 (currentSpell.AllPlace == true ||
-                (currentSpell.AllPlace == false && allow[rand2].CharacterState.allowHit == true))
+                (currentSpell.AllPlace == false && allow[rand2].CharacterState.AllowHit == true))
                 &&
                 (currentSpell.NotMe == false ||
                 (currentSpell.NotMe == true && allow[rand2] != Turns.turnUnit)))

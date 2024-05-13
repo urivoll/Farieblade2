@@ -2,31 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class SideUnitUi : MonoBehaviour
 {
+    public static int spell = -555;
+    public static bool modeBlock = false;
+
     [SerializeField] private GameObject[] spellListUI;
     [SerializeField] private GameObject[] spellListSilence;
     [SerializeField] private GameObject[] spellListMana;
     [SerializeField] private GameObject[] particles;
-
     [SerializeField] private GameObject[] modeListUI;
     [SerializeField] private GameObject[] modeListMark;
     [SerializeField] private Button[] buttons;
     [SerializeField] private GameObject defend;
     [SerializeField] private BattleNetwork battleNetwork;
     [SerializeField] private CheckAllowHit check;
-    public static int spell = -555;
-    private EnergyUnit energy;
-    private List<GameObject> currentSpellList;
-    private List<GameObject> currentModeList;
-    public static bool modeBlock = false;
     [SerializeField] private GameObject buttonHit;
     [SerializeField] private Sprite[] attackSprite;
     [SerializeField] private Image attackImg;
+
+    private EnergyUnit energy;
+    private List<GameObject> currentSpellList;
+    private List<GameObject> currentModeList;
+
     private void Start() => Exit();
     public void SetSpells()
     {
-        if (PlayerData.ai != 2) defend.SetActive(true);
+        if (PlayerData.ai != 2) 
+            defend.SetActive(true);
         energy = Turns.turnUnit.Energy;
 
         currentSpellList = Turns.turnUnit.Spells.SpellList;
@@ -36,8 +40,10 @@ public class SideUnitUi : MonoBehaviour
         {
             if (i == 3) break;
             //—‡ÎÓ
-            if (Turns.turnUnit.CharacterState.silence == true) spellListSilence[i].SetActive(true);
-            else spellListSilence[i].SetActive(false);
+            if (Turns.turnUnit.CharacterState.Silence == true) 
+                spellListSilence[i].SetActive(true);
+            else 
+                spellListSilence[i].SetActive(false);
 
             string state = currentSpellList[i].GetComponent<AbstractSpell>().state;
             if (state == "Passive" || state == "Aura") continue;
@@ -51,15 +57,16 @@ public class SideUnitUi : MonoBehaviour
         if (Turns.turnUnit.Weapon.Damage <= 0)
         {
             if (Turns.turnUnit.Energy.energy >= Turns.turnUnit.Energy—onsumption &&
-                !Turns.turnUnit.CharacterState.silence) ChangeState(0);
-            else spell = -555;
+                !Turns.turnUnit.CharacterState.Silence) ChangeState(0);
+            else 
+                spell = -555;
             buttonHit.SetActive(false);
         }
         else
         {
             ChangeState(-666);
             if (PlayerData.ai != 2) buttonHit.SetActive(true);
-            attackImg.sprite = attackSprite[Turns.turnUnit.Weapon.State];
+            attackImg.sprite = attackSprite[Turns.turnUnit.Weapon.Type];
         }
         if (currentModeList.Count <= 0) return;
         int startModeIndex = Turns.turnUnit.Spells.modeIndex;
@@ -88,6 +95,7 @@ public class SideUnitUi : MonoBehaviour
         defend.SetActive(false);
         buttonHit.SetActive(false);
     }
+
     public void ChangeState(int index)
     {
         if (index != -666)
@@ -132,7 +140,7 @@ public class SideUnitUi : MonoBehaviour
     }
     public void SetDefaultHit()
     {
-        if (Turns.turnUnit.Weapon.State == 0) check.CheckUnit(0, false);
-        else if (Turns.turnUnit.Weapon.State == 1 || Turns.turnUnit.Weapon.State == 2) check.CheckUnit(1, false);
+        if (Turns.turnUnit.Weapon.Type == 0) check.CheckUnit(0, false);
+        else if (Turns.turnUnit.Weapon.Type == 1 || Turns.turnUnit.Weapon.Type == 2) check.CheckUnit(1, false);
     }
 }

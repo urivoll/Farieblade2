@@ -50,30 +50,30 @@ public class CardVeiw : MonoBehaviour
         this.id = id;
         this.level = level;
         this.grade = grade;
-        print(id);
         CharacterData character = _character.CharacterData[id];
         if (character == null) return;
         achive.text = _squads.Squad[character.Attributes.Squad].intArray[PlayerData.language];
+        _name.text = character.Name[PlayerData.language];
+        _icon.sprite = character.CardShell;
         _RangImage.sprite = character.Attributes.Rang.Frame;
         _GradeImage.sprite = character.Attributes.Rang.Icon;
         _StateImage.sprite = character.Attributes.Type.Icon;
         _Fraction.sprite = character.Attributes.Fraction.Icon;
         gameObject.name = character.Name[PlayerData.language];
+
         if (level == 0)
         {
             _damageImg.SetActive(false);
             _HPImg.SetActive(false);
-            _gradeImg.SetActive(false);
             _icon.color = new Color(80 / 255.0f, 80 / 255.0f, 80 / 255.0f);
             _closed.SetActive(true);
             return;
         }
-        _HPImg.SetActive(true);
         if (grade == 0) _gradeImg.SetActive(false);
         else _gradeImg.SetActive(true);
+        _HPImg.SetActive(true);
         _icon.color = new Color(255.0f / 255.0f, 255.0f / 255.0f, 255.0f / 255.0f);
         _closed.SetActive(false);
-
         _hp = character.Attributes.GetHp(level, grade);
         _damage = character.Attributes.GetHp(level, grade);
         _hpText.text = Convert.ToString(_hp);
@@ -85,7 +85,6 @@ public class CardVeiw : MonoBehaviour
     }
     public void OpenPanelProperties()
     {
-        print(id);
         Dictionary<string, int> data = new();
         data["id"] = id;
         data["level"] = level;

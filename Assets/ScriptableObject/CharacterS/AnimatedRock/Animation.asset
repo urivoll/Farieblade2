@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18054a356eb8ff949a056a68d0a4981c, type: 3}
   m_Name: Animation
   m_EditorClassIdentifier: 
-  _attack: {fileID: 11400000, guid: a6097ff77bd33a64196cdc3a16ab8218, type: 2}
-  _idle: {fileID: 11400000, guid: 8bd462d8d0a3700458ea24c10d38ca60, type: 2}
-  _hit: {fileID: 11400000, guid: 326a0c02e7055cc4082f4bad8332ed59, type: 2}
-  _death: {fileID: 11400000, guid: f21993d647a057f409ed1015f1c80998, type: 2}
-  _spell: {fileID: 11400000, guid: 600b1e981d9cb3f498b2fa434da929c2, type: 2}
-  _spell2: {fileID: 11400000, guid: 42a698858bceeb9478c16edf18f23196, type: 2}
-  _mode: {fileID: 11400000, guid: a6097ff77bd33a64196cdc3a16ab8218, type: 2}
-  _passive: {fileID: 11400000, guid: a6097ff77bd33a64196cdc3a16ab8218, type: 2}
+  _attack: {fileID: 11400000, guid: 763ea5f584a8aed4da81fef727cf5a8d, type: 2}
+  _idle: {fileID: 11400000, guid: 21de338185706584eba4707782a3a8a8, type: 2}
+  _hit: {fileID: 11400000, guid: c9ea8ceb9b07ef24aa01ce1a8a5cf897, type: 2}
+  _death: {fileID: 11400000, guid: d7ff9f675bc8bd649ac62ad6c8bc60a6, type: 2}
+  _spell: {fileID: 11400000, guid: 8ceb128e41282e4478668210274513ed, type: 2}
+  _spell2: {fileID: 11400000, guid: 8ceb128e41282e4478668210274513ed, type: 2}
+  _mode: {fileID: 11400000, guid: 763ea5f584a8aed4da81fef727cf5a8d, type: 2}
+  _passive: {fileID: 11400000, guid: c03b31b20e6b44249a4b17c902448cab, type: 2}

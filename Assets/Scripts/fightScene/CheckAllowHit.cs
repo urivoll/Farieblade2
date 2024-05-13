@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 public class CheckAllowHit : MonoBehaviour
@@ -6,19 +5,18 @@ public class CheckAllowHit : MonoBehaviour
     private int sideOur;
     private int sideEnemy;
     private bool spell;
-    private int state;
+    private int _type;
     [Inject] private CharacterPlacement _characterPlacement;
 
-    public void CheckUnit(int state, bool spell, bool notMe = false)
+    public void CheckUnit(int type, bool spell, bool notMe = false)
     {
-        this.state = state;
+        _type = type;
         this.spell = spell;
         sideOur = Turns.turnUnit.ParentCircle.Side;
-        if (sideOur == 1) sideEnemy = 0;
-        else sideEnemy = 1;
+        sideEnemy = (sideOur == 1) ? 0 : 1;
         Clear();
         //БЛИЖНИК
-        if (state == 0)
+        if (type == 0)
         {
             //Проверка верхнего ближника
             if (Turns.turnUnit.ParentCircle == _characterPlacement.CirclesMap[sideOur, 0])
@@ -143,12 +141,12 @@ public class CheckAllowHit : MonoBehaviour
             }
         }
         //ДАЛЬНИК
-        else if (state == 1)
+        else if (type == 1)
         {
             for (int i = 0; i < 6; i++) if (_characterPlacement.CirclesMap[sideEnemy, i].ChildCharacter != null) MayHit(i);
         }
         //БАФФ
-        else if (state == 2)
+        else if (type == 2)
         {
             for (int i = 0; i < 6; i++)
             {
@@ -157,35 +155,55 @@ public class CheckAllowHit : MonoBehaviour
             }
         }
     }
-    //Подсвечивание вражеских кругов которых можно поразить
+
     private void MayHit(int index)
     {
-        if (Turns.turnUnit.ParentCircle.Side == BattleNetwork.sideOnBattle && PlayerData.ai != 2)
+        CircleProperties enemyCircle = _characterPlacement.CirclesMap[sideEnemy, index];
+        CircleProperties ourCircle = _characterPlacement.CirclesMap[sideOur, index];
+        HighlightCircle(enemyCircle, ourCircle);
+        print(_type);
+        if (_type != 2)
         {
-            if (spell == false && state != 2) _characterPlacement.CirclesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleEnemy");
-            else
-            {
-                if(state != 2) _characterPlacement.CirclesMap[sideEnemy, index].PathAnimation.SetCaracterState("circleSpell");
-                else if(_characterPlacement.CirclesMap[sideOur, index].ChildCharacter != Turns.turnUnit) _characterPlacement.CirclesMap[sideOur, index].PathAnimation.SetCaracterState("circleSpell");
-            }
-        }
-        if (state != 2)
-        {
-            _characterPlacement.CirclesMap[sideEnemy, index].ChildCharacter.CharacterState.MakeStep(true);
-            Turns.listAllowHit.Add(_characterPlacement.CirclesMap[sideEnemy, index].ChildCharacter);
+            enemyCircle.ChildCharacter.CharacterState.MakeStep(true);
+            Turns.listAllowHit.Add(enemyCircle.ChildCharacter);
         }
         else
         {
-            _characterPlacement.CirclesMap[sideOur, index].ChildCharacter.CharacterState.ChangeAllowHit(true);
-            Turns.listAllowHit.Add(_characterPlacement.CirclesMap[sideOur, index].ChildCharacter);
+            ourCircle.ChildCharacter.CharacterState.ChangeAllowHit(true);
+            Turns.listAllowHit.Add(ourCircle.ChildCharacter);
         }
     }
+
+    //Подсвечивание вражеских кругов которых можно поразить
+    private void HighlightCircle(CircleProperties enemyCircle, CircleProperties ourCircle)
+    {
+        if (Turns.turnUnit.ParentCircle.Side == BattleNetwork.sideOnBattle && PlayerData.ai != 2)
+        {
+            if (spell == false && _type != 2)
+            {
+                enemyCircle.PathAnimation.SetCaracterState("circleEnemy");
+            }
+            else
+            {
+                if (_type != 2)
+                {
+                    enemyCircle.PathAnimation.SetCaracterState("circleSpell");
+                }
+
+                else if (ourCircle.ChildCharacter != Turns.turnUnit)
+                {
+                    ourCircle.PathAnimation.SetCaracterState("circleSpell");
+                }
+            }
+        }
+    }
+
     //Возврат анимации всех кругов в idle
     public void TurnOver()
     {
         for (int i = 0; i < _characterPlacement.UnitAll.Count; i++)
         {
-            if (!_characterPlacement.UnitAll[i].CharacterState.allowHit) continue;
+            if (!_characterPlacement.UnitAll[i].CharacterState.AllowHit) continue;
             _characterPlacement.UnitAll[i].ParentCircle.PathAnimation.SetCaracterState("idle");
             _characterPlacement.UnitAll[i].CharacterState.ChangeAllowHit(false);
         }

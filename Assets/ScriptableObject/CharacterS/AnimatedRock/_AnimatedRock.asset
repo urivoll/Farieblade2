@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _presenter: []
   _name:
-  - RIBBITROVER
-  - "\u041A\u0412\u0410\u041A\u0423\u041D"
+  - ANIMATED ROCK
+  - "\u041E\u0416\u0418\u0412\u0428\u0418\u0419 \u041A\u0410\u041C\u0415\u041D\u042C"
   _description:
   - 
   - 
-  _portrait: {fileID: 21300000, guid: 4a383d148ade1b34bb029cfef75ee82c, type: 3}
-  _prefub: {fileID: 4705572745250164701, guid: 955cc13104a75ba4abcb9438757690fa, type: 3}
-  _attributes: {fileID: 11400000, guid: d8e2174b118b0c440a52d37d7e859da0, type: 2}
-  _transforms: {fileID: 11400000, guid: 90bcf5b1e36bb7a4785ec3957148490a, type: 2}
-  _animationAssets: {fileID: 11400000, guid: 1390b09fac0bfa746a339559ce5dc55a, type: 2}
+  _portrait: {fileID: 21300000, guid: b0c70e287b70ca34d88a898863752b5f, type: 3}
+  _cardShell: {fileID: 21300000, guid: d39b69e9df7911a44afe341ea061dcaa, type: 3}
+  _prefub: {fileID: 2109319985274871477, guid: e25c2ff223a6fa84b89a9803708bbcac, type: 3}
+  _attributes: {fileID: 11400000, guid: 32b9582921e43eb42b056b2cad521506, type: 2}
+  _transforms: {fileID: 11400000, guid: 91cf70f3d6262c44a8c53d5c7c754c61, type: 2}
+  _animationAssets: {fileID: 11400000, guid: e3a1bb789a6dcb64383c3490910f6814, type: 2}
   _spells:
-  - {fileID: 7046058575070358576, guid: d88d74893f9cf8f4bae365efbdcb40e6, type: 3}
-  - {fileID: 7046058575070358576, guid: e7ec977cda036754a80766a2c7187c42, type: 3}
-  - {fileID: 7046058575070358576, guid: 3b834aae220e1fa449a16de88330dbeb, type: 3}
+  - {fileID: 7046058575070358576, guid: 6132fd84049c3bf4889a69ce3946c5d0, type: 3}
+  - {fileID: 7046058575070358576, guid: fa31eef2a6de06947a610432d964ec13, type: 3}

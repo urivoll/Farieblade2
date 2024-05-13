@@ -2,22 +2,26 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public UnitProperties unitFrom;
-    public int element;
-    [HideInInspector] public float damage;
-    [HideInInspector] public UnitProperties unitTarget;
-    public MakeMove inpData;
-    private BulletAnimation _bulletAnimation;
     public float speed;
-    private AudioSource _soundHit;
-    [SerializeField] private AudioClip Clip;
-    private bool stop = false;
-    private bool notWork = false;
-    [HideInInspector] public GameObject targetBullet = null;
-    [SerializeField] private GameObject start;
-    [SerializeField] private GameObject debuff;
+    public MakeMove inpData;
     public GameObject end;
     public GameObject end2;
+    public UnitProperties unitFrom;
+    public int element;
+
+    [HideInInspector] public float damage;
+    [HideInInspector] public UnitProperties unitTarget;
+    [HideInInspector] public GameObject targetBullet = null;
+
+    private BulletAnimation _bulletAnimation;
+    private AudioSource _soundHit;
+    private bool stop = false;
+    private bool notWork = false;
+
+    [SerializeField] private AudioClip Clip;
+    [SerializeField] private GameObject start;
+    [SerializeField] private GameObject debuff;
+
     private void Start()
     {
         if(unitTarget != null) targetBullet = unitTarget.PathBulletTarget.gameObject;

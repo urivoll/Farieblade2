@@ -56,7 +56,7 @@ public class CharacterPlacement : MonoBehaviour
         int count = 0;
         for (int i = 0; i < _unitAll.Count; i++)
         {
-            if (_unitAll[i].CharacterState.went == false)
+            if (_unitAll[i].CharacterState.Went == false)
             {
                 count++;
                 break;

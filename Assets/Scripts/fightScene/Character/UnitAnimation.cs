@@ -8,11 +8,11 @@ public class UnitAnimation : MonoBehaviour
     private AnimationAssets _animations;
     private TrackEntry animationEntry = null;
     private HpCharacter _hpCharacter;
-    public void Init(AnimationAssets animations)
+    public void Init(AnimationAssets animations, GameObject prefab)
     {
         _animations = animations;
-        _hpCharacter = GetComponent<HpCharacter>();
-        _skeletonAnimation = GetComponent<SkeletonAnimation>();
+        _hpCharacter = GetComponent<UnitProperties>().HpCharacter;
+        _skeletonAnimation = prefab.GetComponent<SkeletonAnimation>();
     }
 
     public void TryGetAnimation(string state)

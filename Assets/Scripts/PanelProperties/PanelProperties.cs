@@ -33,7 +33,6 @@ public class PanelProperties : AbstractPanelProperties
     public override void SetValue(Dictionary<string, int> data)
     {
         base.SetValue(data);
-
         string maxLevelRus = "";
         string maxLevelEng = "";
         if (_character.Presenter.Length > 0) 
@@ -49,6 +48,7 @@ public class PanelProperties : AbstractPanelProperties
 
         if (PlayerData.language == 0) textExpNeed.text = maxLevelEng;
         else if (PlayerData.language == 1) textExpNeed.text = maxLevelRus;
+        expPanel.SetActive(true);
 
         if (data["level"] == 60)
         {
@@ -56,25 +56,27 @@ public class PanelProperties : AbstractPanelProperties
             maxLevelRus = "Макс";
             textExp.text = " ";
         }
-        else
+        else if(data["level"] > 0)
         {
             textExpNeed.text = Convert.ToString(_expNeeder.Exp[data["level"] - 1]);
             textExp.text = Convert.ToString(data["exp"]);
+            
+        }
+        else
+        {
+            expPanel.SetActive(false);
         }
         //ShowSpells(obj);
         //CurrentObj = obj.gameObject;
         transform.Find("Avatar").gameObject.SetActive(true);
         GetComponent<PanelPropertiesInfo>().Start2();
 
-        ImgDescription.sprite = base._character.Portrait;
-        textDescription.text = base._character.Description[PlayerData.language];
-        textDescriptionFraction.text = base._character.Attributes.Fraction.Description[PlayerData.language];
-        textFractionDesc.text = base._character.Attributes.Fraction.Name[PlayerData.language];
-        imageFractionDesc.sprite = base._character.Attributes.Fraction.Icon;
-
-        if (data["level"] == 0) expPanel.SetActive(false);
-        else expPanel.SetActive(true);
-        _GradeImage.sprite = base._character.Attributes.Rang.Icon;
+        ImgDescription.sprite = _character.Portrait;
+        textDescription.text = _character.Description[PlayerData.language];
+        textDescriptionFraction.text = _character.Attributes.Fraction.Description[PlayerData.language];
+        textFractionDesc.text = _character.Attributes.Fraction.Name[PlayerData.language];
+        imageFractionDesc.sprite = _character.Attributes.Fraction.Icon;
+        _GradeImage.sprite = _character.Attributes.Rang.Icon;
     }
     public void Return()
     {

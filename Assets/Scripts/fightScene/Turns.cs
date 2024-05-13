@@ -77,8 +77,7 @@ public class Turns : MonoBehaviour
     }
     private IEnumerator BeforeTurn()
     {
-        Coroutine cor;
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.1f);
         while (true)
         {
             gameCount++;
@@ -88,12 +87,9 @@ public class Turns : MonoBehaviour
             var currentDoing = BattleNetwork.doingQueue[gameCount - 1];
             if (currentDoing.array[0] == -444) break;
             turnUnit = _characterPlacement.CirclesMap[currentDoing.array[0], currentDoing.array[1]].ChildCharacter;
-            StartIni.playersBars[turnUnit.ParentCircle.Side].gameObject.SetActive(true);
-            StartIni.playersBars[turnUnit.ParentCircle.Side].fillAmount = 1f;
-            StartIni.work = true;
+            StartIni.Bar();
             _characterPlacement.DefinitionSides(turnUnit);
-            cor = StartCoroutine(PeriodicEffects());
-            yield return cor;
+            yield return StartCoroutine(PeriodicEffects());
             if (currentDoing.endDebuff.Count > 0)
             {
                 for (int i = 0; i < currentDoing.endDebuff.Count; i++)
@@ -105,7 +101,7 @@ public class Turns : MonoBehaviour
                     }
                 }
             }
-            if (turnUnit != null && !turnUnit.CharacterState.paralize)
+            if (turnUnit != null && !turnUnit.CharacterState.Paralize)
             {
                 _checkAllowHit.TurnUnitEffect();
                 if (turnUnit.ParentCircle.Side == BattleNetwork.sideOnBattle)
@@ -118,7 +114,6 @@ public class Turns : MonoBehaviour
 
             while (BattleNetwork.attackResultQueue.Count < gameCount) yield return null;
             yield return new WaitForSeconds(0.2f);
-            print("Есть!");
             aiMay = false;
             if (turnUnit != null)
             {
@@ -126,17 +121,14 @@ public class Turns : MonoBehaviour
                 StartIni.work = false;
                 StartIni.playersBars[turnUnit.ParentCircle.Side].gameObject.SetActive(false);
             }
-            cor = StartCoroutine(AfterTurn());
-            yield return cor;
+            yield return StartCoroutine(AfterTurn());
             DoDefaultValues();
-            cor = StartCoroutine(AfterMoveEffects());
-            yield return cor;
+            yield return StartCoroutine(AfterMoveEffects());
             yield return new WaitForSeconds(0.5f);
             _characterPlacement.CheckTurnEnd();
             hitDone = false;
         }
-        if (BattleNetwork.doingQueue[gameCount - 1].array[1] == BattleNetwork.sideOnBattle) win = true;
-        else win = false;
+        win = (BattleNetwork.doingQueue[gameCount - 1].array[1] == BattleNetwork.sideOnBattle) ? true : false;
     }
     private IEnumerator AfterTurn()
     {
@@ -152,7 +144,7 @@ public class Turns : MonoBehaviour
         _checkAllowHit.TurnOver();
         if (attackData.spell == -666)
         {
-            //turnUnit.AttackedUnit(attackData.makeMove);
+            turnUnit.Weapon.AttackedUnit(attackData.makeMove);
         }
         //Защита
         else if(attackData.spell == -10)

@@ -1,7 +1,8 @@
 using System;
+using UnityEngine;
 using Zenject;
 
-public class HpCharacter 
+public class HpCharacter : MonoBehaviour
 {
     public int Hp => _hp;
     public int HpBase => _hpBase;
@@ -24,7 +25,7 @@ public class HpCharacter
     private int _resist;
     [Inject] private CharacterPlacement _characterPlacement;
 
-    public HpCharacter(UnitProperties unitProperties, CharacterAttributes attributes)
+    public void Init(UnitProperties unitProperties, CharacterAttributes attributes)
     {
         _unitProperties = unitProperties;
         _hpBase = (int)attributes.Hp;
@@ -75,7 +76,7 @@ public class HpCharacter
     {
         if (hpDmg == "hp" || hpDmg == "hpdmg")
             _hpProsent = Hp * 100 / _hpBase;
-        //pathCanvas.UnitPropTextRenderer(hp, damage, hpProsent, state, this, hpDmg);
+        _unitProperties.UI.UnitPropTextRenderer(_hp, _unitProperties.Weapon.Damage, _hpProsent, hpDmg);
     }
 
     private void TryToDeath()

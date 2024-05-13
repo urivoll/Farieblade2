@@ -12,18 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948ab89100fb1084b83a0c1cf275e0dd, type: 3}
   m_Name: Attributes
   m_EditorClassIdentifier: 
-  _hp: 0
-  _damage: 0
-  _accuracy: 0
-  _initiative: 0
-  _hitCount: 0
-  _spellCoast: 0
-  _state: 0
-  _squad: 0
+  _hp: 70.3467
+  _damage: 19.4563
+  _accuracy: 80
+  _initiative: 40
+  _hitCount: 1
+  _spellCoast: 2
+  _squad: 6
   _type: {fileID: 11400000, guid: 6c6f254dc3c80c24a902fa516730ac67, type: 2}
   _role: {fileID: 11400000, guid: eed626967866099419cbcb203112fe51, type: 2}
   _rang: {fileID: 11400000, guid: e2039c6359e8e464d8e5eace83209274, type: 2}
-  _fraction: {fileID: 11400000, guid: 65e07f265d2e3d1469361cc9c07509d7, type: 2}
+  _fraction: {fileID: 11400000, guid: a4197939021feab48acb06585f7734cf, type: 2}
   _vulnerability: {fileID: 11400000, guid: 4aced438be906584abcdae4068864084, type: 2}
   _resist: {fileID: 11400000, guid: bf4b36e9872219f4e9ed4b52d45658b5, type: 2}
   _damageType: {fileID: 11400000, guid: ab9ab05e155dc224ea8a50d888961b49, type: 2}

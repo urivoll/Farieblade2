@@ -17,13 +17,13 @@ public class Spells : MonoBehaviour
     private UnitProperties parentObject;
     [Inject] private CharacterPlacement _characterPlacement;
 
-    public void Start()
-    { 
+    public void Init(CharacterData characterData)
+    {
+        SpellList.AddRange(characterData.Spells);
         parentObject = GetComponent<UnitProperties>();
         skill = transform.Find("UI/Skill").gameObject;
         skillPic = skill.transform.Find("Mask/Pic").GetComponent<Image>();
-        if (modeList.Count > 0) modeIndex = 0;
-        else modeIndex = -1;
+        modeIndex = (modeList.Count > 0) ? modeIndex = 0 : -1;
     }
 
     public void UseActive(int i, List<MakeMove> inpData) => StartCoroutine(UseActiveAsync(i, inpData));

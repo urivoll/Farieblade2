@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterData:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a8eec3d91b941cb41aa2a8a8ea6a46f6, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

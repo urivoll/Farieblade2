@@ -3,15 +3,11 @@ using Zenject;
 
 public class DefendReference : MonoBehaviour
 {
-    private BattleNetwork _battleNetwork;
+    [Inject] private BattleNetwork _battleNetwork;
 
-    [Inject]
-    private void Construct(BattleNetwork battleNetwork)
+    public void Defend()
     {
-        _battleNetwork = battleNetwork;
-    }
-    public void Defend(UnitProperties unitProperties)
-    {
+        UnitProperties unitProperties = Turns.turnUnit;
         AttackFormSubmitter attackFormSubmitter = new();
         attackFormSubmitter.Spell = -10;
         attackFormSubmitter.ModeIndex = unitProperties.Spells.modeIndex;

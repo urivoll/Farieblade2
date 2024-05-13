@@ -20,6 +20,7 @@ MonoBehaviour:
   - 
   - 
   _portrait: {fileID: 21300000, guid: 4a383d148ade1b34bb029cfef75ee82c, type: 3}
+  _cardShell: {fileID: 21300000, guid: 6c413bd3e7c8103438b7836b02f4c989, type: 3}
   _prefub: {fileID: 4705572745250164701, guid: 955cc13104a75ba4abcb9438757690fa, type: 3}
   _attributes: {fileID: 11400000, guid: d8e2174b118b0c440a52d37d7e859da0, type: 2}
   _transforms: {fileID: 11400000, guid: 90bcf5b1e36bb7a4785ec3957148490a, type: 2}
@@ -28,3 +29,4 @@ MonoBehaviour:
   - {fileID: 7046058575070358576, guid: d88d74893f9cf8f4bae365efbdcb40e6, type: 3}
   - {fileID: 7046058575070358576, guid: e7ec977cda036754a80766a2c7187c42, type: 3}
   - {fileID: 7046058575070358576, guid: 3b834aae220e1fa449a16de88330dbeb, type: 3}
+  _startDebuff: {fileID: 7046058575070358576, guid: 3b834aae220e1fa449a16de88330dbeb, type: 3}

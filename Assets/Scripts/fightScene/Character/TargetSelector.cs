@@ -8,14 +8,17 @@ public class TargetSelector : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        
+
         UnitProperties unitProperties = eventData.pointerClick.GetComponent<UnitProperties>();
+        print(unitProperties.CharacterState.AllowHit);
+        print(SideUnitUi.modeBlock);
+        print(SideUnitUi.spell);
         if (unitProperties.ParentCircle.ChildCharacter == null ||
-            !unitProperties.CharacterState.allowHit ||
+            !unitProperties.CharacterState.AllowHit ||
             SideUnitUi.modeBlock == true ||
             SideUnitUi.spell == -555) 
             return;
-
+        print("df2");
         AttackFormSubmitter attackFormSubmitter = new();
         attackFormSubmitter.Spell = SideUnitUi.spell;
         attackFormSubmitter.ModeIndex = Turns.turnUnit.Spells.modeIndex;

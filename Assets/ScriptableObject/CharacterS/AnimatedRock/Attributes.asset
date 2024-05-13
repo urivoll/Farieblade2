@@ -20,9 +20,9 @@ MonoBehaviour:
   _spellCoast: 2
   _squad: 0
   _type: {fileID: 11400000, guid: 6c6f254dc3c80c24a902fa516730ac67, type: 2}
-  _role: {fileID: 11400000, guid: eed626967866099419cbcb203112fe51, type: 2}
-  _rang: {fileID: 11400000, guid: e2039c6359e8e464d8e5eace83209274, type: 2}
-  _fraction: {fileID: 11400000, guid: 65e07f265d2e3d1469361cc9c07509d7, type: 2}
-  _vulnerability: {fileID: 11400000, guid: 4aced438be906584abcdae4068864084, type: 2}
-  _resist: {fileID: 11400000, guid: bf4b36e9872219f4e9ed4b52d45658b5, type: 2}
-  _damageType: {fileID: 11400000, guid: ab9ab05e155dc224ea8a50d888961b49, type: 2}
+  _role: {fileID: 11400000, guid: 9a3d9f825a856a642ac6de2ef027a4ce, type: 2}
+  _rang: {fileID: 11400000, guid: b091312401444154e96bc2975dbaabfb, type: 2}
+  _fraction: {fileID: 11400000, guid: 8d0157ee98123424488b528c348e53e6, type: 2}
+  _vulnerability: {fileID: 11400000, guid: 3c01cf2805d438f40b971e69ff4cd0af, type: 2}
+  _resist: {fileID: 11400000, guid: ab9ab05e155dc224ea8a50d888961b49, type: 2}
+  _damageType: {fileID: 11400000, guid: dbdb3a23f46e4144fba95fb0d64225e1, type: 2}

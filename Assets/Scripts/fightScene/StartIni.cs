@@ -7,16 +7,6 @@ using Zenject;
 public class StartIni : MonoBehaviour
 {
     public static Action setViewTrops;
-    [SerializeField] private GameObject blockPrefub;
-    public GameObject[] planks;
-
-    [SerializeField] private Button buttonAIPrefub;
-    [SerializeField] private Image viewLine;
-    [SerializeField] private Sprite[] viewSprite;
-    [SerializeField] private Image aiImage;
-    [SerializeField] private Sprite[] aiSprite;
-    [SerializeField] private Image[] playersFrame;
-
     public static GameObject unitProperties;
     public static GameObject debuffs;
     public static Button buttonAI;
@@ -33,11 +23,20 @@ public class StartIni : MonoBehaviour
     public static SideUnitUi sideUnitUi;
     public static MultiplayerDraft multiplayerDraft;
     public static bool work = false;
+    public Animator animatorShake;
+    public float fillTime = 20f;
+    public float fillSpeed; 
+    public GameObject[] planks;
 
     [SerializeField] private TextMeshProUGUI[] nick;
     [SerializeField] private Image[] portrait;
-    public Animator animatorShake;
-
+    [SerializeField] private GameObject blockPrefub;
+    [SerializeField] private Button buttonAIPrefub;
+    [SerializeField] private Image viewLine;
+    [SerializeField] private Sprite[] viewSprite;
+    [SerializeField] private Image aiImage;
+    [SerializeField] private Sprite[] aiSprite;
+    [SerializeField] private Image[] playersFrame;
     [SerializeField] private GameObject[] turnEffectPrefub;
     [SerializeField] private GameObject lostConnectionPrefub;
     [SerializeField] private GameObject loadingScreenPrefub;
@@ -53,22 +52,14 @@ public class StartIni : MonoBehaviour
     [SerializeField] private SideUnitUi sideUnitUiPrefub;
     [SerializeField] private MultiplayerDraft multiplayerDraftPrefub;
     [SerializeField] private BattleVoice soundVoicePrefub;
-
-    public float fillTime = 20f;
-    public float fillSpeed;
-    private bool stopCoroutine = false;
     [SerializeField] private GameObject timeOutObj;
     [SerializeField] private TextMeshProUGUI textWaitForPlayer;
     [SerializeField] private string[] textWait;
-    private Turns _turns;
-    private BattleNetwork _battleNetwork;
 
-    [Inject]
-    private void Construct(Turns turns, BattleNetwork battleNetwork)
-    {
-        _turns = turns;
-        _battleNetwork = battleNetwork;
-    }
+    [Inject] private Turns _turns;
+    [Inject] private BattleNetwork _battleNetwork;
+    private bool stopCoroutine = false;
+
     private void Start()
     {
         fillSpeed = 1f / fillTime;
@@ -277,5 +268,11 @@ public class StartIni : MonoBehaviour
 
         // ѕровер€ем, достигли ли нулевого заполнени€
         if (playersBars[Turns.turnUnit.ParentCircle.Side].fillAmount == 0) work = false;
+    }
+    public static void Bar()
+    {
+        playersBars[Turns.turnUnit.ParentCircle.Side].gameObject.SetActive(true);
+        playersBars[Turns.turnUnit.ParentCircle.Side].fillAmount = 1f;
+        work = true;
     }
 }

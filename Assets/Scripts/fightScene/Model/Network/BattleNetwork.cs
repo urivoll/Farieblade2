@@ -123,6 +123,7 @@ public class BattleNetwork : MonoBehaviour
     //ЗАПРОС НА АТАКУ К СЕРВЕРУ
     public void AttackQuery(AttackFormSubmitter attackFormSubmitter)
     {
+        print("df");
         try
         {
             Debug.Log("Сторона: " + attackFormSubmitter.Side + ", Место: " + attackFormSubmitter.Place + ", Способность: " + attackFormSubmitter.Spell);
