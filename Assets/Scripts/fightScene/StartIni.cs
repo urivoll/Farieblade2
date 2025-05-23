@@ -62,6 +62,7 @@ public class StartIni : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Старт!");
         fillSpeed = 1f / fillTime;
         DefenitionStart();
         if(BattleNetwork.doingQueue.Count > 0 || BattleNetwork.attackResultQueue.Count > 0)
@@ -69,13 +70,13 @@ public class StartIni : MonoBehaviour
             BattleNetwork.doingQueue.Clear();
             BattleNetwork.attackResultQueue.Clear();
         }
-/*        StartCoroutine(TimeOutTimer());
-        StartCoroutine(GetComponent<BattleNetwork>().Game(0));*/
+        /*        StartCoroutine(TimeOutTimer());
+                StartCoroutine(GetComponent<BattleNetwork>().Game(0));*/
 
-        Energy.mode = 1;
-            StartCoroutine(_battleNetwork.Game(1));
-            LoadingManager.LoadingScreenAfter = -1;
-            Start2();
+        Energy.mode = 0;
+        StartCoroutine(_battleNetwork.Game(1));
+        LoadingManager.LoadingScreenAfter = -1;
+        //Start2();
     }
     private IEnumerator TimeOutTimer()
     {
@@ -104,6 +105,7 @@ public class StartIni : MonoBehaviour
     }
     public void Start2()
     {
+        Debug.Log("Start!");
         stopCoroutine = true;
         DefinitionMode();
         StartUI();

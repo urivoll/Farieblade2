@@ -42,12 +42,12 @@ public class BattleNetwork : MonoBehaviour
         endEvent += EndAnswer;
         gameReuslt += GameResult;
         if (state == 0)
-        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:5215/PickHub").Build();
+        hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:5245/PickHub").Build();
         if (state == 1)
         {
             local = true;
             sideOnBattle = 0;
-            hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:5215/PickHub").Build();
+            hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:5245/PickHub").Build();
         }
         if (Energy.mode == 1 || Energy.mode == 2)
         {
@@ -59,8 +59,7 @@ public class BattleNetwork : MonoBehaviour
         hubConnection.On("StartIni", (string stringStartData, string generalData) => startEvent?.Invoke(stringStartData, generalData));
         hubConnection.On("AttackQuery", (string stringAttack) => attackEvent?.Invoke(stringAttack));
         hubConnection.On("EndGame", (int loseSide) => endEvent?.Invoke(loseSide));
-        if(!local)
-        hubConnection.On("LevelHandler", (string stringResult) => gameReuslt?.Invoke(stringResult));
+        if(!local) hubConnection.On("LevelHandler", (string stringResult) => gameReuslt?.Invoke(stringResult));
         yield return hubConnection.StartAsync().AsCoroutine();
         if (Energy.mode == 1) 
             yield return hubConnection.SendAsync("StartHandler", FirstStart.newProdID, gameIndex, sideOnBattle, ident).AsCoroutine();
@@ -69,7 +68,8 @@ public class BattleNetwork : MonoBehaviour
         else
         {
             sideOnBattle = 0;
-            yield return hubConnection.SendAsync("StartCampany", FirstStart.newProdID, FirstStart.newPassword, Campany.currentPlace -1).AsCoroutine();
+            //yield return hubConnection.SendAsync("StartCampany", FirstStart.newProdID, FirstStart.newPassword, Campany.currentPlace -1).AsCoroutine();
+            hubConnection.SendAsync("StartHandlerTest");
         }
     }
     public void Retret()
@@ -159,9 +159,12 @@ public class BattleNetwork : MonoBehaviour
     {
         print(json);
         StartDataJson startData = JsonConvert.DeserializeObject<StartDataJson>(json);
+        Debug.Log("Start!0");
         MapLocation.place = startData.background;
+        Debug.Log("Start!0");
         gameIndex = startData.index;
-        for (int i = 0; i < 6; i++)
+        Debug.Log("Start!0");
+/*        for (int i = 0; i < 6; i++)
         {
             MultiplayerDraft.units[0, i] = startData.leftSide[i]["id"];
             MultiplayerDraft.unitsLevel[0, i] = startData.leftSide[i]["level"];
@@ -172,14 +175,19 @@ public class BattleNetwork : MonoBehaviour
             MultiplayerDraft.unitsLevel[1, i] = startData.rightSide[i]["level"];
             MultiplayerDraft.unitsGrade[1, i] = startData.rightSide[i]["grade"];
             MultiplayerDraft.unitsSkin[1, i] = startData.rightSide[i]["skin"];
-        }
+        }*/
+        Debug.Log("Start!0");
         auraSend = startData.auraSend;
+        Debug.Log("Start!0");
         GeneralMethod(json2);
+        Debug.Log("Start!0");
         connected = true;
+        Debug.Log("Start!");
         if (Energy.mode == 0)
         {
             UnityMainThreadDispatcher.Instance().Enqueue(() =>
             {
+                Debug.Log("Start!");
                 ident = startData.ident;
                 LoadingManager.LoadingScreenAfterObj.SetActive(false);
                 GetComponent<StartIni>().Start2();

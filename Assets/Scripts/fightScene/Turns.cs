@@ -67,6 +67,7 @@ public class Turns : MonoBehaviour
         Coroutine cor;
         while (BattleNetwork.connected == false)
             yield return null;
+        Debug.Log("Start!3");
         _mapLocation.SetBackground();
         _characterPlacement.InitializationCircles();
         cor = StartCoroutine(GetAura());

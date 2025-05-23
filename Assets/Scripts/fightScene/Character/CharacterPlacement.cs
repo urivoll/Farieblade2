@@ -29,6 +29,7 @@ public class CharacterPlacement : MonoBehaviour
     private int _enemySide;
     public void Definition()
     {
+        Debug.Log("Start!2");
         for (int i = 0; i < 6; i++)
         {
             _circlesMap[0, i] = _circleLeftPrefub[i];
